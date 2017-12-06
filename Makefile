@@ -1,0 +1,43 @@
+YEAR = 2016
+
+PG_DATABASE ?= $(USER)
+PSQLFLAGS = $(PG_DATABASE)
+
+ifdef PG_HOST
+PSQLFLAGS += -h $(PG_HOST)
+endif
+
+ifdef PG_PORT
+PSQLFLAGS += -p $(PG_PORT)
+endif
+
+ifdef PG_USER
+PSQLFLAGS += -U $(PG_USER)
+endif
+
+PSQL = psql $(PSQLFLAGS)
+
+tables = accident vehicle person \
+	cevent damage distract \
+	drimpair factor maneuver \
+	nmcrash nmimpair nmprior \
+	parkwork pbtype safetyeq \
+	vevent vindecode \
+	violatn vision vsoe 
+
+.PHONY: load load-% init
+
+load: $(addprefix load-,$(tables))
+
+load-%: $(YEAR)/fars.zip
+	unzip -Cp $< $*.csv | \
+		$(PSQL) -c "\copy fars_$* FROM STDIN WITH (FORMAT CSV, HEADER TRUE)"
+
+init:; $(PSQL) -f sql/fars_schema.sql
+
+clean:; $(PSQL) -c "$(foreach x,$(tables),DROP TABLE fars_$x CASCADE;)"
+
+$(YEAR)/fars.zip:
+	curl ftp://ftp.nhtsa.dot.gov/fars/$(YEAR)/National/FARS$(YEAR)NationalCSV.zip -o $@
+
+$(YEAR):; mkdir -p $@
