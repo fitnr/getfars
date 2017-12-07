@@ -1,0 +1,8 @@
+0	No Special Jurisdiction (Includes National Forests)
+1	National Park Service
+2	Military
+3	Indian Reservation
+4	College/University Campus
+5	Other Federal Properties
+8	Other
+9	Unknown

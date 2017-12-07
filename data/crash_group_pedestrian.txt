@@ -1,0 +1,17 @@
+0	Not a Pedestrian
+100	Unusual Circumstances
+200	Backing Vehicle
+310	Working or Playing in Roadway
+340	Bus-Related
+350	Unique Midblock
+400	Walking/Running Along Roadway
+460	Driveway Access/ Driveway Access Related
+500	Waiting to Cross
+600	Pedestrian in Roadway – Circumstances Unknown
+720	Multiple Threat/Trapped
+740	Dash/Dart-Out
+750	Crossing Roadway – Vehicle Not Turning
+790	Crossing Roadway – Vehicle Turning
+800	Non-Trafficway
+910	Crossing Expressway
+990	Other/Unknown – Insufficient Details

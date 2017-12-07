@@ -1,0 +1,77 @@
+0	None
+1	RECKLESS/CARELESS/HIT-AND-RUN: Manslaughter or Homicide
+2	RECKLESS/CARELESS/HIT-AND-RUN: Willful Reckless Driving; Driving to Endanger; Negligent Driving
+3	RECKLESS/CARELESS/HIT-AND-RUN: Unsafe Reckless (Not Willful, Wanton Reckless) Driving
+4	RECKLESS/CARELESS/HIT-AND-RUN: Inattentive, Careless, Improper Driving
+5	RECKLESS/CARELESS/HIT-AND-RUN: Fleeing or Eluding Police
+6	RECKLESS/CARELESS/HIT-AND-RUN: Fail to Obey Police, Fireman, Authorized Person Directing Traffic
+7	RECKLESS/CARELESS/HIT-AND-RUN: Hit-and-Run, Fail to Stop After Crash
+8	RECKLESS/CARELESS/HIT-AND-RUN: Fail to Give Aid, Information, Wait for Police after Crash
+9	RECKLESS/CARELESS/HIT-AND-RUN: Serious Violation Resulting in Death
+10	RECKLESS/CARELESS/HIT-AND-RUN: Use of Telecommunications Device (Since 2015)
+11	IMPAIRMENT: Driving While Intoxicated (Alcohol or Drugs) or BAC above Limit (Any Detectable BAC for CDLs)
+12	IMPAIRMENT: Driving While Impaired
+13	IMPAIRMENT: Driving under Influence of Substance not intended to intoxicate
+14	IMPAIRMENT: Drinking While Operating
+15	IMPAIRMENT: Illegal Possession of Alcohol or Drugs
+16	IMPAIRMENT: Driving With Detectable Alcohol
+18	IMPAIRMENT: Refusal to Submit to Chemical Test
+19	IMPAIRMENT: Alcohol, Drug, or Impairment Violations Generally
+21	SPEED-RELATED: Racing
+22	SPEED-RELATED: Speeding (Above the Speed Limit)
+23	SPEED-RELATED: Speed Greater Than Reasonable and Prudent (Not Necessarily Over the Limit)
+24	SPEED-RELATED: Exceeding Special Speed Limit (e.g., for Trucks, Buses, Cycles, or on Bridge, in School Zone, etc.)
+25	SPEED-RELATED: Energy Speed (Exceeding 55 mph, Non-Pointable)
+26	SPEED-RELATED: Driving Too Slowly
+29	SPEED-RELATED: Speed-Related Violations Generally
+31	TRAFFIC SIGN & SIGNALS: Fail to Stop for Red Signal
+32	TRAFFIC SIGN & SIGNALS: Fail to Stop for Flashing Red
+33	TRAFFIC SIGN & SIGNALS: Violation of Turn on Red (Fail to Stop & Yield, Yield to Pedestrians before Turning)
+34	TRAFFIC SIGN & SIGNALS: Fail to Obey Flashing Signal (Yellow or Red)
+35	TRAFFIC SIGN & SIGNALS: Fail to Obey Signal Generally
+36	TRAFFIC SIGN & SIGNALS: Violate RR Grade Crossing Device/Regulations
+37	TRAFFIC SIGN & SIGNALS: Fail to Obey Stop Sign
+38	TRAFFIC SIGN & SIGNALS: Fail to Obey Yield Sign
+39	TRAFFIC SIGN & SIGNALS: Fail to Obey Traffic Control Device Generally
+41	TURNING, YIELDING, SIGNALING: Turn in Violation of Traffic Control (Disobey Signs, Turn Arrow or Pavement Markings; this is not a Right-on-Red violation)
+42	TURNING, YIELDING, SIGNALING: Improper Method & Position of Turn (Too Wide, Wrong Lane)
+43	TURNING, YIELDING, SIGNALING: Fail to Signal for Turn or Stop
+45	TURNING, YIELDING, SIGNALING: Fail to Yield to Emergency Vehicle
+46	TURNING, YIELDING, SIGNALING: Fail to Yield Generally
+48	TURNING, YIELDING, SIGNALING: Enter Intersection When Space Insufficient
+49	TURNING, YIELDING, SIGNALING: Turn, Yield, Signaling Violations Generally
+51	WRONG SIDE, PASSING & FOLLOWING: Driving Wrong Way on One-Way Road
+52	WRONG SIDE, PASSING & FOLLOWING: Driving on Left, Wrong Side of Road Generally
+53	WRONG SIDE, PASSING & FOLLOWING: Improper, Unsafe Passing
+54	WRONG SIDE, PASSING & FOLLOWING: Pass on Right (Drive off Pavement to Pass)
+55	WRONG SIDE, PASSING & FOLLOWING: Pass Stopped School Bus
+56	WRONG SIDE, PASSING & FOLLOWING: Fail to Give Way When Overtaken
+58	WRONG SIDE, PASSING & FOLLOWING: Following Too Closely
+59	WRONG SIDE, PASSING & FOLLOWING: Wrong Side, Passing, Following Violations Generally
+61	LANE USAGE: Unsafe or Prohibited Lane Change
+62	LANE USAGE: Improper Use of Lane (Enter of 3-Lane Road, HOV Designated Lane)
+63	LANE USAGE: Certain Traffic to Use Right Lane (Trucks, Slow Moving, etc.)
+66	LANE USAGE: Motorcycle Lane Violations (More than two per Lane, Riding Between Lanes, etc.)
+67	LANE USAGE: Motorcyclist Attached to another Vehicle
+69	LANE USAGE: Lane Violations Generally
+71	LICENSE & REGISTRATION: Driving While License Withdrawn (Since 2014)
+72	LICENSE & REGISTRATION: Other Driver License Violations
+73	LICENSE & REGISTRATION: Commercial Driver Violations
+74	LICENSE & REGISTRATION: Vehicle Registration Violations
+75	LICENSE & REGISTRATION: Fail to Carry Insurance Card
+76	LICENSE & REGISTRATION: Driving Uninsured Vehicle
+79	LICENSE & REGISTRATION: Non-Moving Violations Generally
+81	EQUIPMENT: Lamp Violations
+82	EQUIPMENT: Brake Violations
+83	EQUIPMENT: Failure to Require Restraint Use (By Self or Passenger)
+84	EQUIPMENT: Motorcycle Equipment Violations (Helmet, Special Equipment)
+85	EQUIPMENT: Violation of Hazardous Cargo Regulations
+86	EQUIPMENT: Size, Weight, Load Violations
+89	EQUIPMENT: Equipment Violations Generally
+91	LICENSE, REGISTRATION & OTHER: Parking
+92	LICENSE, REGISTRATION & OTHER: Theft, Unauthorized Use of Motor Vehicle
+93	LICENSE, REGISTRATION & OTHER: Driving Where Prohibited (Sidewalk, Limited Access, Off Truck Route)
+95	LICENSE, REGISTRATION & OTHER: No Driver Present/Unknown if Driver Present
+97	LICENSE, REGISTRATION & OTHER: Not Reported
+98	LICENSE, REGISTRATION & OTHER: Other Moving Violation
+99	LICENSE, REGISTRATION & OTHER: Unknown Violation(s)

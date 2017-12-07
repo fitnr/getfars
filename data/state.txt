@@ -1,0 +1,63 @@
+1	Alabama	01
+2	Alaska	02
+3	American Samoa	60
+4	Arizona	04
+5	Arkansas	05
+6	California	06
+8	Colorado	08
+9	Connecticut	09
+10	Delaware	10
+11	District of Columbia	11
+12	Florida	12
+13	Georgia	13
+14	Guam	66
+15	Hawaii	15
+16	Idaho	16
+17	Illinois	17
+18	Indiana	18
+19	Iowa	19
+20	Kansas	20
+21	Kentucky	21
+22	Louisiana	22
+23	Maine	23
+24	Maryland	24
+25	Massachusetts	25
+26	Michigan	26
+27	Minnesota	27
+28	Mississippi	28
+29	Missouri	29
+30	Montana	30
+31	Nebraska	31
+32	Nevada	32
+33	New Hampshire	33
+34	New Jersey	34
+35	New Mexico	35
+36	New York	36
+37	North Carolina	37
+38	North Dakota	38
+39	Ohio	39
+40	Oklahoma	40
+41	Oregon	41
+42	Pennsylvania	42
+43	Puerto Rico	72
+44	Rhode Island	44
+45	South Carolina	45
+46	South Dakota	46
+47	Tennessee	47
+48	Texas	48
+49	Utah	49
+50	Vermont	50
+52	Virgin Islands	78
+51	Virginia	51
+53	Washington	53
+54	West Virginia	54
+55	Wisconsin	55
+56	Wyoming	56
+0	No Driver Present	\N
+93	Indian Nation	\N
+94	U.S. Government	\N
+95	Canada	\N
+96	Mexico	\N
+97	Other Foreign Country	\N
+98	Not reported	\N
+99	Unknown	\N

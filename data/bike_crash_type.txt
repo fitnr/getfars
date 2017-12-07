@@ -1,0 +1,79 @@
+0	Not a Cyclist
+111	Motorist Turning Error – Left Turn
+112	Motorist Turning Error – Right Turn
+113	Motorist Turning Error – Other
+114	Bicyclist Turning Error – Left Turn
+115	Bicyclist Turning Error – Right Turn
+116	Bicyclist Turning Error – Other
+121	Bicyclist Lost Control – Mechanical Problems
+122	Bicyclist Lost Control – Oversteering, Improper Braking, Speed
+123	Bicyclist Lost Control – Alcohol/Drug Impairment
+124	Bicyclist Lost Control – Surface Conditions
+129	Bicyclist Lost Control – Other/Unknown
+131	Motorist Lost Control – Mechanical Problems
+132	Motorist Lost Control – Oversteering, Improper Braking, Speed
+133	Motorist Lost Control – Alcohol/Drug Impairment
+134	Motorist Lost Control – Surface Conditions
+139	Motorist Lost Control – Other/Unknown
+141	Motorist Drive-Out – Sign-Controlled Intersection
+142	Bicyclist Ride-Out – Sign-Controlled Intersection
+143	Motorist Drive-Through – Sign-Controlled Intersection
+144	Bicyclist Ride-Through – Sign-Controlled Intersection
+147	Multiple Threat – Sign-Controlled Intersection
+148	Sign-Controlled Intersection – Other/Unknown
+151	Motorist Drive-Out – Right Turn on Red
+152	Motorist Drive-Out – Signalized Intersection
+153	Bicyclist – Ride-Out – Signalized Intersection
+154	Motorist Drive-Through – Signalized Intersection
+155	Bicyclist Ride-Through – Signalized Intersection
+156	Bicyclist Failed to Clear – Trapped
+157	Bicyclist Failed to Clear – Multiple Threat
+158	Signalized Intersection – Other/Unknown
+159	Bicyclist Failed to Clear – Unknown
+160	Crossing Paths – Uncontrolled Intersection
+180	Crossing Paths – Intersection – Other/Unknown
+211	Motorist Left Turn – Same Direction
+212	Motorist Left Turn – Opposite Direction
+213	Motorist Right Turn – Same Direction
+214	Motorist Right Turn – Opposite Direction
+215	Motorist Drive-In/Out – Parking
+216	Bus/Delivery Vehicle Pullover
+217	Motorist Right Turn on Red – Same Direction
+218	Motorist Right Turn on Red – Opposite Direction
+219	Motorist Turn/Merge – Other/Unknown
+221	Bicyclist Left Turn – Same Direction
+222	Bicyclist Left Turn – Opposite Direction
+223	Bicyclist Right Turn – Same Direction
+224	Bicyclist Right Turn – Opposite Direction
+225	Bicyclist Ride-out – Parallel Path
+231	Motorist Overtaking – Undetected Bicyclist
+232	Motorist Overtaking – Misjudged Space
+235	Motorist Overtaking – Bicyclist Swerved
+239	Motorist Overtaking – Other/Unknown
+241	Bicyclist Overtaking – Passing on Right
+242	Bicyclist Overtaking – Passing on Left
+243	Bicyclist Overtaking – Parked Vehicle
+244	Bicyclist Overtaking – Extended Door
+249	Bicyclist Overtaking – Other/Unknown
+250	Wrong-Way/Wrong-Side – Bicyclist
+255	Wrong-Way/Wrong-Side – Motorist
+259	Wrong-Way/Wrong-Side – Unknown
+280	Parallel Paths – Other/Unknown
+311	Bicyclist Ride-Out – Residential Driveway
+312	Bicyclist Ride-Out – Commercial Driveway
+313	Bicyclist Ride-Out – Driveway, Unknown Type
+318	Bicyclist Ride-Out – Other Midblock
+319	Bicyclist Ride-Out – Unknown
+321	Motorist Drive-Out – Residential Driveway
+322	Motorist Drive-Out – Commercial Driveway
+323	Motorist Drive-Out – Driveway, Unknown Type
+328	Motorist Drive-Out – Other Midblock
+329	Motorist Drive-Out – Midblock – Unknown
+357	Multiple Threat – Midblock
+380	Crossing Paths – Midblock – Other/Unknown
+610	Backing Vehicle
+700	Play Vehicle-Related
+800	Unusual Circumstances
+910	Non-Trafficway
+970	Unknown Approach Paths
+980	Unknown Location

@@ -1,0 +1,9 @@
+1	Daylight
+2	Dark – Not Lighted
+3	Dark – Lighted
+4	Dawn
+5	Dusk
+6	Dark – Unknown Lighting
+7	Other
+8	Not Reported
+9	Unknown

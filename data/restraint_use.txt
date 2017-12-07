@@ -1,0 +1,18 @@
+0	Not Applicable
+1	Shoulder Belt Only Used
+2	Lap Belt Only Used
+3	Lap and Shoulder Belt Used
+4	Child Restraint Type Unknown
+5	DOT-Compliant Motorcycle Helmet
+7	None Used
+8	Restraint Used – Type Unknown
+10	Child Restraint System – Forward Facing
+11	Child Restraint System – Rear Facing
+12	Booster Seat
+16	Helmet, Other than DOT-Compliant Motorcycle Helmet
+17	No Helmet
+19	Helmet, Unknown if DOT-Compliant
+29	Unknown if Helmet Worn
+97	Not a Motor Vehicle Occupant Other
+98	Not Reported
+99	Unknown

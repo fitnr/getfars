@@ -1,0 +1,29 @@
+1	State Highway Agency
+2	County Highway Agency
+3	Town or Township Highway Agency
+4	City or Municipal Highway Agency
+11	State Park, Forest or Reservation Agency
+12	Local Park, Forest or Reservation Agency
+21	Other State Agency
+25	Other Local Agency
+26	Private (other than Railroad)
+27	Railroad
+31	State Toll Road
+32	Local Toll Authority
+40	Other Public Instrumentality (i.e., Airport)
+50	Indian Tribe Nation
+60	Other Federal Agency
+62	Bureau of Indian Affairs
+63	Bureau of Fish and Wildlife
+64	U.S. Forest Service
+66	National Park Service
+67	Tennessee Valley Authority
+68	Bureau of Land Management
+69	Bureau of Reclamation
+70	Corps of Engineers
+72	Air Force
+74	Navy/Marines
+80	Army
+96	Trafficway Not in State Inventory
+98	Not Reported
+99	Unknown

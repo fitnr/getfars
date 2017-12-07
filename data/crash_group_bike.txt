@@ -1,0 +1,22 @@
+0	Not a Cyclist
+110	Loss of Control/Turning Error
+140	Motorist Failed to Yield – Sign-Controlled Intersection
+145	Bicyclist Failed to Yield – Sign-Controlled Intersection
+150	Motorist Failed to Yield – Signalized Intersection
+158	Bicyclist Failed to Yield – Signalized Intersection
+190	Crossing Paths – Other Circumstances
+210	Motorist Left Turn/Merge
+215	Motorist Right Turn/Merge
+219	Parking/Bus-Related
+220	Bicyclist Left Turn/Merge
+225	Bicyclist Right Turn/Merge
+230	Motorist Overtaking Bicyclist
+240	Bicyclist Overtaking Motorist
+258	Wrong-Way/Wrong-Side
+290	Parallel Paths – Other Circumstances
+310	Bicyclist Failed to Yield – Midblock
+320	Motorist Failed to Yield – Midblock
+600	Backing Vehicle
+850	Other/Unusual Circumstances
+910	Non-Trafficway
+990	Other/Unknown – Insufficient Details

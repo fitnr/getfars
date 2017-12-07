@@ -1,0 +1,56 @@
+0	Not a Pedestrian
+120	Dispute-Related
+130	Pedestrian on Vehicle
+140	Vehicle-Vehicle/Object
+150	Motor Vehicle Loss of Control
+160	Pedestrian Loss of Control
+190	Other Unusual Circumstances
+211	Backing Vehicle – Non-Trafficway – Driveway
+212	Backing Vehicle – Driveway Access
+213	Backing Vehicle – Trafficway
+214	Backing Vehicle – Non-Trafficway – Parking Lot
+219	Backing Vehicle – Other/Unknown
+220	Driverless Vehicle
+230	Disabled Vehicle-Related
+240	Emergency Vehicle-Related
+250	Play Vehicle-Related
+311	Working in Roadway
+312	Playing in Roadway
+313	Lying in Roadway
+320	Entering/Exiting Parked or Stopped Vehicle
+330	Mailbox-Related
+341	Transit Bus-Related
+342	School Bus Stop-Related
+360	Ice Cream/Vendor Truck-Related
+410	Walking/Running Along Roadway With Traffic – From Behind
+420	Walking/Running Along Roadway With Traffic – From Front
+430	Walking/Running Along Roadway Against Traffic – From Behind
+440	Walking/Running Along Roadway Against Traffic – From Front
+459	Walking/Running Along Roadway – Direction/Position Unknown
+461	Motorist Entering Driveway
+465	Motorist Exiting Driveway
+469	Driveway Access – Other/Unknown
+510	Waiting to Cross – Vehicle Turning
+520	Waiting to Cross – Vehicle Not Turning
+590	Waiting to Cross – Vehicle Action Unknown
+610	Standing in Roadway
+620	Walking in Roadway
+680	Not At Intersection – Other/Unknown
+690	At Intersection – Other/Unknown
+710	Multiple Threat
+730	Trapped
+741	Dash
+742	Dart-Out
+760	Pedestrian Failed to Yield
+770	Motorist Failed to Yield
+781	Motorist Left Turn – Parallel Paths
+782	Motorist Left Turn – Perpendicular Paths
+791	Motorist Right Turn – Parallel Paths
+792	Motorist Right Turn on Red – Parallel Paths
+794	Motorist Right Turn on Red – Perpendicular Paths
+795	Motorist Right Turn – Perpendicular Paths
+799	Motorist Turn/Merge – Other/Unknown
+830	Non-Trafficway – Parking Lot
+890	Non-Trafficway – Other/Unknown
+900	Other – Unknown Location
+910	Crossing an Expressway

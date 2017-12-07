@@ -1,0 +1,9 @@
+1	Interstate
+2	U.S. Highway
+3	State Highway
+4	County Road
+5	Local Street – Township
+6	Local Street – Municipality
+7	Local Street – Frontage Road
+8	Other
+9	Unknown

@@ -1,0 +1,27 @@
+0	Non-Collision
+1	One O'Clock
+2	Two O'Clock
+3	Three O'Clock
+4	Four O'Clock
+5	Five O'Clock
+6	Six O'Clock
+7	Seven O'Clock
+8	Eight O'Clock
+9	Nine O'Clock
+10	Ten O'Clock
+11	Eleven O'Clock
+12	Twelve O'Clock
+13	Top
+14	Undercarriage
+18	Cargo/Vehicle Parts Set-In-Motion
+19	Other Objects Set-In-Motion
+55	Non-Harmful Event
+61	Left
+62	Left-Front Size
+63	Left-Back Side
+77	Not a Motor Vehicle
+81	Right
+82	Right-Front Side
+83	Right-Back Side
+98	Not Reported
+99	Unknown

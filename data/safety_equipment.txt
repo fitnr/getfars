@@ -1,0 +1,8 @@
+1	None Used
+2	Helmet
+3	Reflective Clothing (Jacket, Backpack, etc.)
+4	Protective Pads (Elbows, Knees, Shins, etc.)
+5	Lighting
+7	Other Safety Equipment
+8	Not Reported
+9	Unknown if Used

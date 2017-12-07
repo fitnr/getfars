@@ -1,0 +1,9 @@
+0	Non-Trafficway or Driveway Access
+1	Two-Way, Not Divided
+2	Two-Way, Divided, Unprotected (Painted > 4 Feet)
+3	Median Two-Way, Divided, Positive Median Barrier
+4	One-Way Trafficway
+5	Two-Way, Not Divided With a Continuous Left-Turn Lane
+6	Entrance/Exit Ramp
+8	Not Reported
+9	Unknown

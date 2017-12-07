@@ -1,0 +1,8 @@
+0	No Apparent Injury (O)
+1	Possible Injury (C)
+2	Suspected Minor Injury (B)
+3	Suspected Serious Injury (A)
+4	Fatal Injury (K)
+5	Injured, Severity Unknown (U)
+6	Died Prior to Crash
+9	Unknown/Not Reported

@@ -1,0 +1,69 @@
+1	Convertible (Excludes Sunroof, T-Bar)
+2	2-Door Sedan/Hardtop/Coupe
+3	3-Door/2-Door Hatchback
+4	4-Door Sedan/Hardtop
+5	5-Door/4-Door Hatchback
+6	Station Wagon (Excluding Van and Truck-Based)
+7	Hatchback, Number of Doors Unknown
+8	Sedan/Hardtop, Number of Doors Unknown
+9	Other or Unknown Automobile Type (Since 1994)
+10	Auto-Based Pickup
+11	Auto-Based Panel (Cargo Station Wagon, Auto-Based Ambulance or Hearse)
+12	Large Limousine – More Than Four Side Doors or Stretch Chassis
+13	Three-Wheel Automobile or Automobile Derivative
+14	Compact Utility (ANSI D-16 Utility Vehicle Categories "Small" and "Midsize")
+15	Large Utility (ANSI D-16 Utility Vehicle Categories "Full Size" and "Large")
+16	Utility Station Wagon
+17	3-Door Coupe
+19	Utility Unknown Body
+20	Minivan
+21	Large Van – Includes Van-Based Buses
+22	Step Van or Walk-In Van
+28	Other Van Type (Hi-Cube Van)
+29	Unknown Van Type
+30	Compact Pickup (Gross Vehicle Weight, GVWR, < 4,500 lbs)
+31	Standard Pickup (4,500 lbs GVWR < 10,000 lbs)
+32	Pickup with Slide-In Camper
+33	Convertible Pickup
+39	Unknown (Pickup Style) Light Conventional Truck Type
+40	Cab Chassis-Based (Includes Light Stake, Light Dump, Light Tow, Rescue Vehicles)
+41	Truck-Based Panel
+42	Light-Truck-Based Motorhome (Chassis Mounted)
+45	Other Light Conventional Truck Type (Includes Stretched Suburban Limousine)
+48	Unknown Light Truck Type
+49	Unknown Light-Vehicle Type (Automobile, Utility Vehicle, Van or Light Truck)
+50	School Bus
+51	Cross-Country/Intercity Bus (i.e., Greyhound)
+52	Transit Bus (City Bus)
+55	Van-Based Bus GVWR > 10,000 lbs. (Since 2011)
+58	Other Bus Type
+59	Unknown Bus Type
+60	Step Van
+61	Single-Unit Straight Truck or Cab-Chassis (10,000 lbs < GVWR <= 19,500 lbs)
+62	Single-Unit Straight Truck or Cab-Chassis (19,500 lbs < GVWR <= 26,000 lbs)
+63	Single-Unit Straight Truck or Cab-Chassis (GVWR > 26,000 lbs)
+64	Single-Unit Straight Truck or Cab-Chassis (GVWR Unknown)
+65	Medium/Heavy Truck-Based Motorhome
+66	Truck/Tractor (Cab Only, or with Any Number of Trailing Units: Any Weight)
+67	Medium/Heavy Pickup (GVWR > 10,000 lbs)
+68	Single-Unit Straight Truck (GVWR Unknown)
+71	Unknown if Single-Unit or Combination-Unit Medium Truck (10,000 lbs < GVWR < 26,000 lbs)
+72	Unknown if Single-Unit or Combination-Unit Heavy Truck (GVWR > 26,000 lbs.)
+73	Camper or Motorhome, Unknown Truck Type
+78	Unknown Medium/Heavy Truck Type
+79	Unknown Truck Type
+80	Motorcycle
+81	Moped (Motorized Bicycle)
+82	Three-Wheel Motorcycle/Moped- Not All-Terrain Vehicle
+83	Off-Road Motorcycle (2-Wheel) (Since 1993)
+88	Other Motored Cycle Type (Mini-Bikes, Motor Scooters, Pocket Motorcycles, Pocket Bikes) (Since 2008)
+89	Unknown Motored Cycle Type
+90	ATV (All-Terrain Vehicle; Includes 3 or 4 Wheels)
+91	Snowmobile
+92	Farm Equipment Other Than Trucks
+93	Construction Equipment Other Than Trucks (Includes Graders)
+94	Low Speed Vehicle (LSV)/Neighborhood Electric Vehicle (NEV)
+95	Golf Cart (Since 2012)
+97	Other Vehicle Type (Includes Go-Cart, Fork-Lift, City Street Sweeper, Dune/Swamp Buggy)
+98	Not Reported
+99	Unknown Body Type

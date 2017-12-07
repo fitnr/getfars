@@ -1,0 +1,11 @@
+0	Not Applicable
+1	Explosives
+2	Gases
+3	Flammable / Combustible Liquid
+4	Flammable Solid, Spontaneously Combustible, and Dangerous When Wet
+5	Oxidizer and Organic Peroxide
+6	Poison and Poison Inhalation Hazard
+7	Radioactive
+8	Corrosive
+9	Miscellaneous
+88	Not Reported
