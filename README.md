@@ -1,7 +1,26 @@
+# getfars
+
+Download [FARS (Fatality Analysis Reporting System )](https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars) data and load it into a PostgreSQL database.
+
+This repo also contains many look-up tables derived from the [FARS User’s Manual](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812448).
+
+Requires: make, postgresql.
+
+## Usage
+
+First, clone or download the repo.
+
+To set up the database, download 2016 data and load into the database:
+
+````
+make init load PG_DATABASE=my_database_name
+````
+
+The database tables will be created in a schema named `fars`.
+
 ## Example queries
 
 Retrieve information about a crash:
-
 ````sql
 select
     st_case,
@@ -36,7 +55,6 @@ where st_case = 10845;
 ````
 
 Retrieve information about persons involved in a particular crash:
-
 ````sql
 select a.st_case,
     make_date(a.year, a.month, a.day),
