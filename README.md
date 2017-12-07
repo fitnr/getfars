@@ -20,6 +20,8 @@ The database tables will be created in a schema named `fars`.
 
 ## Example queries
 
+These queries are meant to demonstrate the relationships between the different tables in FARS.
+
 Retrieve information about a crash:
 ````sql
 select
@@ -124,4 +126,42 @@ from accident as a
     left join trafficway trafficway using (vtrafway)
     left join accident_type using (acc_type)
 where a.st_case = 10845;
+````
+
+Query information about the sequence of events in a crash:
+````sql
+select
+    eventnum,
+    vnumber1,
+    m1.name vehicle1make,
+    aoi1.name area_of_impact1,
+    soe.name as event,
+    vnumber2,
+    m2.name vehicle2make,
+    aoi1.name area_of_impact2
+from cevent c
+    left join area_of_impact aoi1 on (aoi1=aoi)
+    left join sequence_events soe using (soe)
+    left join area_of_impact aoi2 on (c.aoi2 = aoi2.aoi)
+    left join vehicle v1 on (c.st_case = v1.st_case and c.vnumber1 = v1.veh_no)
+    left join vehicle_make m1 on (v1.make = m1.make)
+    left join vehicle v2 on (c.st_case = v2.st_case and c.vnumber2 = v2.veh_no)
+    left join vehicle_make m2 on (v2.make = m2.make)
+where c.st_case = 40399;
+````
+
+Retrieve the number of pedestrian and bicyclist fatalities for different crash situations:
+````sql
+SELECT
+    person_type.name person_type,
+    COALESCE(NULLIF(bcg.name, 'Not a Cyclist'), pcg.name) crash_group,
+    COUNT(*)
+FROM person
+    INNER JOIN pbtype USING (st_case, veh_no)
+    LEFT JOIN person_type USING (per_typ)
+    LEFT JOIN crash_group_pedestrian pcg USING (pedcgp)
+    LEFT JOIN crash_group_bike bcg USING (bikecgp)
+WHERE inj_sev = 4 -- fatal injury
+GROUP BY person_type.name, COALESCE(NULLIF(bcg.name, 'Not a Cyclist'), pcg.name)
+ORDER BY 3 DESC;
 ````
