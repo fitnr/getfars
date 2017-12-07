@@ -31,11 +31,11 @@ load: $(addprefix load-,$(tables))
 
 load-%: $(YEAR)/fars.zip
 	unzip -Cp $< $*.csv | \
-		$(PSQL) -c "\copy fars_$* FROM STDIN WITH (FORMAT CSV, HEADER TRUE)"
+		$(PSQL) -c "\copy fars.$* FROM STDIN WITH (FORMAT CSV, HEADER TRUE)"
 
 init:; $(PSQL) -f sql/fars_schema.sql
 
-clean:; $(PSQL) -c "$(foreach x,$(tables),DROP TABLE fars_$x CASCADE;)"
+clean:; $(PSQL) -c "DROP SCHEMA fars CASCADE"
 
 $(YEAR)/fars.zip:
 	curl ftp://ftp.nhtsa.dot.gov/fars/$(YEAR)/National/FARS$(YEAR)NationalCSV.zip -o $@

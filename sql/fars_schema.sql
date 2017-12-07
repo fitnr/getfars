@@ -1,9 +1,11 @@
-create table fars_state (
+CREATE SCHEMA IF NOT EXISTS fars;
+
+create table fars.state (
     state int primary key,
     name text,
     fips char(2)
 );
-insert into fars_state values
+insert into fars.state values
     (1, 'Alabama', '01'),
     (2, 'Alaska', '02'),
     (3, 'American Samoa', '60'),
@@ -68,11 +70,11 @@ insert into fars_state values
     (98, 'Not reported', null),
     (99, 'Unknown', null);
 
-create table fars_route (
+create table fars.route (
     route int primary key,
     name text
 );
-insert into fars_route values
+insert into fars.route values
     (1, 'Interstate'),
     (2, 'U.S. Highway'),
     (3, 'State Highway'),
@@ -83,11 +85,11 @@ insert into fars_route values
     (8, 'Other'),
     (9, 'Unknown');
 
-create table fars_functional_system (
+create table fars.functional_system (
     func_sys int primary key,
     name text
 );
-insert into fars_functional_system values
+insert into fars.functional_system values
     (1, 'Interstate'),
     (2, 'Principal Arterial – Other Freeways and Expressways'),
     (3, 'Principal Arterial – Other'),
@@ -99,11 +101,11 @@ insert into fars_functional_system values
     (98, 'Not Reported'),
     (99, 'Unknown');
 
-create table fars_road_owner (
+create table fars.road_owner (
     rd_owner int primary key,
     name text
 );
-insert into fars_road_owner values
+insert into fars.road_owner values
     (1 , 'State Highway Agency'),
     (2 , 'County Highway Agency'),
     (3 , 'Town or Township Highway Agency'),
@@ -134,11 +136,11 @@ insert into fars_road_owner values
     (98, 'Not Reported'),
     (99, 'Unknown');
 
-create table fars_special_jurisdiction (
+create table fars.special_jurisdiction (
     sp_jur int primary key,
     name text
 );
-insert into fars_special_jurisdiction values
+insert into fars.special_jurisdiction values
     (0, 'No Special Jurisdiction (Includes National Forests)'),
     (1, 'National Park Service'),
     (2, 'Military'),
@@ -148,11 +150,11 @@ insert into fars_special_jurisdiction values
     (8, 'Other'),
     (9, 'Unknown');
 
-create table fars_harmful_event (
+create table fars.harmful_event (
     harm_ev int primary key,
     name text
 );
-insert into fars_harmful_event values
+insert into fars.harmful_event values
     (1, 'Rollover/Overturn'),
     (2, 'Fire/Explosion'),
     (3, 'Immersion (or Partial Immersion)'),
@@ -193,7 +195,7 @@ insert into fars_harmful_event values
     (45, 'Working Motor Vehicle'),
     (46, 'Traffic Signal Support'),
     (48, 'Snow Bank'),
-    (49, 'Ridden Animal or Animal-Drawn Conveyance (Since 1998)'),
+    (49, 'Ridden Animal or Animal-Drawn Conveyance'),
     (50, 'Bridge Overhead Structure'),
     (51, 'Jackknife (Harmful to This Vehicle)'),
     (52, 'Guardrail End'),
@@ -222,11 +224,11 @@ insert into fars_harmful_event values
     (98, 'Not reported'),
     (99, 'Unknown');
 
-create table fars_manner_of_collision (
+create table fars.manner_of_collision (
     man_coll int primary key,
     name text
 );
-insert into fars_manner_of_collision values
+insert into fars.manner_of_collision values
     (0, 'Not Collision with Motor Vehicle in Transport'),
     (1, 'Front-to-Rear'),
     (2, 'Front-to-Front'),
@@ -239,11 +241,11 @@ insert into fars_manner_of_collision values
     (98, 'Not Reported'),
     (99, 'Unknown');
 
-create table fars_light_condition (
+create table fars.light_condition (
     lgt_cond int primary key,
     name text
 );
-insert into fars_light_condition values
+insert into fars.light_condition values
     (1, 'Daylight'),
     (2, 'Dark – Not Lighted'),
     (3, 'Dark – Lighted'),
@@ -254,11 +256,11 @@ insert into fars_light_condition values
     (8, 'Not Reported'),
     (9, 'Unknown');
 
-create table fars_atmospheric_condition (
+create table fars.atmospheric_condition (
     weather int primary key,
     name text
 );
-insert into fars_atmospheric_condition values
+insert into fars.atmospheric_condition values
     (1, 'Clear'),
     (0, 'No Additional Atmospheric Conditions'),
     (2, 'Rain'),
@@ -274,11 +276,11 @@ insert into fars_atmospheric_condition values
     (98, 'Not Reported'),
     (99, 'Unknown');
 
-create table fars_related_factors_crash (
+create table fars.related_factors_crash (
     cf int primary key,
     name text
 );
-insert into fars_related_factors_crash values
+insert into fars.related_factors_crash values
     (0, 'None'),
     (1, 'Inadequate Warning of Exits, Lanes Narrowing, Traffic Controls etc.'),
     (2, 'Shoulder Related Design or Condition'),
@@ -305,11 +307,11 @@ insert into fars_related_factors_crash values
     (28, 'Backup Due to Regular Congestion'),
     (99, 'Unknown');
 
-create table fars_vehicle_owner (
+create table fars.vehicle_owner (
     owner int primary key,
     name text
 );
-insert into fars_vehicle_owner values
+insert into fars.vehicle_owner values
     (0, 'Not Applicable, Vehicle Not Registered'),
     (1, 'Driver (of This Vehicle) Was Registered Owner'),
     (2, 'Driver (of This Vehicle) Not Registered Owner (Other Private Owner)'),
@@ -319,11 +321,11 @@ insert into fars_vehicle_owner values
     (6, 'Driverless/Motor Vehicle Parked/Stopped Off Roadway'),
     (9, 'Unknown');
 
-create table fars_vehicle_make (
+create table fars.vehicle_make (
     make int primary key,
     name text
 );
-insert into fars_vehicle_make values
+insert into fars.vehicle_make values
     (1, 'American Motors'),
     (2, 'Jeep/Kaiser-Jeep/Willys Jeep'),
     (3, 'AM General'),
@@ -412,11 +414,11 @@ insert into fars_vehicle_make values
     (98, 'Other Make'),
     (99, 'Unknown Make');
 
-create table fars_body_type (
+create table fars.body_type (
     body_typ int primary key,
     name text
 );
-insert into fars_body_type values
+insert into fars.body_type values
     (1, 'Convertible (Excludes Sunroof, T-Bar)'),
     (2, '2-Door Sedan/Hardtop/Coupe'),
     (3, '3-Door/2-Door Hatchback'),
@@ -425,7 +427,7 @@ insert into fars_body_type values
     (6, 'Station Wagon (Excluding Van and Truck-Based)'),
     (7, 'Hatchback, Number of Doors Unknown'),
     (8, 'Sedan/Hardtop, Number of Doors Unknown'),
-    (9, 'Other or Unknown Automobile Type (Since 1994)'),
+    (9, 'Other or Unknown Automobile Type'),
     (10, 'Auto-Based Pickup'),
     (11, 'Auto-Based Panel (Cargo Station Wagon, Auto-Based Ambulance or Hearse)'),
     (12, 'Large Limousine – More Than Four Side Doors or Stretch Chassis'),
@@ -454,7 +456,7 @@ insert into fars_body_type values
     (50, 'School Bus'),
     (51, 'Cross-Country/Intercity Bus (i.e., Greyhound)'),
     (52, 'Transit Bus (City Bus)'),
-    (55, 'Van-Based Bus GVWR > 10,000 lbs. (Since 2011)'),
+    (55, 'Van-Based Bus GVWR > 10,000 lbs.'),
     (58, 'Other Bus Type'),
     (59, 'Unknown Bus Type'),
     (60, 'Step Van'),
@@ -474,26 +476,26 @@ insert into fars_body_type values
     (80, 'Motorcycle'),
     (81, 'Moped (Motorized Bicycle)'),
     (82, 'Three-Wheel Motorcycle/Moped- Not All-Terrain Vehicle'),
-    (83, 'Off-Road Motorcycle (2-Wheel) (Since 1993)'),
-    (88, 'Other Motored Cycle Type (Mini-Bikes, Motor Scooters, Pocket Motorcycles, Pocket Bikes) (Since 2008)'),
+    (83, 'Off-Road Motorcycle (2-Wheel)'),
+    (88, 'Other Motored Cycle Type (Mini-Bikes, Motor Scooters, Pocket Motorcycles, Pocket Bikes)'),
     (89, 'Unknown Motored Cycle Type'),
     (90, 'ATV (All-Terrain Vehicle; Includes 3 or 4 Wheels)'),
     (91, 'Snowmobile'),
     (92, 'Farm Equipment Other Than Trucks'),
     (93, 'Construction Equipment Other Than Trucks (Includes Graders)'),
     (94, 'Low Speed Vehicle (LSV)/Neighborhood Electric Vehicle (NEV)'),
-    (95, 'Golf Cart (Since 2012)'),
+    (95, 'Golf Cart'),
     (97, 'Other Vehicle Type (Includes Go-Cart, Fork-Lift, City Street Sweeper, Dune/Swamp Buggy)'),
     (98, 'Not Reported'),
     (99, 'Unknown Body Type');
 
 -- todo: vehicle configuration, cargo body type, bus use, special use, emergency use
 
-create table fars_trailing_vehicle (
+create table fars.trailing_vehicle (
     tow_veh int primary key,
     name text
 );
-insert into fars_trailing_vehicle values
+insert into fars.trailing_vehicle values
     (0, 'No Trailing Unit'),
     (1, 'Yes, One Trailing Unit'),
     (2, 'Yes, Two Trailing Units'),
@@ -503,11 +505,11 @@ insert into fars_trailing_vehicle values
     (6, 'Vehicle Towing another Motor Vehicle – Non-Fixed'),
     (9, 'Linkage Unknown');
 
-create table fars_hazardous_material_class (
+create table fars.hazardous_material_class (
     haz_cno int primary key,
     name text
 );
-insert into fars_hazardous_material_class values
+insert into fars.hazardous_material_class values
     (0, 'Not Applicable'),
     (1, 'Explosives'),
     (2, 'Gases'),
@@ -520,11 +522,11 @@ insert into fars_hazardous_material_class values
     (9, 'Miscellaneous'),
     (88, 'Not Reported');
 
-create table fars_safety_equipment (
+create table fars.safety_equipment (
     msafeqmt int primary key,
     name text
 );
-insert into fars_safety_equipment values
+insert into fars.safety_equipment values
     (1, 'None Used'),
     (2, 'Helmet'),
     (3, 'Reflective Clothing (Jacket, Backpack, etc.)'),
@@ -534,11 +536,11 @@ insert into fars_safety_equipment values
     (8, 'Not Reported'),
     (9, 'Unknown if Used');
 
-create table fars_ped_crash_type (
+create table fars.ped_crash_type (
     pedctype int primary key,
     name text
 );
-insert into fars_ped_crash_type values
+insert into fars.ped_crash_type values
     (0, 'Not a Pedestrian'),
     (120, 'Dispute-Related'),
     (130, 'Pedestrian on Vehicle'),
@@ -596,11 +598,11 @@ insert into fars_ped_crash_type values
     (900, 'Other – Unknown Location'),
     (910, 'Crossing an Expressway');
 
-create table fars_bike_crash_type (
+create table fars.bike_crash_type (
     bikectype int primary key,
     name text
 );
-insert into fars_bike_crash_type values
+insert into fars.bike_crash_type values
     (0, 'Not a Cyclist'),
     (111, 'Motorist Turning Error – Left Turn'),
     (112, 'Motorist Turning Error – Right Turn'),
@@ -681,14 +683,14 @@ insert into fars_bike_crash_type values
     (970, 'Unknown Approach Paths'),
     (980, 'Unknown Location');
 
-create table fars_related_factors_driver (
+create table fars.related_factors_driver (
     dr_sf integer primary key,
     name text
 );
-insert into fars_related_factors_driver values
+insert into fars.related_factors_driver values
     (0, 'None'),
     (4, 'Reaction to or Failure to Take Drugs/Medication'),
-    (6, 'Careless Driving '),
+    (6, 'Careless Driving'),
     (8, 'Road Rage/Aggressive Driving'),
     (12, 'Mother of Dead Fetus/Mother of Infant Born Post Crash'),
     (13, 'Mentally Challenged'),
@@ -707,6 +709,7 @@ insert into fars_related_factors_driver values
     (29, 'Intentional Illegal Driving on Road Shoulder, in Ditch, or Sidewalk, or on Median'),
     (30, 'Making Improper Entry to or Exit from Trafficway'),
     (31, 'Starting or Backing Improperly'),
+    (32, 'Opening Vehicle Closure into Moving Traffic or Vehicle is in Motion'),
     (33, 'Passing Where Prohibited by Posted Signs, Pavement Markings, or School Bus Displaying Warning Not to Pass'),
     (34, 'Passing on Right Side'),
     (35, 'Passing with Insufficient Distance or Inadequate Visibility or Failing to Yield to Overtaking Vehicle'),
@@ -717,7 +720,8 @@ insert into fars_related_factors_driver values
     (40, 'Passing Through or Around Barrier'),
     (41, 'Failure to Observe Warnings or Instructions on Vehicle Displaying Them'),
     (42, 'Failure to Signal Intentions'),
-    (46, 'Driving Less Than Posted Maximum'),
+    (45, 'Driving Less Than Posted Maximum'),
+    (46, 'Operating at Erratic or Suddenly Changing Speeds'),
     (47, 'Making Right Turn from Left-Turn Lane or Making Left Turn from Right-Turn Lane'),
     (48, 'Making Improper Turn'),
     (50, 'Driving Wrong Way on One-Way Trafficway'),
@@ -746,11 +750,11 @@ insert into fars_related_factors_driver values
     (92, 'Other Non-Moving Traffic Violation'),
     (99, 'Unknown');
 
-create table fars_trafficway (
+create table fars.trafficway (
     vtrafway int primary key,
     name text
 );
-insert into fars_trafficway values
+insert into fars.trafficway values
     (0, 'Non-Trafficway or Driveway Access'),
     (1, 'Two-Way, Not Divided'),
     (2, 'Two-Way, Divided, Unprotected (Painted > 4 Feet)'),
@@ -761,11 +765,11 @@ insert into fars_trafficway values
     (8, 'Not Reported'),
     (9, 'Unknown');
 
-create table fars_related_factors_person (
+create table fars.related_factors_person (
     p_sf int primary key,
     name text
 );
-insert into fars_related_factors_person values
+insert into fars.related_factors_person values
     (0, 'None/Not Applicable-Driver'),
     (5, 'Interfering With Driver'),
     (8, 'Mentally Challenged'),
@@ -797,7 +801,8 @@ insert into fars_related_factors_person values
     (64, 'Vision Obscured By Trees, Crops, Vegetation'),
     (65, 'Vision Obscured By Motor Vehicle (Including Load)'),
     (66, 'Vision Obscured By Parked Vehicle'),
-    (67, 'Vision Obscured By Splash or Spray or Passing Vehicle 68 Inadequate Lighting System'),
+    (67, 'Vision Obscured By Splash or Spray or Passing Vehicle'),
+    (68, 'Inadequate Lighting System'),
     (69, 'Vision Obscured By Obstructing Angles on Vehicle'),
     (70, 'Vision Obscured By Mirrors'),
     (72, 'Vision Obscured By Other Visual Obstruction'),
@@ -820,11 +825,11 @@ insert into fars_related_factors_person values
     (92, 'Person in Ambulance Treatment Compartment / Non-Motorist Wearing Motorcycle Helmet'),
     (99, 'Unknown');
 
-create table fars_person_type (
+create table fars.person_type (
     per_typ int PRIMARY KEY,
     name TEXT
 );
-insert into fars_person_type values
+insert into fars.person_type values
     (1, 'Driver of a Motor Vehicle In-Transport'),
     (2, 'Passenger of a Motor Vehicle In-Transport'),
     (3, 'Occupant of a Motor Vehicle Not In-Transport'),
@@ -838,11 +843,11 @@ insert into fars_person_type values
     (19, 'Unknown Type of Non-Motorist'),
     (88, 'Not Reported');
 
-create table fars_sequence_events (
+create table fars.sequence_events (
     soe int primary key,
     name text
 );
-insert into fars_sequence_events values
+insert into fars.sequence_events values
     (1, 'Rollover/Overturn'),
     (2, 'Fire/Explosion'),
     (3, 'Immersion or Partial Immersion'),
@@ -856,7 +861,8 @@ insert into fars_sequence_events values
     (11, 'Live Animal'),
     (12, 'Motor Vehicle in Transport'),
     (14, 'Parked Motor Vehicle'),
-    (15, 'Non-Motorist on Personal Conveyance Thrown or Falling Object'),
+    (15, 'Non-Motorist on Personal Conveyance'),
+    (16, 'Thrown or Falling Object'),
     (17, 'Boulder'),
     (18, 'Other Object (Not Fixed)'),
     (19, 'Building'),
@@ -882,7 +888,8 @@ insert into fars_sequence_events values
     (45, 'Working Motor Vehicle'),
     (46, 'Traffic Signal Support'),
     (48, 'Snow Bank'),
-    (49, 'Ridden Animal or Animal-Drawn Conveyance Bridge Overhead Structure'),
+    (49, 'Ridden Animal or Animal-Drawn Conveyance'),
+    (50, 'Bridge Overhead Structure'),
     (51, 'Jackknife (Harmful to This Vehicle)'),
     (52, 'Guardrail End'),
     (53, 'Mail Box'),
@@ -909,11 +916,11 @@ insert into fars_sequence_events values
     (79, 'Ran Off Roadway – Direction Unknown'),
     (99, 'Unknown');
 
-create table fars_area_of_impact (
+create table fars.area_of_impact (
     aoi int primary key,
     name text
 );
-insert into fars_area_of_impact values
+insert into fars.area_of_impact values
     (0, 'Non-Collision'),
     (1, 'One O''Clock'),
     (2, 'Two O''Clock'),
@@ -942,8 +949,219 @@ insert into fars_area_of_impact values
     (98, 'Not Reported'),
     (99, 'Unknown');
 
-CREATE TABLE fars_accident (
-    state integer references fars_state (state),
+create table fars.driver_distracted (
+    mdrdstrd int primary key,
+    name text
+);
+insert into fars.driver_distracted values
+    (0, 'Not Distracted'),
+    (1, 'Looked But Did Not See'),
+    (3, 'By Other Occupant(s)'),
+    (4, 'By a Moving Object in Vehicle'),
+    (5, 'While Talking or Listening to Cellular Phone'),
+    (6, 'While Manipulating Cellular Phone'),
+    (7, 'While Adjusting Audio or Climate Controls'),
+    (9, 'While Using Other Component/Controls Integral to Vehicle'),
+    (10, 'While Using or Reaching For Device/Object Brought Into Vehicle'),
+    (12, 'Distracted by Outside Person, Object or Event'),
+    (13, 'Eating or Drinking'),
+    (14, 'Smoking Related'),
+    (15, 'Other Cellular Phone Related'),
+    (16, 'No Driver Present/Unknown if Driver Present'),
+    (17, 'Distraction/Inattention'),
+    (18, 'Distraction/Careless'),
+    (19, 'Careless/Inattentive'),
+    (92, 'Distraction (Distracted), Details Unknown'),
+    (93, 'Inattention (Inattentive), Details Unknown'),
+    (96, 'Not Reported'),
+    (97, 'Lost In Thought/Day Dreaming'),
+    (98, 'Other Distraction'),
+    (99, 'Unknown if Distracted');
+
+create table fars.driver_impairment (
+    drimpair int primary key,
+    name text
+);
+insert into fars.driver_impairment values
+    (0, 'None/Apparently Normal'),
+    (1, 'Ill, Blackout'),
+    (2, 'Asleep or Fatigued'),
+    (3, 'Walking with a Cane or Crutches, etc.'),
+    (4, 'Paraplegic or Restricted to Wheelchair'),
+    (5, 'Impaired Due to Previous Injury'),
+    (6, 'Deaf'),
+    (7, 'Blind'),
+    (8, 'Emotional (Depressed, Angry, Disturbed, etc.)'),
+    (9, 'Under the Influence of Alcohol, Drugs or Medication'),
+    (10, 'Physical Impairment – No Details'),
+    (95, 'No Driver Present/Unknown if Driver Present'),
+    (96, 'Other Physical Impairment'),
+    (98, 'Not Reported'),
+    (99, 'Unknown if Impaired');
+
+create table fars.motor_vehicle_factor (
+    mfactor int primary key,
+    name text
+);
+insert into fars.motor_vehicle_factor values
+    (0, 'None'),
+    (1, 'Tires'),
+    (2, 'Brake System'),
+    (3, 'Steering'),
+    (4, 'Suspension'),
+    (5, 'Power Train'),
+    (6, 'Exhaust System'),
+    (7, 'Head Lights'),
+    (8, 'Signal Lights'),
+    (9, 'Other Lights'),
+    (10, 'Wipers'),
+    (11, 'Wheels'),
+    (12, 'Mirrors'),
+    (13, 'Windows/Windshield'),
+    (14, 'Body, Doors'),
+    (15, 'Truck Coupling / Trailer Hitch / Safety Chains'),
+    (16, 'Safety Systems'),
+    (17, 'Vehicle Contributing Factors – No Details'),
+    (97, 'Other'),
+    (98, 'Not Reported'),
+    (99, 'Unknown');
+
+create table fars.driver_maneuver (
+    mdrmanav int primary key,
+    name text
+);
+insert into fars.driver_maneuver values
+    (0, 'Driver Did Not Maneuver To Avoid'),
+    (1, 'Object'),
+    (2, 'Poor Road Conditions (Puddle, Ice, Pothole, etc.)'),
+    (3, 'Live Animal'),
+    (4, 'Motor Vehicle'),
+    (5, 'Pedestrian, Pedalcyclist or Other Non-Motorist'),
+    (92, 'Phantom/Non-Contact Motor Vehicle'),
+    (95, 'No Driver Present/Unknown if Driver Present'),
+    (98, 'Not Reported'),
+    (99, 'Unknown');
+
+create table fars.vision_obscured (
+    mvisobsc int primary key,
+    name text
+);
+insert into fars.vision_obscured values
+    (0, 'No Obstruction Noted'),
+    (1, 'Rain, Snow, Fog, Smoke, Sand, Dust'),
+    (2, 'Reflected Glare, Bright Sunlight, Headlights'),
+    (3, 'Curve, Hill, or Other Roadway Design Features'),
+    (4, 'Building, Billboard, or Other Structure'),
+    (5, 'Trees, Crops, Vegetation'),
+    (6, 'In-Transport Motor Vehicle (Including Load)'),
+    (7, 'Not-in-Transport Motor Vehicle (Parked, Working)'),
+    (8, 'Splash or Spray of Passing Vehicle'),
+    (9, 'Inadequate Defrost or Defog System'),
+    (10, 'Inadequate Vehicle Lighting System'),
+    (11, 'Obstructing Interior to the Vehicle'),
+    (12, 'External Mirrors'),
+    (13, 'Broken or Improperly Cleaned Windshield'),
+    (14, 'Obstructing Angles on Vehicle'),
+    (95, 'No Driver Present/Unknown if Driver Present'),
+    (97, 'Vision Obscured – No Details'),
+    (98, 'Other Visual Obstruction'),
+    (99, 'Unknown');
+
+create table fars.violations_charged (
+    mviolatn int primary key,
+    name text
+);
+insert into fars.violations_charged values
+    (0, 'None'),
+    -- RECKLESS/CARELESS/HIT-AND-RUN OFFENSES
+    (1, 'RECKLESS/CARELESS/HIT-AND-RUN: Manslaughter or Homicide'),
+    (2, 'RECKLESS/CARELESS/HIT-AND-RUN: Willful Reckless Driving; Driving to Endanger; Negligent Driving'),
+    (3, 'RECKLESS/CARELESS/HIT-AND-RUN: Unsafe Reckless (Not Willful, Wanton Reckless) Driving'),
+    (4, 'RECKLESS/CARELESS/HIT-AND-RUN: Inattentive, Careless, Improper Driving'),
+    (5, 'RECKLESS/CARELESS/HIT-AND-RUN: Fleeing or Eluding Police'),
+    (6, 'RECKLESS/CARELESS/HIT-AND-RUN: Fail to Obey Police, Fireman, Authorized Person Directing Traffic'),
+    (7, 'RECKLESS/CARELESS/HIT-AND-RUN: Hit-and-Run, Fail to Stop After Crash'),
+    (8, 'RECKLESS/CARELESS/HIT-AND-RUN: Fail to Give Aid, Information, Wait for Police after Crash'),
+    (9, 'RECKLESS/CARELESS/HIT-AND-RUN: Serious Violation Resulting in Death'),
+    (10, 'RECKLESS/CARELESS/HIT-AND-RUN: Use of Telecommunications Device'),
+    -- IMPAIRMENT OFFENSES
+    (11, 'IMPAIRMENT: Driving While Intoxicated (Alcohol or Drugs) or BAC above Limit (Any Detectable BAC for CDLs)'),
+    (12, 'IMPAIRMENT: Driving While Impaired'),
+    (13, 'IMPAIRMENT: Driving under Influence of Substance not intended to intoxicate'),
+    (14, 'IMPAIRMENT: Drinking While Operating'),
+    (15, 'IMPAIRMENT: Illegal Possession of Alcohol or Drugs'),
+    (16, 'IMPAIRMENT: Driving With Detectable Alcohol'),
+    (18, 'IMPAIRMENT: Refusal to Submit to Chemical Test'),
+    (19, 'IMPAIRMENT: Alcohol, Drug, or Impairment Violations Generally'),
+    -- SPEED-RELATED OFFENSES
+    (21, 'SPEED-RELATED: Racing'),
+    (22, 'SPEED-RELATED: Speeding (Above the Speed Limit)'),
+    (23, 'SPEED-RELATED: Speed Greater Than Reasonable and Prudent (Not Necessarily Over the Limit)'),
+    (24, 'SPEED-RELATED: Exceeding Special Speed Limit (e.g., for Trucks, Buses, Cycles, or on Bridge, in School Zone, etc.)'),
+    (25, 'SPEED-RELATED: Energy Speed (Exceeding 55 mph, Non-Pointable)'),
+    (26, 'SPEED-RELATED: Driving Too Slowly'),
+    (29, 'SPEED-RELATED: Speed-Related Violations Generally'),
+    -- RULES OF THE ROAD – TRAFFIC SIGN & SIGNALS
+    (31, 'TRAFFIC SIGN & SIGNALS: Fail to Stop for Red Signal'),
+    (32, 'TRAFFIC SIGN & SIGNALS: Fail to Stop for Flashing Red'),
+    (33, 'TRAFFIC SIGN & SIGNALS: Violation of Turn on Red (Fail to Stop & Yield, Yield to Pedestrians before Turning)'),
+    (34, 'TRAFFIC SIGN & SIGNALS: Fail to Obey Flashing Signal (Yellow or Red)'),
+    (35, 'TRAFFIC SIGN & SIGNALS: Fail to Obey Signal Generally'),
+    (36, 'TRAFFIC SIGN & SIGNALS: Violate RR Grade Crossing Device/Regulations'),
+    (37, 'TRAFFIC SIGN & SIGNALS: Fail to Obey Stop Sign'),
+    (38, 'TRAFFIC SIGN & SIGNALS: Fail to Obey Yield Sign'),
+    (39, 'TRAFFIC SIGN & SIGNALS: Fail to Obey Traffic Control Device Generally'),
+    -- RULES OF THE ROAD – TURNING, YIELDING, SIGNALING
+    (41, 'TURNING, YIELDING, SIGNALING: Turn in Violation of Traffic Control (Disobey Signs, Turn Arrow or Pavement Markings; this is not a Right-on-Red violation)'),
+    (42, 'TURNING, YIELDING, SIGNALING: Improper Method & Position of Turn (Too Wide, Wrong Lane)'),
+    (43, 'TURNING, YIELDING, SIGNALING: Fail to Signal for Turn or Stop'),
+    (45, 'TURNING, YIELDING, SIGNALING: Fail to Yield to Emergency Vehicle'),
+    (46, 'TURNING, YIELDING, SIGNALING: Fail to Yield Generally'),
+    (48, 'TURNING, YIELDING, SIGNALING: Enter Intersection When Space Insufficient'),
+    (49, 'TURNING, YIELDING, SIGNALING: Turn, Yield, Signaling Violations Generally'),
+    -- RULES OF THE ROAD – WRONG SIDE, PASSING & FOLLOWING
+    (51, 'WRONG SIDE, PASSING & FOLLOWING: Driving Wrong Way on One-Way Road'),
+    (52, 'WRONG SIDE, PASSING & FOLLOWING: Driving on Left, Wrong Side of Road Generally'),
+    (53, 'WRONG SIDE, PASSING & FOLLOWING: Improper, Unsafe Passing'),
+    (54, 'WRONG SIDE, PASSING & FOLLOWING: Pass on Right (Drive off Pavement to Pass)'),
+    (55, 'WRONG SIDE, PASSING & FOLLOWING: Pass Stopped School Bus'),
+    (56, 'WRONG SIDE, PASSING & FOLLOWING: Fail to Give Way When Overtaken'),
+    (58, 'WRONG SIDE, PASSING & FOLLOWING: Following Too Closely'),
+    (59, 'WRONG SIDE, PASSING & FOLLOWING: Wrong Side, Passing, Following Violations Generally'),
+    -- RULES OF THE ROAD – LANE USAGE
+    (61, 'LANE USAGE: Unsafe or Prohibited Lane Change'),
+    (62, 'LANE USAGE: Improper Use of Lane (Enter of 3-Lane Road, HOV Designated Lane)'),
+    (63, 'LANE USAGE: Certain Traffic to Use Right Lane (Trucks, Slow Moving, etc.)'),
+    (66, 'LANE USAGE: Motorcycle Lane Violations (More than two per Lane, Riding Between Lanes, etc.)'),
+    (67, 'LANE USAGE: Motorcyclist Attached to another Vehicle'),
+    (69, 'LANE USAGE: Lane Violations Generally'),
+    -- NON-MOVING – LICENSE & REGISTRATION VIOLATIONS
+    (71, 'LICENSE & REGISTRATION: Driving While License Withdrawn'),
+    (72, 'LICENSE & REGISTRATION: Other Driver License Violations'),
+    (73, 'LICENSE & REGISTRATION: Commercial Driver Violations'),
+    (74, 'LICENSE & REGISTRATION: Vehicle Registration Violations'),
+    (75, 'LICENSE & REGISTRATION: Fail to Carry Insurance Card'),
+    (76, 'LICENSE & REGISTRATION: Driving Uninsured Vehicle'),
+    (79, 'LICENSE & REGISTRATION: Non-Moving Violations Generally'),
+    -- EQUIPMENT
+    (81, 'EQUIPMENT: Lamp Violations'),
+    (82, 'EQUIPMENT: Brake Violations'),
+    (83, 'EQUIPMENT: Failure to Require Restraint Use (By Self or Passenger)'),
+    (84, 'EQUIPMENT: Motorcycle Equipment Violations (Helmet, Special Equipment)'),
+    (85, 'EQUIPMENT: Violation of Hazardous Cargo Regulations'),
+    (86, 'EQUIPMENT: Size, Weight, Load Violations'),
+    (89, 'EQUIPMENT: Equipment Violations Generally'),
+    -- LICENSE, REGISTRATION & OTHER VIOLATIONS
+    (91, 'LICENSE, REGISTRATION & OTHER: Parking'),
+    (92, 'LICENSE, REGISTRATION & OTHER: Theft, Unauthorized Use of Motor Vehicle'),
+    (93, 'LICENSE, REGISTRATION & OTHER: Driving Where Prohibited (Sidewalk, Limited Access, Off Truck Route)'),
+    (95, 'LICENSE, REGISTRATION & OTHER: No Driver Present/Unknown if Driver Present'),
+    (97, 'LICENSE, REGISTRATION & OTHER: Not Reported'),
+    (98, 'LICENSE, REGISTRATION & OTHER: Other Moving Violation'),
+    (99, 'LICENSE, REGISTRATION & OTHER: Unknown Violation(s)');
+
+CREATE TABLE fars.accident (
+    state integer references fars.state (state),
     st_case integer PRIMARY KEY,
     ve_total integer,
     ve_forms integer,
@@ -962,26 +1180,26 @@ CREATE TABLE fars_accident (
     minute integer,
     nhs integer,
     rur_urb integer,
-    func_sys integer references fars_functional_system (func_sys),
-    rd_owner integer references fars_road_owner (rd_owner),
-    route integer references fars_route (route),
+    func_sys integer references fars.functional_system (func_sys),
+    rd_owner integer references fars.road_owner (rd_owner),
+    route integer references fars.route (route),
     tway_id text,
     tway_id2 text,
     milept integer,
     latitude double precision,
     longitud double precision,
-    sp_jur integer references fars_special_jurisdiction (sp_jur),
-    harm_ev integer references fars_harmful_event (harm_ev),
-    man_coll integer references fars_manner_of_collision (man_coll),
+    sp_jur integer references fars.special_jurisdiction (sp_jur),
+    harm_ev integer references fars.harmful_event (harm_ev),
+    man_coll integer references fars.manner_of_collision (man_coll),
     reljct1 integer,
     reljct2 integer,
     typ_int integer,
     wrk_zone integer,
     rel_road integer,
-    lgt_cond integer references fars_light_condition (lgt_cond),
-    weather1 integer references fars_atmospheric_condition (weather),
-    weather2 integer references fars_atmospheric_condition (weather),
-    weather integer references fars_atmospheric_condition (weather),
+    lgt_cond integer references fars.light_condition (lgt_cond),
+    weather1 integer references fars.atmospheric_condition (weather),
+    weather2 integer references fars.atmospheric_condition (weather),
+    weather integer references fars.atmospheric_condition (weather),
     sch_bus integer,
     rail text,
     not_hour integer,
@@ -990,95 +1208,95 @@ CREATE TABLE fars_accident (
     arr_min integer,
     hosp_hr integer,
     hosp_mn integer,
-    cf1 integer references fars_related_factors_crash (cf),
-    cf2 integer references fars_related_factors_crash (cf),
-    cf3 integer references fars_related_factors_crash (cf),
+    cf1 integer references fars.related_factors_crash (cf),
+    cf2 integer references fars.related_factors_crash (cf),
+    cf3 integer references fars.related_factors_crash (cf),
     fatals integer,
     drunk_dr integer
 );
 
-CREATE TABLE fars_cevent (
-    state integer references fars_state (state),
+CREATE TABLE fars.cevent (
+    state integer references fars.state (state),
     st_case integer,
     eventnum integer,
     vnumber1 integer,
-    aoi1 integer references fars_area_of_impact (aoi),
-    soe integer references fars_sequence_events (soe),
+    aoi1 integer references fars.area_of_impact (aoi),
+    soe integer references fars.sequence_events (soe),
     vnumber2 integer,
-    aoi2 integer references fars_area_of_impact (aoi),
+    aoi2 integer references fars.area_of_impact (aoi),
     constraint fars_cevent_pk primary key (st_case, eventnum)
 );
 
-CREATE TABLE fars_damage (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.damage (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
     mdareas integer
 );
-create index fars_damage_idx on fars_damage (st_case, veh_no);
+create index on fars.damage (st_case, veh_no);
 
-CREATE TABLE fars_distract (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.distract (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
-    mdrdstrd integer
+    mdrdstrd integer references fars.driver_distracted (mdrdstrd)
 );
-create index fars_distract_idx on fars_distract (st_case, veh_no);
+create index on fars.distract (st_case, veh_no);
 
-CREATE TABLE fars_drimpair (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.drimpair (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
-    drimpair integer
+    drimpair integer references fars.driver_impairment (drimpair)
 );
-create index fars_drimpair_idx on fars_drimpair (st_case, veh_no);
+create index on fars.drimpair (st_case, veh_no);
 
-CREATE TABLE fars_factor (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.factor (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
-    mfactor integer
+    mfactor integer references fars.motor_vehicle_factor (mfactor)
 );
-create index fars_factor_idx on fars_factor (st_case, veh_no);
+create index on fars.factor (st_case, veh_no);
 
-CREATE TABLE fars_maneuver (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.maneuver (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
-    mdrmanav integer
+    mdrmanav integer references fars.driver_maneuver (mdrmanav)
 );
-create index fars_maneuver_idx on fars_maneuver (st_case, veh_no);
+create index on fars.maneuver (st_case, veh_no);
 
-CREATE TABLE fars_nmcrash (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.nmcrash (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
     per_no integer,
     mtm_crsh integer
 );
-create index fars_nmcrash_idx on fars_nmcrash (st_case, veh_no, per_no);
+create index on fars.nmcrash (st_case, veh_no, per_no);
 
-CREATE TABLE fars_nmimpair (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.nmimpair (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
     per_no integer,
     nmimpair integer
 );
-create index fars_nmimpair_idx on fars_nmimpair (st_case, veh_no, per_no);
+create index on fars.nmimpair (st_case, veh_no, per_no);
 
-CREATE TABLE fars_nmprior (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.nmprior (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
     per_no integer,
     mpr_act integer
 );
-create index fars_nmprior_idx on fars_nmprior (st_case, veh_no, per_no);
+create index on fars.nmprior (st_case, veh_no, per_no);
 
-CREATE TABLE fars_parkwork (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.parkwork (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
     pve_forms integer,
     pnumoccs integer,
@@ -1087,12 +1305,12 @@ CREATE TABLE fars_parkwork (
     phour integer,
     pminute integer,
     pharm_ev integer,
-    pman_coll integer references fars_manner_of_collision (man_coll),
+    pman_coll integer references fars.manner_of_collision (man_coll),
     ptype integer,
     phit_run integer,
     preg_stat integer,
-    powner integer references fars_vehicle_owner (owner),
-    pmake integer references fars_vehicle_make (make),
+    powner integer references fars.vehicle_owner (owner),
+    pmake integer references fars.vehicle_make (make),
     pmodel integer,
     pmak_mod integer,
     pbodytyp integer,
@@ -1120,7 +1338,7 @@ CREATE TABLE fars_parkwork (
     phaz_inv integer,
     phazplac integer,
     phaz_id integer,
-    phaz_cno integer references fars_hazardous_material_class (haz_cno),
+    phaz_cno integer references fars.hazardous_material_class (haz_cno),
     phaz_rel integer,
     pbus_use integer,
     psp_use integer,
@@ -1129,7 +1347,7 @@ CREATE TABLE fars_parkwork (
     pimpact1 integer,
     pveh_sev integer,
     ptowed integer,
-    pm_harm integer references fars_harmful_event (harm_ev),
+    pm_harm integer references fars.harmful_event (harm_ev),
     pveh_sc1 integer,
     pveh_sc2 integer,
     pfire integer,
@@ -1140,19 +1358,19 @@ CREATE TABLE fars_parkwork (
     constraint fars_parkwork_pk primary key (st_case, veh_no)
 );
 
-CREATE TABLE fars_pbtype (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.pbtype (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
     per_no integer,
-    pbptype integer references fars_person_type (per_typ),
+    pbptype integer references fars.person_type (per_typ),
     pbage integer,
     pbsex integer,
     pbcwalk integer,
     pbswalk integer,
     pbszone integer,
-    pedctype integer references fars_ped_crash_type (pedctype),
-    bikectype integer references fars_bike_crash_type (bikectype),
+    pedctype integer references fars.ped_crash_type (pedctype),
+    bikectype integer references fars.bike_crash_type (bikectype),
     pedloc integer,
     bikeloc integer,
     pedpos integer,
@@ -1168,9 +1386,9 @@ CREATE TABLE fars_pbtype (
     constraint fars_pbtype_pk primary key (st_case, per_no)
 );
 
-CREATE TABLE fars_person (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.person (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     ve_forms integer,
     veh_no integer,
     per_no integer,
@@ -1185,11 +1403,11 @@ CREATE TABLE fars_person (
     harm_ev integer,
     man_coll integer,
     sch_bus integer,
-    make integer references fars_vehicle_make (make),
+    make integer references fars.vehicle_make (make),
     mak_mod integer,
-    body_typ integer references fars_body_type (body_typ),
+    body_typ integer references fars.body_type (body_typ),
     mod_year integer,
-    tow_veh integer references fars_trailing_vehicle (tow_veh),
+    tow_veh integer references fars.trailing_vehicle (tow_veh),
     spec_use integer,
     emer_use integer,
     rollover integer,
@@ -1197,7 +1415,7 @@ CREATE TABLE fars_person (
     fire_exp integer,
     age integer,
     sex integer,
-    per_typ integer references fars_person_type (per_typ),
+    per_typ integer references fars.person_type (per_typ),
     inj_sev integer,
     seat_pos integer,
     rest_use integer,
@@ -1230,9 +1448,9 @@ CREATE TABLE fars_person (
     death_tm integer,
     lag_hrs integer,
     lag_mins integer,
-    p_sf1 integer references fars_related_factors_person (p_sf),
-    p_sf2 integer references fars_related_factors_person (p_sf),
-    p_sf3 integer references fars_related_factors_person (p_sf),
+    p_sf1 integer references fars.related_factors_person (p_sf),
+    p_sf2 integer references fars.related_factors_person (p_sf),
+    p_sf3 integer references fars.related_factors_person (p_sf),
     work_inj integer,
     hispanic integer,
     race integer,
@@ -1240,18 +1458,18 @@ CREATE TABLE fars_person (
     constraint fars_person_pk primary key (st_case, veh_no, per_no)
 );
 
-CREATE TABLE fars_safetyeq (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.safetyeq (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
     per_no integer,
-    msafeqmt integer references fars_safety_equipment (msafeqmt)
+    msafeqmt integer references fars.safety_equipment (msafeqmt)
 );
-create index fars_safetyeq_idx on fars_safetyeq (st_case, veh_no, per_no);
+create index on fars.safetyeq (st_case, veh_no, per_no);
 
-CREATE TABLE fars_vehicle (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.vehicle (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
     ve_forms integer,
     numoccs integer,
@@ -1264,11 +1482,11 @@ CREATE TABLE fars_vehicle (
     unittype integer,
     hit_run integer,
     reg_stat integer,
-    owner integer references fars_vehicle_owner (owner),
-    make integer references fars_vehicle_make (make),
+    owner integer references fars.vehicle_owner (owner),
+    make integer references fars.vehicle_make (make),
     model integer,
     mak_mod integer,
-    body_typ integer references fars_body_type (body_typ),
+    body_typ integer references fars.body_type (body_typ),
     mod_year integer,
     vin text,
     vin_1 text,
@@ -1283,7 +1501,7 @@ CREATE TABLE fars_vehicle (
     vin_10 text,
     vin_11 text,
     vin_12 text,
-    tow_veh integer references fars_trailing_vehicle (tow_veh),
+    tow_veh integer references fars.trailing_vehicle (tow_veh),
     j_knife integer,
     mcarr_i1 integer,
     mcarr_i2 text,
@@ -1294,7 +1512,7 @@ CREATE TABLE fars_vehicle (
     haz_inv integer,
     haz_plac integer,
     haz_id integer,
-    haz_cno integer references fars_hazardous_material_class (haz_cno),
+    haz_cno integer references fars.hazardous_material_class (haz_cno),
     haz_rel integer,
     bus_use integer,
     spec_use integer,
@@ -1306,12 +1524,12 @@ CREATE TABLE fars_vehicle (
     impact1 integer,
     deformed integer,
     towed integer,
-    m_harm integer references fars_harmful_event (harm_ev),
+    m_harm integer references fars.harmful_event (harm_ev),
     veh_sc1 integer,
     veh_sc2 integer,
     fire_exp integer,
     dr_pres integer,
-    l_state integer references fars_state (state),
+    l_state integer references fars.state (state),
     dr_zip text,
     l_status integer,
     l_type integer,
@@ -1331,11 +1549,11 @@ CREATE TABLE fars_vehicle (
     last_mo integer,
     last_yr integer,
     speedrel integer,
-    dr_sf1 integer references fars_related_factors_driver (dr_sf),
-    dr_sf2 integer references fars_related_factors_driver (dr_sf),
-    dr_sf3 integer references fars_related_factors_driver (dr_sf),
-    dr_sf4 integer references fars_related_factors_driver (dr_sf),
-    vtrafway integer references fars_trafficway (vtrafway),
+    dr_sf1 integer references fars.related_factors_driver (dr_sf),
+    dr_sf2 integer references fars.related_factors_driver (dr_sf),
+    dr_sf3 integer references fars.related_factors_driver (dr_sf),
+    dr_sf4 integer references fars.related_factors_driver (dr_sf),
+    vtrafway integer references fars.trafficway (vtrafway),
     vnum_lan integer,
     vspd_lim integer,
     valign integer,
@@ -1358,23 +1576,23 @@ CREATE TABLE fars_vehicle (
     constraint fars_vehicle_pk primary key (st_case, veh_no)
 );
 
-CREATE TABLE fars_vevent (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.vevent (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     eventnum integer,
     veh_no integer,
     veventnum integer,
     vnumber1 integer,
-    aoi1 integer references fars_area_of_impact (aoi),
-    soe integer references fars_sequence_events (soe),
+    aoi1 integer references fars.area_of_impact (aoi),
+    soe integer references fars.sequence_events (soe),
     vnumber2 integer,
-    aoi2 integer references fars_area_of_impact (aoi),
+    aoi2 integer references fars.area_of_impact (aoi),
     constraint fars_vevent_pk primary key (st_case, veh_no, eventnum)
 );
 
-CREATE TABLE fars_vindecode (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.vindecode (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
     ncicmake text,
     vinyear integer,
@@ -1479,25 +1697,25 @@ CREATE TABLE fars_vindecode (
     constraint fars_vindecode_pk primary key (st_case, veh_no)
 );
 
-CREATE TABLE fars_violatn (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.violatn (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
-    mviolatn integer
+    mviolatn integer references violations_charged (mviolatn)
 );
-create index fars_violatn_idx on fars_violatn (st_case, veh_no);
+create index on fars.violatn (st_case, veh_no);
 
-CREATE TABLE fars_vision (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.vision (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
-    mvisobsc integer
+    mvisobsc integer references fars.vision_obscured (mvisobsc)
 );
-create index fars_vision_idx on fars_vision (st_case, veh_no);
+create index on fars.vision (st_case, veh_no);
 
-CREATE TABLE fars_vsoe (
-    state integer references fars_state (state),
-    st_case integer references fars_accident (st_case),
+CREATE TABLE fars.vsoe (
+    state integer references fars.state (state),
+    st_case integer references fars.accident (st_case),
     veh_no integer,
     veventnum integer,
     soe integer,
