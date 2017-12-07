@@ -1,0 +1,5 @@
+1	Rural
+2	Urban
+6	Trafficway Not in State Inventory
+8	Not Reported
+9	Unknown

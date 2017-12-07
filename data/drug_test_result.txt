@@ -1,0 +1,384 @@
+100	Acetaminophen + Codeine
+101	Acetorphine
+102	Acetyl-alpha-methylfentanyl
+103	Acetyldihydrocodeine
+104	Acetylmethadol
+105	Alfentanil
+106	Allylprodine
+107	Alpha-Methylfentanyl
+108	Alphamethythiofentanyl
+109	Alpha-meprodine
+110	Alphamethadol
+111	Alphaprodine
+112	Anileridine
+113	APC + Codeine
+114	Aspirin + Codeine
+117	Benzylmorphine
+118	Beta-hydroxyfentanyl
+119	Betacetylmethadol
+120	Beta-meprodine
+121	Betamethadol
+122	Betaprodine
+123	Bezitramide
+124	Buprenorphine
+125	Carfentanil
+126	Clonitazene
+127	Codeine methylbromide
+128	Codeine
+129	Cyprenorphine
+130	Desomorphine
+131	Dextromoramide
+133	Diampromide
+134	Diethylthiambutene
+135	Difenoxin
+136	Dihydrocodeine
+137	Dihydromorphine
+138	Dimenoxadol
+139	Dimepheptanol (Racemethadol)
+140	Dimethylthiambutene
+141	Dioxaphetyl Butyrate
+142	Diphenoxylate
+143	Dipipanone
+144	Diprenorphine Hydrochloride
+145	Drotebanol
+190	Para-fluorofentanyl
+191	Paregoric
+192	Parepectolin
+193	Pentazocine
+195	Phenadoxone
+196	Phenampromide
+197	Phenanthrine
+198	Phenazocine
+199	Phenomorphan
+200	Phenoperidine
+202	Pholcodine
+203	Piminodine
+204	Piritramide
+205	Proheptazine
+206	Properidine
+207	Propiram
+208	Propoxyphene (Dextropropoxyphene, bulk (non-dosage forms))
+209	Racemethorphan
+210	Racemoramide
+211	Racemorphan
+212	Sufentanil
+213	Thebacon
+214	Thebaine
+215	Thiofentanyl
+216	Tilidine
+217	Trimeperidine
+218	Butorphanol
+220	Alphacetylmethadol
+221	Beta-Hydroxy-3-methylfentanyl
+222	Codeine & Isoquinoline
+223	Codeine-N-oxide
+224	Dextropropoxyphene (dosage forms)
+226	Dihydroetrophine
+227	Diprenorphine
+228	Levo-alphacetylmethadol
+229	Levorphanol
+230	Methylthiofentanyl
+231	Morphine-N-oxide
+232	Opium extract
+233	Opium Fluid Extract
+234	Opium Poppy
+235	Opium Tincture
+236	Phenylethyl-phenyl-acetoxypiperidine (PEPAP)
+237	Poppy Straw
+238	Poppy Straw Concentrate
+239	Remifentanil
+240	Codeine combination product 90 mg/du
+241	Codeine preparations – 200 mg/100 ml or 100 gm
+242	Difenoxin 1 mg/25ug AtSO4/du
+243	Difenoxin preparations – 0.5 mg/25 ug AtSO4/du
+244	Dihydrocodeine combination product 90 mg/du
+245	Dihydrocodeine preparations 10 mg/100 ml or 100 gm
+246	Diphenoxylate preparations 2.5 mg/25 ug AtSO4
+247	Ethylmorphine combination product 15 mg/du
+248	Ethylmorphine preparations 100 mg/100 ml or 100 gm
+249	Hydrocodone & isoquinoline alkaloid<15 mg/du
+250	Hydrocodone combination product<15 mg/du
+251	Meperidine intermediate-A
+252	Meperidine intermediate-B
+253	Meperidine intermediate-C
+254	Methadone intermediate
+255	Morphine combination product/50 mg/100 ml or gm
+256	Opium combination product 25 mg/du
+257	Opium preparations – 100 mg/100 ml or/100 gm
+258	Opium, granulated
+259	Opium, powdered
+260	Oripavine
+295	Narcotics, Type Unknown
+300	Alprazolam
+301	Amobarbital
+302	Barbital
+303	Barbiturates
+349	Nimetazepam
+350	Nitrazepam
+351	Nordiazepam
+352	Oxazepam
+353	Oxazolam
+354	Paraldehyde
+355	Pentobarbital
+356	Petrichloral
+357	Phencyclohexylamine
+358	Phenobarbital
+359	Pinazepam
+360	Prazepam
+361	Quazepam
+362	Secobarbital
+363	Sulfondiethylmethane
+364	Sulfonethylmethane
+365	Sulfonmethane
+366	Talbutal
+367	Temazepam
+368	Tetrazepam
+369	Thenylfentanyl
+370	Thiamylal
+371	Thiopental (Pentothal)
+372	Tiletamine/Zolazepam (Telazol)
+373	Traizolam
+374	Tybamate
+376	Carisoprodol
+377	Gamma-Hydroxybutyric Acid (GHB)
+378	Amobarbital & non-controlled active ingred.
+379	Aprobarbital
+380	Barbituric Acid Derivative
+383	Dexfenfluramine
+384	Flurazepam
+385	Sibutramin
+386	Zaleplon
+387	Zolpidem
+388	Amobarbital suppository dosage form
+389	Butobarbital (butethal)
+390	Embutramide
+391	Gamma Hydroxybutyric Acid preparations
+393	Pentobarbital & noncontrolled active ingred.
+304	Benzodiazepines
+305	Benzylfentanyl
+306	Bromazepam
+307	Butabarbital (secbutabarbital)
+308	Butalbital
+309	Camazepam
+310	Carbamate
+311	Chloral betaine
+312	Chloral Hydrate
+313	Chlordiazepoxide
+314	Chlorhexadol
+315	Clobazam
+316	Clonazepam
+317	Clorazepate Dipotassium
+318	Clotiazepam
+319	Cloxazolam
+320	Delorazepam
+321	Diazepam
+322	Estazolam
+323	Ethchlorvynol
+324	Ethinamate
+325	Ethyl Ioflazepate
+326	Fiorinal
+327	Fludiazepam
+328	Flunitrazepam
+330	Glutethimide
+331	Halazepam
+332	Haloxazolam
+333	Hexobarbital
+334	Hydroxyzine
+335	Ketazolam
+336	Loprazolam
+337	Lorazepam
+338	Lormetazepam
+339	Mebutamate
+340	Mecloqualone
+341	Medazepam
+342	Mephobarbital (Methylphenobarbital)
+343	Meprobamate
+344	Methaqualone
+345	Metharbital
+346	Methohexital
+347	Methyprylon
+348	Midazolam
+433	Modafinil
+434	Vinbarbital
+435	Methylone
+436	Lisdexamfetamine
+437	Methoxy-Methylenedioxyamphetamine
+438	N, N-Dimethylamphetamine (Dimethylamphetamine)
+439	N-Benzylpiperazine
+440	Stimulant compounds previously excepted
+495	Stimulants, Type Unknown
+500	Amphetamine Variants
+501	Bufotenine
+503	Diethyltryptamine (DET)
+504	Dimethoxyamphetamine (DMA)
+505	Dimethyltryptamine (DMT)
+506	DMA
+507	Dronabinol
+508	N-Ethyl-3piperdyl benzilate
+509	Ibogaine
+511	Lysergic Acid
+512	Mescaline
+513	Methylenedioxymethamphetamine (MDMA)
+514	Methoxyamphetamine (PMA)
+515	Methylenedioxyamphetamine (MDA)
+516	Nabilone
+517	Peyote
+518	Phenylacetone (P2P)
+519	Psilocybin
+520	Psilocyn
+521	Trimethoxy amphetamine
+522	Ketamine
+523	Alpha-Ethyltryptamine
+524	Bromo-dimethoxyamphetamine
+525	Bromo-dimethoxyphenethylamine
+527	Lysergic Acid Amide
+528	Lysergic Acid Diethylamide (LSD)
+529	Methylaminorex
+530	Meth-dimethoxyamphetamine
+531	Methylenedioxy-N-ethylamphetamine
+394	Pentobarbital suppository dosage form
+395	Depressants, Type Unknown
+396	Pregabalin
+397	Secobarbital & noncontrolled active ingred.
+398	Secobarbital suppository dosage form
+399	Zopiclone
+400	Amphetamine Sulfate
+401	Amphetamine
+402	Benzoylecgonine
+403	Benzphetamine
+404	Cathine (Norpseudoephedrine)
+405	Chlorphentermine
+406	Clortermine
+407	Cocaine
+408	Dextroamphetamine
+409	Diethylpropion
+410	Ecgonine
+411	Fencamfamin
+412	Fenethylline
+413	Fenfluramine
+414	Fenproporex
+415	Mazindol
+416	Mefenorex
+417	Methamphetamine
+418	Methylphenidate
+419	N-Ethylamphetamine
+420	Pemoline
+421	Phendimetrazine
+422	Phenmetrazine
+423	Phentermine
+424	Pipradrol
+425	Propylhexedrine
+426	Pyrovalerone
+427	SPA
+428	Aminorex
+429	Cathinone
+430	Coca Leaves
+431	Dichloralphenazone
+432	Methcathinone
+807	Fluoxymesterone
+808	Formebulone (Formebolone)
+809	Mesterolone
+810	Methandienone
+811	Methandranone
+812	Methandriol
+813	Methandrostenolone
+814	Methenolone
+815	Methyltestosterone
+816	Mibolerone
+817	Nandrolone
+818	Norethandrolone
+819	Oxandrolone
+820	Oxymesterone
+821	Oxymetholone
+822	Stanolone
+823	Stanozolol
+824	Testolactone
+825	Testosterone
+826	Trenbolone
+827	Clostebol
+828	Alpha, Beta-dihydroxy-alpha-androstane
+829	Alpha-methyl-alpha-beta-dihydroxy-alpha-androstane
+830	Alpha-methyl-beta-beta-dihydroxy-alpha-androstane
+831	Alpha-methyl-beta-beta-dihydroxy-androstene
+832	Alpha-methyl-delta 1-dihydrotestosterone
+833	Alpha-methyl-hydroxynandrolone
+834	Androstanedione
+835	Androstenediol
+836	Androstenedione
+837	Beta, beta-dihydroxy-alpha-androstane
+838	Bolasterone
+839	Calusterone
+840	Delta 1-dihydrotestosterone
+841	Furazabol
+842	Hydroxy-Nortestosterone
+843	Hydroxytestosterone
+844	Mestanolone
+845	Methyldienolone
+533	N-Ethyl-1-phenylcyclohexylamine
+534	Alpha-methyltryptamine
+535	Dimethoxyethylamphetamine
+536	Dimethoxy-(n)-propylthiophenethylamine
+537	Methoxy-NN-diisopropyltryptamine
+538	N-Hydroxymethylenedioxy-amphetamin
+539	N-Methylpiperidyl benzilate
+595	Hallucinogens, Type Unknown
+600	Delta 9
+601	Hashish Oil
+602	Hashish
+603	Marijuana/Marihuana
+604	Marinol
+605	Tetrahydrocannabinols (THC)
+695	Cannabinoid, Type Unknown
+700	Ethylamine
+701	Parahexyl (Synhexyl)
+702	Phencyclidine
+703	Phencyclidine Analogs
+704	Phenylcyclohexylamine
+705	Piperidinocyclohexanecarbonitrile (PCC)
+706	Pyrrolidine (PCPy, PHP,TCPy)
+707	Thiophene
+708	Thienyl Cyclohexyl/piperidine
+709	Phenylcyclohexyl-Pyrrolidine
+710	Thienyl Cyclohexyl Pyrrolidine
+795	PCP, Type Unknown
+800	Boldenone
+801	Chlorotestosterone
+803	Dehydrochloromethyltestosterone
+804	Dihydrotestosterone
+805	Drostanolone
+806	Ethylestrenol
+846	Methyltrienolone
+847	Norandrostenediol
+848	Norandrostenedione
+849	Norbolethone
+850	Norclostebol
+851	Normethandrolone
+852	Stenbolone
+853	Tetrahydrogestrinone
+854	Boldione
+855	Desoxymethyltestosterone
+856	Dienedione
+895	Anabolic Steroid, Type Unknown
+900	Volatile Solvents (toluene)
+901	Plastic Cement (airplane glue)
+902	Paint and Paint Removers
+903	Petroleum Products (gasoline, kerosene)
+904	Lacquer Thinners
+920	Anesthetic Gases
+921	Amyl Nitrite
+923	Butly Nitrite
+924	Nitrous Oxide
+925	Ether
+926	Chloroform
+940	Aerosols (hydrocarbon gases)
+941	Hair spray
+942	Insecticides
+943	Glass Chillers
+944	Frying Pan Lubricants
+945	Cyclohexl Nitrite
+946	Enflurane
+947	Halothane
+995	Inhalants, Type Unknown
+997	TESTED; RESULTS UNKNOWN
+998	TESTED; DRUGS FOUND; TYPE UNKNOWN
+999	UNKNOWN IF TESTED FOR DRUG

@@ -178,6 +178,46 @@ create table fars.accident_type (
     name text
 );
 
+create table fars.drug_test_result (
+    drugres int primary key,
+    name text
+);
+
+create table fars.rural_urban (
+    rur_urb int primary key,
+    name text
+);
+
+create table fars.bus_use (
+    bus_use int primary key,
+    name text
+);
+
+create table fars.relation_to_road (
+    rel_road int primary key,
+    name text
+);
+
+create table fars.roadway_surface (
+    vsurcond int primary key,
+    name text
+);
+
+create table fars.pre_event_movement (
+    p_crash1 int primary key,
+    name text
+);
+
+create table fars.critical_precrash_event (
+    p_crash2 int primary key,
+    name text
+);
+
+create table fars.attempted_avoidance (
+    p_crash3 int primary key,
+    name text
+);
+
 CREATE TABLE fars.accident (
     state integer references fars.state (state),
     st_case integer PRIMARY KEY,
@@ -197,7 +237,7 @@ CREATE TABLE fars.accident (
     hour integer,
     minute integer,
     nhs integer,
-    rur_urb integer,
+    rur_urb integer references fars.rural_urban (rur_urb),
     func_sys integer references fars.functional_system (func_sys),
     rd_owner integer references fars.road_owner (rd_owner),
     route integer references fars.route (route),
@@ -213,7 +253,7 @@ CREATE TABLE fars.accident (
     reljct2 integer,
     typ_int integer,
     wrk_zone integer,
-    rel_road integer,
+    rel_road integer references fars.relation_to_road (rel_road),
     lgt_cond integer references fars.light_condition (lgt_cond),
     weather1 integer references fars.atmospheric_condition (weather),
     weather2 integer references fars.atmospheric_condition (weather),
@@ -358,7 +398,7 @@ CREATE TABLE fars.parkwork (
     phaz_id integer,
     phaz_cno integer references fars.hazardous_material_class (haz_cno),
     phaz_rel integer,
-    pbus_use integer,
+    pbus_use integer references fars.bus_use (bus_use),
     psp_use integer,
     pem_use integer,
     punderide integer,
@@ -416,7 +456,7 @@ CREATE TABLE fars.person (
     month integer,
     hour integer,
     minute integer,
-    rur_urb integer,
+    rur_urb integer references fars.rural_urban (rur_urb),
     func_sys integer,
     harm_ev integer,
     man_coll integer,
@@ -453,9 +493,9 @@ CREATE TABLE fars.person (
     drugtst1 integer,
     drugtst2 integer,
     drugtst3 integer,
-    drugres1 integer,
-    drugres2 integer,
-    drugres3 integer,
+    drugres1 integer references fars.drug_test_result (drugres),
+    drugres2 integer references fars.drug_test_result (drugres),
+    drugres3 integer references fars.drug_test_result (drugres),
     hospital integer,
     doa integer,
     death_da integer,
@@ -532,7 +572,7 @@ CREATE TABLE fars.vehicle (
     haz_id integer,
     haz_cno integer references fars.hazardous_material_class (haz_cno),
     haz_rel integer,
-    bus_use integer,
+    bus_use integer references fars.bus_use (bus_use),
     spec_use integer,
     emer_use integer,
     trav_sp integer,
@@ -577,12 +617,12 @@ CREATE TABLE fars.vehicle (
     valign integer,
     vprofile integer,
     vpavetyp integer,
-    vsurcond integer,
+    vsurcond integer references fars.roadway_surface (vsurcond),
     vtrafcon integer,
     vtcont_f integer,
-    p_crash1 integer,
-    p_crash2 integer,
-    p_crash3 integer,
+    p_crash1 integer references fars.pre_event_movement (p_crash1),
+    p_crash2 integer references fars.critical_precrash_event (p_crash2),
+    p_crash3 integer references fars.attempted_avoidance (p_crash3),
     pcrash4 integer,
     pcrash5 integer,
     acc_type integer references fars.accident_type (acc_type),

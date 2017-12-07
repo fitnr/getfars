@@ -1,0 +1,14 @@
+0	No Driver Present/Unknown if Driver Present
+1	No Avoidance Maneuver
+5	Releasing Brakes
+6	Steering Left
+7	Steering Right
+8	Braking and Steering Left
+9	Braking and Steering Right
+10	Accelerating
+11	Accelerating and Steering Left
+12	Accelerating and Steering Right
+15	Braking and Unknown Steering Direction
+16	Braking
+98	Other Actions
+99	Unknown/Not Reported

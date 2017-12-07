@@ -1,0 +1,9 @@
+0	Not a Bus
+1	School Bus
+4	Intercity Bus
+5	Charter/Tour Bus
+6	Transit/Commuter Bus
+7	Shuttle Bus
+8	Modified for Personal/Private Use
+98	Not Reported
+99	Unknown

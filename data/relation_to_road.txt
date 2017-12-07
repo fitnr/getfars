@@ -1,0 +1,12 @@
+1	On Roadway
+2	On Shoulder
+3	On Median
+4	On Roadside
+5	Outside Trafficway
+6	Off Roadway – Location Unknown
+7	In Parking Lane/Zone
+8	Gore
+10	Separator
+11	Continuous Left-Turn Lane
+98	Not Reported
+99	Unknown

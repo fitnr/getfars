@@ -1,0 +1,54 @@
+1	Blow Out/Flat Tire
+2	Stalled Engine
+3	Disabling Vehicle Failure (e.g., Wheel Fell Off)
+4	Poor Road Conditions (Puddle, Pothole, Ice, etc.)
+6	Traveling Too Fast For Conditions
+8	Other Cause of Control Loss
+9	Unknown Cause of Control Loss
+10	This Vehicle Traveling Over the Lane Line on Left Side of Travel Lane
+11	This Vehicle Traveling Over the Lane Line on Right Side of Travel Lane
+12	This Vehicle Traveling Off the Edge of the Road on the Left Side
+13	This Vehicle Traveling Off the Edge of the Road on the Right Side
+14	This Vehicle Traveling End Departure
+15	This Vehicle Traveling Turning Left at Junction
+16	This Vehicle Traveling Turning Right at Junction
+17	This Vehicle Crossing Over (Passing Through) Intersection
+18	This Vehicle Decelerating
+19	Unknown Travel Direction
+50	Other Motor Vehicle In Lane: Other Vehicle Stopped
+51	Other Motor Vehicle In Lane: Traveling In Same Direction with Lower Steady Speed
+52	Other Motor Vehicle In Lane: Traveling In Same Direction while Decelerating
+53	Other Motor Vehicle In Lane: Traveling In Same Direction with Higher Speed
+54	Other Motor Vehicle In Lane: Traveling In Opposite Direction
+55	Other Motor Vehicle In Lane: In Crossover
+56	Other Motor Vehicle In Lane: Backing
+59	Other Motor Vehicle In Lane: Unknown Travel Direction of the Other Motor Vehicle in Lane
+60	Other Motor Vehicle Encroaching Into Lane From Adjacent Lane (Same Direction) Over Left Lane Line
+61	Other Motor Vehicle Encroaching Into Lane From Adjacent Lane (Same Direction) Over Right Lane Line
+62	Other Motor Vehicle Encroaching Into Lane From Opposite Direction Over Left Lane Line
+63	Other Motor Vehicle Encroaching Into Lane From Opposite Direction Over Right Lane Line
+64	Other Motor Vehicle Encroaching Into Lane From Parking Lane/Shoulder, Median/Crossover, Roadside
+65	Other Motor Vehicle Encroaching Into Lane From Crossing Street, Turning Into Same Direction
+66	Other Motor Vehicle Encroaching Into Lane From Crossing Street, Across Path
+67	Other Motor Vehicle Encroaching Into Lane From Crossing Street, Turning Into Opposite Direction
+68	Other Motor Vehicle Encroaching Into Lane From Crossing Street, Intended Path Unknown
+70	Other Motor Vehicle Encroaching Into Lane From Driveway, Turning Into Same Direction
+71	Other Motor Vehicle Encroaching Into Lane From Driveway, Across Path
+72	Other Motor Vehicle Encroaching Into Lane From Driveway, Turning Into Opposite Direction
+73	Other Motor Vehicle Encroaching Into Lane From Driveway, Intended Path Unknown
+74	Other Motor Vehicle Encroaching Into Lane From Entrance to Limited Access Highway
+78	Other Motor Vehicle Encroaching Into Lane Encroachment by Other Vehicle – Details Unknown
+80	Pedestrian in Road
+81	Pedestrian Approaching Road
+82	Pedestrian Unknown Location
+83	Pedalcyclist/Other Non-Motorist in Road
+84	Pedalcyclist/Other Non-Motorist Approaching Road
+85	Pedalcyclist/Other Non-Motorist Unknown Location
+87	Animal in Road
+88	Animal Approaching Road
+89	Animal – Unknown Location Object in Roadway
+90	Object in Road
+91	Object Approaching Road
+92	Object Unknown Location
+98	Other Critical Precrash
+99	Event Unknown

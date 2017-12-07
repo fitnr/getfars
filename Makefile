@@ -31,7 +31,9 @@ lookups = area_of_impact atmospheric_condition bike_crash_type \
 	hazardous_material_class injury_severity light_condition \
 	manner_of_collision ped_crash_type restraint_use road_owner \
 	route safety_equipment sequence_events special_jurisdiction \
-	state trafficway violations_charged
+	state trafficway violations_charged drug_test_result rural_urban \
+	bus_use relation_to_road roadway_surface critical_precrash_event \
+	pre_event_movement attempted_avoidance
 
 .PHONY: load load-% init
 

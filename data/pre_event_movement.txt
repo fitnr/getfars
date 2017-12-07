@@ -1,0 +1,20 @@
+0	No Driver Present/Unknown if Driver Present
+1	Going Straight
+2	Decelerating in Road
+3	Accelerating in Road
+4	Starting in Road
+5	Stopped in Roadway
+6	Passing or Overtaking Another Vehicle
+7	Disabled or Parked in Travel Lane
+8	Leaving a Parking Position
+9	Entering a Parking Position
+10	Turning Right
+11	Turning Left
+12	Making a U-Turn
+13	Backing Up (Other Than For Parking Position)
+14	Negotiating a Curve
+15	Changing Lanes
+16	Merging
+17	Successful Avoidance Maneuver to a Previous Critical Event
+98	Other
+99	Unknown

@@ -1,0 +1,13 @@
+0	Non-Trafficway Area or Driveway Access
+1	Dry
+2	Wet
+3	Snow
+4	Ice/Frost
+5	Sand
+6	Water (Standing or Moving)
+7	Oil
+8	Other
+10	Slush
+11	Mud, Dirt, Gravel
+98	Not Reported
+99	Unknown
