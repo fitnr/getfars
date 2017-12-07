@@ -147,6 +147,7 @@ insert into fars_special_jurisdiction values
     (5, 'Other Federal Properties'),
     (8, 'Other'),
     (9, 'Unknown');
+
 create table fars_harmful_event (
     harm_ev int primary key,
     name text
@@ -486,7 +487,7 @@ insert into fars_body_type values
     (98, 'Not Reported'),
     (99, 'Unknown Body Type');
 
--- todo: vehicle configuration, cargo body type
+-- todo: vehicle configuration, cargo body type, bus use, special use, emergency use
 
 create table fars_trailing_vehicle (
     tow_veh int primary key,
@@ -533,7 +534,7 @@ insert into fars_safety_equipment values
     (8, 'Not Reported'),
     (9, 'Unknown if Used');
 
-create table fars_ped_crash_type(
+create table fars_ped_crash_type (
     pedctype int primary key,
     name text
 );
@@ -760,6 +761,187 @@ insert into fars_trafficway values
     (8, 'Not Reported'),
     (9, 'Unknown');
 
+create table fars_related_factors_person (
+    p_sf int primary key,
+    name text
+);
+insert into fars_related_factors_person values
+    (0, 'None/Not Applicable-Driver'),
+    (5, 'Interfering With Driver'),
+    (8, 'Mentally Challenged'),
+    (9, 'Construction/Maintenance/Utility Worker, Highway Department, Contractor, Utility Company Personnel, etc'),
+    (13, 'Motorized Wheelchair Rider'),
+    (18, 'Mother of Dead Fetus/Mother of Infant Born Post Crash'),
+    (21, 'Overloading or Improper Loading of Vehicle with Passengers or Cargo'),
+    (26, 'Following Improperly'),
+    (28, 'Improper Lane Usage'),
+    (29, 'Intentional Illegal Driving on Road Shoulder, in Ditch, on Sidewalk, on Median'),
+    (32, 'Opening Vehicle Closure into Moving Traffic or While Vehicle is in Motion'),
+    (33, 'Passing where Prohibited by Posted Signs, Pavement Markings, or School Bus Displaying Warning not to Pass'),
+    (37, 'Traveling on Prohibited Trafficway'),
+    (40, 'Passing Through or Around Barrier Positioned to Prohibit or Channel Traffic'),
+    (41, 'Failure to Observe Warnings or Instructions on Vehicles Displaying Them'),
+    (42, 'Failure to Signal Intentions'),
+    (44, 'Driving Too Fast for Conditions or in Excess of Posted Maximum'),
+    (45, 'Driving Less Than Posted Maximum'),
+    (47, 'Making Right Turn From Left-Turn Lane, Left Turn from Right-Turn Lane'),
+    (51, 'Operator Inexperience'),
+    (52, 'Unfamiliar with Roadway'),
+    (56, 'Non-Driver Flees Scene'),
+    (57, 'Improper Tire Pressure'),
+    (59, 'Overcorrecting'),
+    (60, 'Vision Obscured By Rain, Snow, Fog, Smoke, Sand, Dust'),
+    (61, 'Vision Obscured By Reflected Glare, Bright Sunlight, Headlights'),
+    (62, 'Vision Obscured By Curve, Hill, or Other Design Features (Including Traffic Signs, Embankment)'),
+    (63, 'Vision Obscured By Building, Billboard, Other Structures'),
+    (64, 'Vision Obscured By Trees, Crops, Vegetation'),
+    (65, 'Vision Obscured By Motor Vehicle (Including Load)'),
+    (66, 'Vision Obscured By Parked Vehicle'),
+    (67, 'Vision Obscured By Splash or Spray or Passing Vehicle 68 Inadequate Lighting System'),
+    (69, 'Vision Obscured By Obstructing Angles on Vehicle'),
+    (70, 'Vision Obscured By Mirrors'),
+    (72, 'Vision Obscured By Other Visual Obstruction'),
+    (73, 'Skidding, Swerving, Or Sliding Due To Severe Crosswind'),
+    (74, 'Skidding, Swerving, Or Sliding Due To Wind From Passing Truck'),
+    (75, 'Skidding, Swerving, Or Sliding Due To Slippery or Loose Surface'),
+    (76, 'Skidding, Swerving, Or Sliding Due To Tire Blow-Out or Flat'),
+    (77, 'Skidding, Swerving, Or Sliding Due To Debris or Objects in Road'),
+    (78, 'Ruts, Holes, Bumps in Road'),
+    (80, 'Vehicle in Road'),
+    (81, 'Phantom Vehicle'),
+    (82, 'Pedestrian, Pedalcyclist, or Other Non-Motorist'),
+    (83, 'Ice, Snow, Slush, Water, Sand, Dirt, Oil, Wet Leaves on Road'),
+    (86, 'Emergency Services Personnel'),
+    (87, 'Police or Law Enforcement Officer'),
+    (88, 'Seat Back Not in Normal Upright Position, Seat Back Reclined'),
+    (89, 'Parked Motor Vehicle With Equipment Extending into the Travel Lane'),
+    (90, 'Non-Motorist Pushing a Vehicle'),
+    (91, 'Portable Electronic Devices'),
+    (92, 'Person in Ambulance Treatment Compartment / Non-Motorist Wearing Motorcycle Helmet'),
+    (99, 'Unknown');
+
+create table fars_person_type (
+    per_typ int PRIMARY KEY,
+    name TEXT
+);
+insert into fars_person_type values
+    (1, 'Driver of a Motor Vehicle In-Transport'),
+    (2, 'Passenger of a Motor Vehicle In-Transport'),
+    (3, 'Occupant of a Motor Vehicle Not In-Transport'),
+    (4, 'Occupant of a Non-Motor Vehicle Transport Device'),
+    (5, 'Pedestrian'),
+    (6, 'Bicyclist'),
+    (7, 'Other Pedalcyclist'),
+    (8, 'Person on Personal Conveyances'),
+    (9, 'Unknown Occupant Type in a Motor Vehicle In-Transport'),
+    (10, 'Persons In/On Buildings'),
+    (19, 'Unknown Type of Non-Motorist'),
+    (88, 'Not Reported');
+
+create table fars_sequence_events (
+    soe int primary key,
+    name text
+);
+insert into fars_sequence_events values
+    (1, 'Rollover/Overturn'),
+    (2, 'Fire/Explosion'),
+    (3, 'Immersion or Partial Immersion'),
+    (4, 'Gas Inhalation'),
+    (5, 'Fell/Jumped from Vehicle'),
+    (6, 'Injured in Vehicle (Non-Collision)'),
+    (7, 'Other Non-Collision'),
+    (8, 'Pedestrian'),
+    (9, 'Pedalcyclist'),
+    (10, 'Railway Vehicle'),
+    (11, 'Live Animal'),
+    (12, 'Motor Vehicle in Transport'),
+    (14, 'Parked Motor Vehicle'),
+    (15, 'Non-Motorist on Personal Conveyance Thrown or Falling Object'),
+    (17, 'Boulder'),
+    (18, 'Other Object (Not Fixed)'),
+    (19, 'Building'),
+    (20, 'Impact Attenuator/Crash Cushion'),
+    (21, 'Bridge Pier or Support'),
+    (23, 'Bridge Rail (Includes Parapet)'),
+    (24, 'Guardrail Face'),
+    (25, 'Concrete Traffic Barrier'),
+    (26, 'Other Traffic Barrier'),
+    (30, 'Utility Pole/Light Support'),
+    (31, 'Other Post, Other Pole, or Other Support'),
+    (32, 'Culvert'),
+    (33, 'Curb'),
+    (34, 'Ditch'),
+    (35, 'Embankment'),
+    (38, 'Fence'),
+    (39, 'Wall'),
+    (40, 'Fire Hydrant'),
+    (41, 'Shrubbery'),
+    (42, 'Tree (Standing Only)'),
+    (43, 'Other Fixed Object'),
+    (44, 'Pavement Surface Irregularity (Ruts, Potholes, Grates, etc.)'),
+    (45, 'Working Motor Vehicle'),
+    (46, 'Traffic Signal Support'),
+    (48, 'Snow Bank'),
+    (49, 'Ridden Animal or Animal-Drawn Conveyance Bridge Overhead Structure'),
+    (51, 'Jackknife (Harmful to This Vehicle)'),
+    (52, 'Guardrail End'),
+    (53, 'Mail Box'),
+    (54, 'Motor Vehicle In-Transport Strikes or is Struck by Cargo, Persons or Objects Set-in-Motion from/by Another Motor Vehicle In-Transport'),
+    (55, 'Motor Vehicle in Motion Outside the Trafficway'),
+    (57, 'Cable Barrier'),
+    (58, 'Ground'),
+    (59, 'Traffic Sign Support'),
+    (60, 'Cargo/Equipment Loss or Shift (Non-Harmful)'),
+    (61, 'Equipment Failure (Blown Tire, Brake Failure, etc.)'),
+    (62, 'Separation of Units'),
+    (63, 'Ran Off Road – Right'),
+    (64, 'Ran Off Road – Left'),
+    (65, 'Cross Median'),
+    (66, 'Downhill Runaway'),
+    (67, 'Vehicle Went Airborne'),
+    (68, 'Cross Centerline'),
+    (69, 'Re-Entering Highway'),
+    (70, 'Jackknife (Non-Harmful)'),
+    (71, 'End Departure'),
+    (72, 'Cargo/Equipment Loss or Shift (Harmful To This Vehicle)'),
+    (73, 'Object That Had Fallen From Motor Vehicle In-Transport'),
+    (74, 'Road Vehicle on Rails'),
+    (79, 'Ran Off Roadway – Direction Unknown'),
+    (99, 'Unknown');
+
+create table fars_area_of_impact (
+    aoi int primary key,
+    name text
+);
+insert into fars_area_of_impact values
+    (0, 'Non-Collision'),
+    (1, 'One O''Clock'),
+    (2, 'Two O''Clock'),
+    (3, 'Three O''Clock'),
+    (4, 'Four O''Clock'),
+    (5, 'Five O''Clock'),
+    (6, 'Six O''Clock'),
+    (7, 'Seven O''Clock'),
+    (8, 'Eight O''Clock'),
+    (9, 'Nine O''Clock'),
+    (10, 'Ten O''Clock'),
+    (11, 'Eleven O''Clock'),
+    (12, 'Twelve O''Clock'),
+    (13, 'Top'),
+    (14, 'Undercarriage'),
+    (18, 'Cargo/Vehicle Parts Set-In-Motion'),
+    (19, 'Other Objects Set-In-Motion'),
+    (55, 'Non-Harmful Event'),
+    (61, 'Left'),
+    (62, 'Left-Front Size'),
+    (63, 'Left-Back Side'),
+    (77, 'Not a Motor Vehicle'),
+    (81, 'Right'),
+    (82, 'Right-Front Side'),
+    (83, 'Right-Back Side'),
+    (98, 'Not Reported'),
+    (99, 'Unknown');
+
 CREATE TABLE fars_accident (
     state integer references fars_state (state),
     st_case integer PRIMARY KEY,
@@ -820,10 +1002,10 @@ CREATE TABLE fars_cevent (
     st_case integer,
     eventnum integer,
     vnumber1 integer,
-    aoi1 integer,
-    soe integer,
+    aoi1 integer references fars_area_of_impact (aoi),
+    soe integer references fars_sequence_events (soe),
     vnumber2 integer,
-    aoi2 integer,
+    aoi2 integer references fars_area_of_impact (aoi),
     constraint fars_cevent_pk primary key (st_case, eventnum)
 );
 
@@ -963,7 +1145,7 @@ CREATE TABLE fars_pbtype (
     st_case integer references fars_accident (st_case),
     veh_no integer,
     per_no integer,
-    pbptype integer,
+    pbptype integer references fars_person_type (per_typ),
     pbage integer,
     pbsex integer,
     pbcwalk integer,
@@ -983,7 +1165,7 @@ CREATE TABLE fars_pbtype (
     pedsnr text,
     pedcgp integer,
     bikecgp integer,
-    constraint fars_pbtype_pk primary key (st_case, veh_no, per_no)
+    constraint fars_pbtype_pk primary key (st_case, per_no)
 );
 
 CREATE TABLE fars_person (
@@ -1003,7 +1185,7 @@ CREATE TABLE fars_person (
     harm_ev integer,
     man_coll integer,
     sch_bus integer,
-    make integer,
+    make integer references fars_vehicle_make (make),
     mak_mod integer,
     body_typ integer references fars_body_type (body_typ),
     mod_year integer,
@@ -1015,7 +1197,7 @@ CREATE TABLE fars_person (
     fire_exp integer,
     age integer,
     sex integer,
-    per_typ integer,
+    per_typ integer references fars_person_type (per_typ),
     inj_sev integer,
     seat_pos integer,
     rest_use integer,
@@ -1048,9 +1230,9 @@ CREATE TABLE fars_person (
     death_tm integer,
     lag_hrs integer,
     lag_mins integer,
-    p_sf1 integer,
-    p_sf2 integer,
-    p_sf3 integer,
+    p_sf1 integer references fars_related_factors_person (p_sf),
+    p_sf2 integer references fars_related_factors_person (p_sf),
+    p_sf3 integer references fars_related_factors_person (p_sf),
     work_inj integer,
     hispanic integer,
     race integer,
@@ -1183,10 +1365,10 @@ CREATE TABLE fars_vevent (
     veh_no integer,
     veventnum integer,
     vnumber1 integer,
-    aoi1 integer,
-    soe integer,
+    aoi1 integer references fars_area_of_impact (aoi),
+    soe integer references fars_sequence_events (soe),
     vnumber2 integer,
-    aoi2 integer,
+    aoi2 integer references fars_area_of_impact (aoi),
     constraint fars_vevent_pk primary key (st_case, veh_no, eventnum)
 );
 
