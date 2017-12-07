@@ -37,7 +37,7 @@ lookups = area_of_impact atmospheric_condition bike_crash_type \
 
 load: $(addprefix load-,$(tables))
 
-load-%: $(YEAR)/fars.zip
+load-%: fars-$(YEAR).zip
 	unzip -Cp $< $*.csv | \
 		$(PSQL) -c "\copy fars.$* FROM STDIN WITH (FORMAT CSV, HEADER TRUE)"
 
@@ -50,7 +50,5 @@ init-schema:; $(PSQL) -f sql/fars_schema.sql
 
 clean:; $(PSQL) -c "DROP SCHEMA fars CASCADE"
 
-$(YEAR)/fars.zip:
+fars-$(YEAR).zip:
 	curl ftp://ftp.nhtsa.dot.gov/fars/$(YEAR)/National/FARS$(YEAR)NationalCSV.zip -o $@
-
-$(YEAR):; mkdir -p $@
