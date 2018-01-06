@@ -27,18 +27,15 @@ Retrieve information about a crash:
 select
     st_case,
     state.name state,
-    make_date(a.year, a.month, a.day),
+    make_timestamp(a.year, a.month, a.day, a.hour, a.minute, 0),
     route.name route_type,
     owner.name road_owner,
     special_jurisdiction.name special_jurisdiction,
     man_coll.name manner_of_collision,
     harmful_event.name first_harmful_event,
     lgt.name as lighting_condition,
-    weather1.name weather_condition1,
-    weather2.name weather_condition2,
-    rcf1.name relatedfactors1,
-    rcf2.name relatedfactors2,
-    rcf3.name relatedfactors3
+    concat_ws('; ', weather1.name, nullif(weather2.name, 'No Additional Atmospheric Conditions')) weather,
+    concat_ws('; ', rcf1.name, nullif(rcf2.name, 'None'), nullif(rcf3.name, 'None')) relatedfactors
 from accident as a
     left join state using (state)
     left join route using (route)
@@ -59,9 +56,10 @@ where st_case = 10845;
 Retrieve information about persons involved in a particular crash:
 ````sql
 select a.st_case,
-    make_date(a.year, a.month, a.day),
+    make_timestamp(a.year, a.month, a.day, a.hour, a.minute, 0),
     veh_no,
-    per_no, str_veh struck,
+    per_no,
+    str_veh struck,
     person_type.name persontype,
     person.age,
     person.sex,
@@ -71,11 +69,8 @@ select a.st_case,
     seat_pos,
     injury_severity.name injury_severity,
     make_date(nullif(death_yr, 8888), nullif(death_mo, 88), nullif(death_da, 88)) death_date,
-    crash_group_pedestrian.name crash_group_pedestrian,
-    crash_group_bike.name crash_group_bike,
-    sf1.name relatedfactor1,
-    sf2.name relatedfactor2,
-    sf3.name relatedfactor3
+    coalesce(nullif(crash_group_bike.name, 'Not a Cyclist'), crash_group_pedestrian.name) crash_group,
+    concat_ws('; ', sf1.name, nullif(sf2.name, 'None/Not Applicable-Driver'), nullif(sf3.name, 'None/Not Applicable-Driver')) relatedfactors
 from accident as a
     left join person using (st_case)
     left join pbtype pb using (st_case, veh_no, per_no)
@@ -95,23 +90,33 @@ Query vehicles involved in a crash:
 ````sql
 select
     a.st_case,
+    veh_no,
     trafficway.name trafficway,
-    TRAV_SP travel_speed,
-    NUMOCCS occupants,
+    trav_sp travel_speed,
+    numoccs occupants,
     owner.name as owner,
+    dr_drink driver_drinking,
     state.name registration,
-    DR_ZIP drivers_zipcode,
+    dr_zip drivers_zipcode,
     make.name make,
     model,
     body_type.name body_type,
     towing.name trailing_vehicle,
     haz.name hazardous_material,
+    pre_event_movement.name pre_event_movement,
+    critical_precrash_event.name critical_precrash_event,
+    attempted_avoidance.name attempted_avoidance,
     concat_ws('; ', vsf1.name, nullif(vsf2.name, 'None'), nullif(vsf3.name, 'None'), nullif(vsf4.name, 'None')) driver_related_factors,
     harmful_event.name most_harmful_event,
-    DEFORMED,
-    accident_type.name as accident_type
+    deformed,
+    accident_type.name as accident_type,
+    impairment.name impairment,
+    distraction.name distraction
 from accident as a
     left join vehicle v using (st_case)
+    left join pre_event_movement using (p_crash1)
+    left join critical_precrash_event using (p_crash2)
+    left join attempted_avoidance using (p_crash3)
     left join vehicle_owner owner using (owner)
     left join vehicle_make make using (make)
     left join state on (state.state = l_state)
@@ -125,7 +130,14 @@ from accident as a
     left join related_factors_driver vsf4 on (vsf4.dr_sf = v.dr_sf4)
     left join trafficway trafficway using (vtrafway)
     left join accident_type using (acc_type)
-where a.st_case = 10845;
+
+    left join drimpair on (st_case, veh_no)
+    left join impairment using (drimpair)
+
+    left join distract using (st_case, veh_no)
+    left join driver_distracted distraction using (mdrdstrd)
+
+where a.st_case = 10845 order by veh_no asc;
 ````
 
 Query information about the sequence of events in a crash:
