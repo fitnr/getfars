@@ -6,7 +6,7 @@
 6	Station Wagon (Excluding Van and Truck-Based)
 7	Hatchback, Number of Doors Unknown
 8	Sedan/Hardtop, Number of Doors Unknown
-9	Other or Unknown Automobile Type (Since 1994)
+9	Other or Unknown Automobile Type
 10	Auto-Based Pickup
 11	Auto-Based Panel (Cargo Station Wagon, Auto-Based Ambulance or Hearse)
 12	Large Limousine – More Than Four Side Doors or Stretch Chassis
@@ -35,7 +35,7 @@
 50	School Bus
 51	Cross-Country/Intercity Bus (i.e., Greyhound)
 52	Transit Bus (City Bus)
-55	Van-Based Bus GVWR > 10,000 lbs. (Since 2011)
+55	Van-Based Bus GVWR > 10,000 lbs.
 58	Other Bus Type
 59	Unknown Bus Type
 60	Step Van
@@ -63,7 +63,7 @@
 92	Farm Equipment Other Than Trucks
 93	Construction Equipment Other Than Trucks (Includes Graders)
 94	Low Speed Vehicle (LSV)/Neighborhood Electric Vehicle (NEV)
-95	Golf Cart (Since 2012)
+95	Golf Cart
 97	Other Vehicle Type (Includes Go-Cart, Fork-Lift, City Street Sweeper, Dune/Swamp Buggy)
 98	Not Reported
 99	Unknown Body Type

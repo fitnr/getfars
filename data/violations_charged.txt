@@ -8,7 +8,7 @@
 7	RECKLESS/CARELESS/HIT-AND-RUN: Hit-and-Run, Fail to Stop After Crash
 8	RECKLESS/CARELESS/HIT-AND-RUN: Fail to Give Aid, Information, Wait for Police after Crash
 9	RECKLESS/CARELESS/HIT-AND-RUN: Serious Violation Resulting in Death
-10	RECKLESS/CARELESS/HIT-AND-RUN: Use of Telecommunications Device (Since 2015)
+10	RECKLESS/CARELESS/HIT-AND-RUN: Use of Telecommunications Device
 11	IMPAIRMENT: Driving While Intoxicated (Alcohol or Drugs) or BAC above Limit (Any Detectable BAC for CDLs)
 12	IMPAIRMENT: Driving While Impaired
 13	IMPAIRMENT: Driving under Influence of Substance not intended to intoxicate
@@ -54,7 +54,7 @@
 66	LANE USAGE: Motorcycle Lane Violations (More than two per Lane, Riding Between Lanes, etc.)
 67	LANE USAGE: Motorcyclist Attached to another Vehicle
 69	LANE USAGE: Lane Violations Generally
-71	LICENSE & REGISTRATION: Driving While License Withdrawn (Since 2014)
+71	LICENSE & REGISTRATION: Driving While License Withdrawn
 72	LICENSE & REGISTRATION: Other Driver License Violations
 73	LICENSE & REGISTRATION: Commercial Driver Violations
 74	LICENSE & REGISTRATION: Vehicle Registration Violations

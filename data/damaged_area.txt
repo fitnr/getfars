@@ -1,0 +1,16 @@
+1	One O'Clock
+2	Two O'Clock
+3	Three O'Clock
+4	Four O'Clock
+5	Five O'Clock
+6	Six O'Clock
+7	Seven O'Clock
+8	Eight O'Clock
+9	Nine O'Clock
+10	Ten O'Clock
+11	Eleven O'Clock
+12	Twelve O'Clock
+13	Top
+14	Undercarriage
+15	No Damage
+99	Unknown

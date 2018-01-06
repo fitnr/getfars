@@ -1,0 +1,23 @@
+0	None Noted
+1	Dart-Out
+2	Failure to Yield Right-Of-Way
+3	Failure to Obey Traffic Signs, Signals or Officer
+4	In Roadway Improperly (Standing, Lying, Working, Playing)
+5	Entering/Exiting Parked or Stopped Vehicle
+6	Inattentive (Talking, Eating, etc.)
+7	Improper Turn/Merge
+8	Improper Passing
+9	Wrong-Way Riding or Walking
+10	Riding on Wrong Side of Road
+11	Dash
+12	Improper Crossing of Roadway or Intersection (Jaywalking)
+13	Failing to Have Lights on When Required
+14	Operating Without Required Equipment
+15	Improper or Erratic Lane Changing
+16	Failure to Keep in Proper Lane or Running Off Road
+17	Making Improper Entry to or Exit from Trafficway
+18	Operating in Other Erratic, Reckless, Careless or Negligent Manner
+19	Not Visible (Dark Clothing, No Lighting, etc.)
+20	Passing with Insufficient Distance or Inadequate Visibility or Failing to Yield to Overtaking Vehicle
+21	Other
+99	Unknown

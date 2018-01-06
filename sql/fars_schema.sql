@@ -1,4 +1,4 @@
--- todo: vehicle configuration, cargo body type, bus use, special use, emergency use
+-- todo: vehicle configuration, cargo body type, special use, emergency use
 
 CREATE SCHEMA IF NOT EXISTS fars;
 
@@ -128,8 +128,8 @@ create table fars.driver_distracted (
     name text
 );
 
-create table fars.driver_impairment (
-    drimpair int primary key,
+create table fars.impairment (
+    impair int primary key,
     name text
 );
 
@@ -170,6 +170,11 @@ create table fars.injury_severity (
 
 create table fars.restraint_use (
     rest_use int primary key,
+    name text
+);
+
+create table fars.location (
+    location int primary key,
     name text
 );
 
@@ -215,6 +220,21 @@ create table fars.critical_precrash_event (
 
 create table fars.attempted_avoidance (
     p_crash3 int primary key,
+    name text
+);
+
+create table fars.nonmotorist_action (
+    mpr_act int primary key,
+    name text
+);
+
+create table fars.nonmotorist_contributing (
+    mtm_crsh int primary key,
+    name text
+);
+
+create table fars.damaged_area (
+    mdareas int primary key,
     name text
 );
 
@@ -289,7 +309,7 @@ CREATE TABLE fars.damage (
     state integer references fars.state (state),
     st_case integer references fars.accident (st_case),
     veh_no integer,
-    mdareas integer
+    mdareas integer references fars.damaged_area (mdareas)
 );
 create index on fars.damage (st_case, veh_no);
 
@@ -305,7 +325,7 @@ CREATE TABLE fars.drimpair (
     state integer references fars.state (state),
     st_case integer references fars.accident (st_case),
     veh_no integer,
-    drimpair integer references fars.driver_impairment (drimpair)
+    drimpair integer references fars.impairment (impair)
 );
 create index on fars.drimpair (st_case, veh_no);
 
@@ -330,7 +350,7 @@ CREATE TABLE fars.nmcrash (
     st_case integer references fars.accident (st_case),
     veh_no integer,
     per_no integer,
-    mtm_crsh integer
+    mtm_crsh integer references fars.nonmotorist_contributing (mtm_crsh)
 );
 create index on fars.nmcrash (st_case, veh_no, per_no);
 
@@ -339,7 +359,7 @@ CREATE TABLE fars.nmimpair (
     st_case integer references fars.accident (st_case),
     veh_no integer,
     per_no integer,
-    nmimpair integer
+    nmimpair integer references fars.impairment (impair)
 );
 create index on fars.nmimpair (st_case, veh_no, per_no);
 
@@ -348,7 +368,7 @@ CREATE TABLE fars.nmprior (
     st_case integer references fars.accident (st_case),
     veh_no integer,
     per_no integer,
-    mpr_act integer
+    mpr_act integer references fars.nonmotorist_action (mpr_act)
 );
 create index on fars.nmprior (st_case, veh_no, per_no);
 
@@ -402,7 +422,7 @@ CREATE TABLE fars.parkwork (
     psp_use integer,
     pem_use integer,
     punderide integer,
-    pimpact1 integer,
+    pimpact1 integer references fars.area_of_impact (aoi),
     pveh_sev integer,
     ptowed integer,
     pm_harm integer references fars.harmful_event (harm_ev),
@@ -459,7 +479,7 @@ CREATE TABLE fars.person (
     rur_urb integer references fars.rural_urban (rur_urb),
     func_sys integer,
     harm_ev integer,
-    man_coll integer,
+    man_coll integer fars.manner_of_collision (man_coll),
     sch_bus integer,
     make integer references fars.vehicle_make (make),
     mak_mod integer,
@@ -469,7 +489,7 @@ CREATE TABLE fars.person (
     spec_use integer,
     emer_use integer,
     rollover integer,
-    impact1 integer,
+    impact1 integer references fars.area_of_impact (aoi),
     fire_exp integer,
     age integer,
     sex integer,
@@ -512,7 +532,7 @@ CREATE TABLE fars.person (
     work_inj integer,
     hispanic integer,
     race integer,
-    location integer,
+    location integer references fars.location (location),
     constraint fars_person_pk primary key (st_case, veh_no, per_no)
 );
 
@@ -535,8 +555,8 @@ CREATE TABLE fars.vehicle (
     month integer,
     hour integer,
     minute integer,
-    harm_ev integer,
-    man_coll integer,
+    harm_ev integer references fars.harmful_event (harm_ev),
+    man_coll integer references fars.manner_of_collision (man_coll),
     unittype integer,
     hit_run integer,
     reg_stat integer,
@@ -776,7 +796,7 @@ CREATE TABLE fars.vsoe (
     st_case integer references fars.accident (st_case),
     veh_no integer,
     veventnum integer,
-    soe integer,
-    aoi integer,
+    soe integer references fars.sequence_events (soe),
+    aoi integer references fars.area_of_impact (aoi),
     constraint fars_vsoe_pk primary key (st_case, veh_no, veventnum)
 );

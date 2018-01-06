@@ -1,0 +1,15 @@
+1	Going to or from School (K-12)
+2	Waiting to Cross Roadway
+3	Crossing Roadway
+4	Jogging/Running
+5	Movement Along Roadway with Traffic (In or Adjacent to Travel Lane)
+6	Movement Along Roadway Against Traffic (In or Adjacent to Travel Lane)
+8	In Roadway-Other (Working, Playing, etc.)
+9	Adjacent to Roadway (e.g., Shoulder, Median)
+10	Working in Trafficway (Incident Response)
+11	Entering/Exiting a Parked or Stopped Vehicle
+12	Disabled Vehicle Related (Working on, Pushing, Leaving/Approaching)
+14	Other
+16	Movement Along Roadway – Direction Unknown
+98	Not Reported
+99	Unknown

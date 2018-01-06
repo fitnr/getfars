@@ -1,0 +1,19 @@
+0	Occupant of a Motor Vehicle (Includes Railway Train Occupants)
+1	At Intersection-In Marked Crosswalk
+2	At Intersection-Unmarked/Unknown If Marked Crosswalk
+3	At Intersection-Not in Crosswalk
+9	At Intersection-Unknown Location
+10	Non-Intersection-In Marked Crosswalk
+11	Not At Intersection-On Roadway, Not in Marked Crosswalk
+13	Not At Intersection-On Roadway, Crosswalk Availability Unknown
+14	Parking Lane/Zone
+16	Bicycle Lane
+20	Shoulder/Roadside
+21	Sidewalk
+22	Median/Crossing Island
+23	Driveway Access
+24	Shared-Use Path
+25	Non-Trafficway Area
+28	Other
+98	Not Reported
+99	Unknown Location
