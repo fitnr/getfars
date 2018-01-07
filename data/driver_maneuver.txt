@@ -1,0 +1,10 @@
+0	Driver Did Not Maneuver To Avoid
+1	Object
+2	Poor Road Conditions (Puddle, Ice, Pothole, etc.)
+3	Live Animal
+4	Motor Vehicle
+5	Pedestrian, Pedalcyclist or Other Non-Motorist
+92	Phantom/Non-Contact Motor Vehicle
+95	No Driver Present/Unknown if Driver Present
+98	Not Reported
+99	Unknown

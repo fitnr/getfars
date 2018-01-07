@@ -108,7 +108,7 @@ select
     attempted_avoidance.name attempted_avoidance,
     concat_ws('; ', vsf1.name, nullif(vsf2.name, 'None'), nullif(vsf3.name, 'None'), nullif(vsf4.name, 'None')) driver_related_factors,
     harmful_event.name most_harmful_event,
-    deformed,
+    damage_extent.name as damage_extent,
     accident_type.name as accident_type,
     impairment.name impairment,
     distraction.name distraction
@@ -131,11 +131,12 @@ from accident as a
     left join trafficway trafficway using (vtrafway)
     left join accident_type using (acc_type)
 
-    left join drimpair on (st_case, veh_no)
+    left join drimpair using (st_case, veh_no)
     left join impairment using (drimpair)
 
     left join distract using (st_case, veh_no)
     left join driver_distracted distraction using (mdrdstrd)
+    left join damage_extent using (deformed)
 
 where a.st_case = 10845 order by veh_no asc;
 ````

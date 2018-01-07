@@ -1,0 +1,7 @@
+0	No
+2	Yes, Racing
+3	Yes, Exceeded Speed Limit
+4	Yes, Too Fast for Conditions
+5	Yes, Specifics Unknown
+8	No Driver Present/Unknown if Driver Present
+9	Unknown

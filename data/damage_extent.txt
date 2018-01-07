@@ -1,0 +1,6 @@
+0	No Damage
+2	Minor Damage
+4	Functional Damage
+6	Disabling Damage
+8	Not Reported
+9	Unknown

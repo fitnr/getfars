@@ -238,6 +238,26 @@ create table fars.damaged_area (
     name text
 );
 
+create table fars.damage_extent (
+    deformed int primary key,
+    name text
+);
+
+create table fars.speeding (
+    speedrel int primary key,
+    name text
+);
+
+create table fars.bike_location (
+    bikeloc int primary key,
+    name text
+);
+
+create table fars.ped_location (
+    pedloc int primary key,
+    name text
+);
+
 CREATE TABLE fars.accident (
     state integer references fars.state (state),
     st_case integer PRIMARY KEY,
@@ -391,7 +411,7 @@ CREATE TABLE fars.parkwork (
     pmake integer references fars.vehicle_make (make),
     pmodel integer,
     pmak_mod integer,
-    pbodytyp integer,
+    pbodytyp integer references fars.body_type (body_typ),
     pmodyear integer,
     pvin text,
     pvin_1 text,
@@ -449,10 +469,10 @@ CREATE TABLE fars.pbtype (
     pbszone integer,
     pedctype integer references fars.ped_crash_type (pedctype),
     bikectype integer references fars.bike_crash_type (bikectype),
-    pedloc integer,
-    bikeloc integer,
-    pedpos integer,
-    bikepos integer,
+    pedloc integer references fars.ped_location (pedloc),
+    bikeloc integer references fars.bike_location (bikeloc),
+    pedpos integer references fars.ped_position (pedpos),
+    bikepos integer references fars.bike_position (bikepos),
     peddir integer,
     bikedir integer,
     motdir integer,
@@ -479,7 +499,7 @@ CREATE TABLE fars.person (
     rur_urb integer references fars.rural_urban (rur_urb),
     func_sys integer,
     harm_ev integer,
-    man_coll integer fars.manner_of_collision (man_coll),
+    man_coll integer references fars.manner_of_collision (man_coll),
     sch_bus integer,
     make integer references fars.vehicle_make (make),
     mak_mod integer,
@@ -600,7 +620,7 @@ CREATE TABLE fars.vehicle (
     rollover integer,
     rolinloc integer,
     impact1 integer,
-    deformed integer,
+    deformed integer references fars.damage_extent (deformed),
     towed integer,
     m_harm integer references fars.harmful_event (harm_ev),
     veh_sc1 integer,
@@ -626,7 +646,7 @@ CREATE TABLE fars.vehicle (
     first_yr integer,
     last_mo integer,
     last_yr integer,
-    speedrel integer,
+    speedrel integer references fars.speeding (speedrel),
     dr_sf1 integer references fars.related_factors_driver (dr_sf),
     dr_sf2 integer references fars.related_factors_driver (dr_sf),
     dr_sf3 integer references fars.related_factors_driver (dr_sf),

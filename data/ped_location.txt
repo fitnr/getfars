@@ -1,0 +1,6 @@
+1	At Intersection
+2	Intersection-Related
+3	Not At Intersection
+4	Non-Trafficway Location
+7	Not a Pedestrian/Cyclist
+9	Unknown/Insufficient Information
