@@ -1,0 +1,15 @@
+0	None/Apparently Normal
+1	Ill, Blackout
+2	Asleep or Fatigued
+3	Walking with a Cane or Crutches, etc.
+4	Paraplegic or Restricted to Wheelchair
+5	Impaired Due to Previous Injury
+6	Deaf
+7	Blind
+8	Emotional (Depressed, Angry, Disturbed, etc.)
+9	Under the Influence of Alcohol, Drugs or Medication
+10	Physical Impairment – No Details
+95	No Driver Present/Unknown if Driver Present
+96	Other Physical Impairment
+98	Not Reported
+99	Unknown if Impaired

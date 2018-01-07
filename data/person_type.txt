@@ -1,0 +1,12 @@
+1	Driver of a Motor Vehicle In-Transport
+2	Passenger of a Motor Vehicle In-Transport
+3	Occupant of a Motor Vehicle Not In-Transport
+4	Occupant of a Non-Motor Vehicle Transport Device
+5	Pedestrian
+6	Bicyclist
+7	Other Pedalcyclist
+8	Person on Personal Conveyances
+9	Unknown Occupant Type in a Motor Vehicle In-Transport
+10	Persons In/On Buildings
+19	Unknown Type of Non-Motorist
+88	Not Reported

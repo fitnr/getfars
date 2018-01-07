@@ -1,0 +1,53 @@
+0	None/Not Applicable-Driver
+5	Interfering With Driver
+8	Mentally Challenged
+9	Construction/Maintenance/Utility Worker
+13	Motorized Wheelchair Rider
+18	Mother of Dead Fetus/Mother of Infant Born Post Crash
+21	Overloading or Improper Loading of Vehicle with Passengers or Cargo
+26	Following Improperly
+28	Improper Lane Usage
+29	Intentional Illegal Driving on Road Shoulder, in Ditch, on Sidewalk, on Median
+32	Opening Vehicle Closure into Moving Traffic or While Vehicle is in Motion
+33	Passing where Prohibited by Posted Signs, Pavement Markings, or School Bus Displaying Warning not to Pass
+37	Traveling on Prohibited Trafficway
+40	Passing Through or Around Barrier Positioned to Prohibit or Channel Traffic
+41	Failure to Observe Warnings or Instructions on Vehicles Displaying Them
+42	Failure to Signal Intentions
+44	Driving Too Fast for Conditions or in Excess of Posted Maximum
+45	Driving Less Than Posted Maximum
+51	Operator Inexperience
+52	Unfamiliar with Roadway
+56	Non-Driver Flees Scene
+57	Improper Tire Pressure
+59	Overcorrecting
+60	VISION OBSCURED BY: Rain, Snow, Fog, Smoke, Sand, Dust
+61	VISION OBSCURED BY: Reflected Glare, Bright Sunlight, Headlights
+62	VISION OBSCURED BY: Curve, Hill, or Other Design Features (Including Traffic Signs, Embankment)
+63	VISION OBSCURED BY: Building, Billboard, Other Structures
+64	VISION OBSCURED BY: Trees, Crops, Vegetation
+65	VISION OBSCURED BY: Motor Vehicle (Including Load)
+66	VISION OBSCURED BY: Parked Vehicle
+67	VISION OBSCURED BY: Splash or Spray or Passing Vehicle
+68	VISION OBSCURED BY: Inadequate Lighting System
+69	VISION OBSCURED BY: Obstructing Angles on Vehicle
+70	VISION OBSCURED BY: Mirrors
+72	VISION OBSCURED BY: Other Visual Obstruction
+73	SKIDDING, SWERVING, OR SLIDING DUE TO: Severe Crosswind
+74	SKIDDING, SWERVING, OR SLIDING DUE TO: Wind From Passing Truck
+75	SKIDDING, SWERVING, OR SLIDING DUE TO: Slippery or Loose Surface
+76	SKIDDING, SWERVING, OR SLIDING DUE TO: Tire Blow-Out or Flat
+77	SKIDDING, SWERVING, OR SLIDING DUE TO: Debris or Objects in Road
+78	Ruts, Holes, Bumps in Road
+80	Vehicle in Road
+81	Phantom Vehicle
+82	Pedestrian, Pedalcyclist, or Other Non-Motorist
+83	Ice, Snow, Slush, Water, Sand, Dirt, Oil, Wet Leaves on Road
+86	Emergency Services Personnel
+87	Police or Law Enforcement Officer
+88	Seat Back Not in Normal Upright Position, Seat Back Reclined (Since 2002)
+89	Parked Motor Vehicle With Equipment Extending into the Travel Lane (Since 2013)
+90	Non-Motorist Pushing a Vehicle
+91	Portable Electronic Devices (Since 2008)
+92	Person in Ambulance Treatment Compartment (Since 2013)
+99	Unknown

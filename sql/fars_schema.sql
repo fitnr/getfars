@@ -53,6 +53,11 @@ create table fars.related_factors_crash (
     name text
 );
 
+create table fars.related_factors_vehicle (
+    sc int primary key,
+    name text
+);
+
 create table fars.vehicle_owner (
     owner int primary key,
     name text
@@ -258,6 +263,21 @@ create table fars.ped_location (
     name text
 );
 
+create table fars.bike_position (
+    bikepos int primary key,
+    name text
+);
+
+create table fars.ped_position (
+    pedpos int primary key,
+    name text
+);
+
+create table fars.driver_impairment (
+    drimpair int primary key,
+    name text
+);
+
 CREATE TABLE fars.accident (
     state integer references fars.state (state),
     st_case integer PRIMARY KEY,
@@ -305,7 +325,7 @@ CREATE TABLE fars.accident (
     arr_hour integer,
     arr_min integer,
     hosp_hr integer,
-    hosp_mn integer,
+    hosp_min integer,
     cf1 integer references fars.related_factors_crash (cf),
     cf2 integer references fars.related_factors_crash (cf),
     cf3 integer references fars.related_factors_crash (cf),
@@ -446,8 +466,8 @@ CREATE TABLE fars.parkwork (
     pveh_sev integer,
     ptowed integer,
     pm_harm integer references fars.harmful_event (harm_ev),
-    pveh_sc1 integer,
-    pveh_sc2 integer,
+    pveh_sc1 integer references fars.related_factors_vehicle (sc),
+    pveh_sc2 integer references fars.related_factors_vehicle (sc),
     pfire integer,
     pdeaths integer,
     ptrlr1vin text,
@@ -479,8 +499,8 @@ CREATE TABLE fars.pbtype (
     motman integer,
     pedleg integer,
     pedsnr text,
-    pedcgp integer references crash_group_pedestrian (pedcgp),
-    bikecgp integer references crash_group_bike (bikecgp),
+    pedcgp integer references fars.crash_group_pedestrian (pedcgp),
+    bikecgp integer references fars.crash_group_bike (bikecgp),
     constraint fars_pbtype_pk primary key (st_case, per_no)
 );
 
@@ -799,7 +819,7 @@ CREATE TABLE fars.violatn (
     state integer references fars.state (state),
     st_case integer references fars.accident (st_case),
     veh_no integer,
-    mviolatn integer references violations_charged (mviolatn)
+    mviolatn integer references fars.violations_charged (mviolatn)
 );
 create index on fars.violatn (st_case, veh_no);
 

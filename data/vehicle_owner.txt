@@ -1,0 +1,8 @@
+0	Not Applicable, Vehicle Not Registered
+1	Driver (of This Vehicle) Was Registered Owner
+2	Driver (of This Vehicle) Not Registered Owner (Other Private Owner)
+3	Vehicle Registered as Business/Company/Government Vehicle
+4	Vehicle Registered as Rental Vehicle
+5	Vehicle Was Stolen (Reported By Police)
+6	Driverless/Motor Vehicle Parked/Stopped Off Roadway
+9	Unknown

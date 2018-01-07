@@ -1,0 +1,10 @@
+1	Intersection Area
+2	Crosswalk Area
+3	Travel Lane
+4	Paved Shoulder/Bicycle Lane/Parking Lane
+5	Sidewalk/Shared-Use Path/Driveway Access
+6	Unpaved Right-of-Way
+7	Non-Trafficway – Driveway
+8	Non-Trafficway – Parking Lot/Other
+9	Other/Unknown
+77	Not a Pedestrian

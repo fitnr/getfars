@@ -2,6 +2,7 @@
 2	Stalled Engine
 3	Disabling Vehicle Failure (e.g., Wheel Fell Off)
 4	Poor Road Conditions (Puddle, Pothole, Ice, etc.)
+5	MISSING FROM FARS MANUAL (5)
 6	Traveling Too Fast For Conditions
 8	Other Cause of Control Loss
 9	Unknown Cause of Control Loss
@@ -15,6 +16,8 @@
 17	This Vehicle Crossing Over (Passing Through) Intersection
 18	This Vehicle Decelerating
 19	Unknown Travel Direction
+20	MISSING FROM FARS MANUAL (20)
+21	MISSING FROM FARS MANUAL (21)
 50	Other Motor Vehicle In Lane: Other Vehicle Stopped
 51	Other Motor Vehicle In Lane: Traveling In Same Direction with Lower Steady Speed
 52	Other Motor Vehicle In Lane: Traveling In Same Direction while Decelerating

@@ -1,0 +1,9 @@
+1	Travel Lane
+2	Bicycle Lane/Paved Shoulder/Parking Lane
+3	Sidewalk/Crosswalk/Driveway Access
+4	Shared-Use Path
+5	Non-Trafficway – Driveway
+6	Non-Trafficway – Parking Lot/Other
+7	Not a Cyclist
+8	Other
+9	Unknown

@@ -38,7 +38,7 @@ load-%: fars-$(YEAR).zip
 init: init-schema $(addprefix init-,$(lookups))
 
 init-%: data/%.txt
-	$(PSQL) -c "\copy fars.$* from '$<' WITH (FORMAT CSV, HEADER FALSE, DELIMITER '	')"
+	$(PSQL) -c "\copy fars.$* from '$<' (FORMAT TEXT)"
 
 init-schema:; $(PSQL) -f sql/fars_schema.sql
 

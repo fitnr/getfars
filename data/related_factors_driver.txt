@@ -1,0 +1,61 @@
+0	None
+4	Reaction to or Failure to Take Drugs/Medication
+6	Careless Driving
+8	Road Rage/Aggressive Driving
+12	Mother of Dead Fetus/Mother of Infant Born Post Crash
+13	Mentally Challenged
+15	Seat Back Not in Normal Position, Seat Back Reclined
+16	Police or Law Enforcement
+18	Traveling on Prohibited Trafficways
+19	Legally Driving on Suspended or Revoked License
+20	Leaving Vehicle Unattended with Engine Running; Leaving Vehicle Unattended in Roadway
+21	Overloading or Improper Loading of Vehicle with Passenger or Cargo
+22	Towing or Pushing Vehicle Improperly
+23	Failing to Dim Lights or to Have Lights on When Required
+24	Operating Without Required Equipment
+26	Following Improperly
+27	Improper or Erratic Lane Changing
+28	Improper Lane Usage
+29	Intentional Illegal Driving on Road Shoulder, in Ditch, or Sidewalk, or on Median
+30	Making Improper Entry to or Exit from Trafficway
+31	Starting or Backing Improperly
+32	Opening Vehicle Closure into Moving Traffic or Vehicle is in Motion
+33	Passing Where Prohibited by Posted Signs, Pavement Markings, or School Bus Displaying Warning Not to Pass
+34	Passing on Right Side
+35	Passing with Insufficient Distance or Inadequate Visibility or Failing to Yield to Overtaking Vehicle
+36	Operating the Vehicle in an Erratic, Reckless, Careless or Negligent Manner
+37	Police Pursuing this Driver or Police Officer in Pursuit
+38	Failure to Yield Right of Way
+39	Failure to Obey Actual Traffic Signs, Traffic Control Devices or Traffic Officers, Failure to Observe Safety Zone Traffic Laws
+40	Passing Through or Around Barrier
+41	Failure to Observe Warnings or Instructions on Vehicle Displaying Them
+42	Failure to Signal Intentions
+45	Driving Less Than Posted Maximum
+46	Operating at Erratic or Suddenly Changing Speeds
+47	Making Right Turn from Left-Turn Lane or Making Left Turn from Right-Turn Lane
+48	Making Improper Turn
+50	Driving Wrong Way on One-Way Trafficway
+51	Driving on Wrong Side of Two-way Trafficway (Intentionally or Unintentionally)
+52	Operator Inexperience
+53	Unfamiliar With Roadway
+54	Stopping in Roadway (Vehicle Not Abandoned)
+58	Over Correcting
+59	Getting Off/Out of a Vehicle
+73	Driver Has Not Complied with Learners Permit or Intermediate Driver License/GDL Restrictions
+74	Driver Has Not Complied With Physical or Other Imposed Restrictions
+77	Skidding, Swerving, Or Sliding Due to Severe Crosswind
+78	Skidding, Swerving, Or Sliding Due to Wind from Passing Truck
+79	Skidding, Swerving, Or Sliding Due to Slippery or Loose Surface
+80	Skidding, Swerving, Or Sliding Due to Tire Blow-Out or Flat
+81	Skidding, Swerving, Or Sliding Due to Debris or Objects in Road
+82	Skidding, Swerving, Or Sliding Due to Ruts, Holes, Bumps in Road
+83	Skidding, Swerving, Or Sliding Due to Live Animals in Road
+84	Skidding, Swerving, Or Sliding Due to Vehicle in Road
+85	Skidding, Swerving, Or Sliding Due to Phantom Vehicle
+86	Skidding, Swerving, Or Sliding Due to Pedestrian, Pedalcyclist, or Other Non-Motorist in Road
+87	Skidding, Swerving, Or Sliding Due to Ice, Water, Snow, Slush, Sand, Dirt, Oil, Wet Leaves on Road
+88	Skidding, Swerving, Or Sliding Due to Trailer Fishtailing or Swaying
+89	Driver has a Driving Record or Driver’s License from More than One State
+91	Non-Traffic Violation Charged (Manslaughter, Homicide or Other Assault Offense Committed Without Malice)
+92	Other Non-Moving Traffic Violation
+99	Unknown

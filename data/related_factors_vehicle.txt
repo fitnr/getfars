@@ -1,0 +1,31 @@
+0	None
+1	Tires (Does Not Include Wheels)
+2	Brake System
+3	Steering System - Tie Rod, Kingpin, Ball Joint, etc.
+4	Suspension - Springs, Shock Absorbers, MacPherson struts, Axle Bearing, Control Arms, etc.
+5	Power Train - Universal Joint, Drive Shaft, Transmission,etc.
+6	Exhaust System
+7	Headlights
+8	Signal Lights
+9	Other Lights
+10	Horn
+11	Mirrors
+12	Wipers
+13	Driver Seating and Control
+14	Body, Doors, Hood, Other
+15	Trailer Hitch
+16	Wheels
+17	Air Bags
+18	Other Vehicle Defects
+19	Safety Belts
+30	Multi-Wheeled Motorcycle Conversion
+32	Vehicle Registration for Handicapped
+33	Vehicle Being Pushed by Non-Motorist
+35	Reconstructed/Altered Vehicle
+37	Transporting Children to/from Head Start/Day Care
+39	Highway Construction, Maintenance or Utility Vehicle, In Transport (Inside or Outside Work Zone)
+40	Highway Incident Response Vehicle
+41	Police Fire or EMS Vehicle Working at the Scene of an Emergency or Performing Other Traffic Control Activities
+42	Other Working Vehicle
+44	Adaptive Equipment
+99	Unknown

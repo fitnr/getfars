@@ -4,7 +4,7 @@ Download [FARS (Fatality Analysis Reporting System )](https://www.nhtsa.gov/rese
 
 This repo also contains many look-up tables derived from the [FARS User’s Manual](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/812448).
 
-Requires: make, postgresql.
+Requires: make, postgresql (9.3+).
 
 ## Usage
 

@@ -1,0 +1,8 @@
+0	No Trailing Unit
+1	Yes, One Trailing Unit
+2	Yes, Two Trailing Units
+3	Yes, Three or More Trailing Units
+4	Yes, Number of Trailing Units Unknown
+5	Vehicle Towing another Motor Vehicle – Fixed Linkage
+6	Vehicle Towing another Motor Vehicle – Non-Fixed
+9	Linkage Unknown

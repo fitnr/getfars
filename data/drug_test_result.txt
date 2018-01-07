@@ -1,3 +1,6 @@
+0	Not Tested for Drugs
+1	No Drugs Reported/Negative
+95	Not Reported
 100	Acetaminophen + Codeine
 101	Acetorphine
 102	Acetyl-alpha-methylfentanyl
@@ -41,6 +44,50 @@
 143	Dipipanone
 144	Diprenorphine Hydrochloride
 145	Drotebanol
+146	Ethylmethylthiambutene
+147	Ethylmorphine
+148	Etonitazene
+149	Etorphine
+150	Etoxeridine
+151	Fentanyl
+152	Fiorinal + Codeine
+153	Furethidine
+154	Heroin (Diacetylmorphine)
+155	Hydrocodone
+156	Hydromorphinol
+157	Hydromorphone
+158	Hydroxypethidine
+159	Isomethadone
+160	Ketobemidone
+161	Levomoramide
+162	Levophenacylmorphan
+163	Levomethorphan
+164	Levorphanol Tartrate
+165	Meperidine (Pethidine)
+166	Metazocine
+167	Methadone
+168	Methyldesorphine
+169	Methyldihydromorphine
+170	Methylfentanyl
+171	Methyl-phenyl-propionoxypiperidine (MPPP)
+172	Metopon
+173	Moramide - intermediate
+174	Morpheridine
+175	Morphine methylsulfonate
+176	Morphine methylbromide
+177	Morphine
+178	Myrophine
+179	Nalorphine
+180	Nicocodeine
+181	Nicomorphine
+182	Noracymethadol
+183	Norlevorphanol
+184	Normethadone
+185	Normorphine
+186	Norpipanone
+187	Opium
+188	Oxymorphone
+189	Oxycodone
 190	Para-fluorofentanyl
 191	Paregoric
 192	Parepectolin
@@ -89,8 +136,7 @@
 239	Remifentanil
 240	Codeine combination product 90 mg/du
 241	Codeine preparations – 200 mg/100 ml or 100 gm
-242	Difenoxin 1 mg/25ug AtSO4/du
-243	Difenoxin preparations – 0.5 mg/25 ug AtSO4/du
+242	Difenoxin 1 mg/25ug AtSO4/du 243 Difenoxin preparations – 0.5 mg/25 ug AtSO4/du
 244	Dihydrocodeine combination product 90 mg/du
 245	Dihydrocodeine preparations 10 mg/100 ml or 100 gm
 246	Diphenoxylate preparations 2.5 mg/25 ug AtSO4
@@ -102,7 +148,7 @@
 252	Meperidine intermediate-B
 253	Meperidine intermediate-C
 254	Methadone intermediate
-255	Morphine combination product/50 mg/100 ml or gm
+255	Morphine combination product/ 50 mg/100 ml or gm
 256	Opium combination product 25 mg/du
 257	Opium preparations – 100 mg/100 ml or/100 gm
 258	Opium, granulated
@@ -113,47 +159,6 @@
 301	Amobarbital
 302	Barbital
 303	Barbiturates
-349	Nimetazepam
-350	Nitrazepam
-351	Nordiazepam
-352	Oxazepam
-353	Oxazolam
-354	Paraldehyde
-355	Pentobarbital
-356	Petrichloral
-357	Phencyclohexylamine
-358	Phenobarbital
-359	Pinazepam
-360	Prazepam
-361	Quazepam
-362	Secobarbital
-363	Sulfondiethylmethane
-364	Sulfonethylmethane
-365	Sulfonmethane
-366	Talbutal
-367	Temazepam
-368	Tetrazepam
-369	Thenylfentanyl
-370	Thiamylal
-371	Thiopental (Pentothal)
-372	Tiletamine/Zolazepam (Telazol)
-373	Traizolam
-374	Tybamate
-376	Carisoprodol
-377	Gamma-Hydroxybutyric Acid (GHB)
-378	Amobarbital & non-controlled active ingred.
-379	Aprobarbital
-380	Barbituric Acid Derivative
-383	Dexfenfluramine
-384	Flurazepam
-385	Sibutramin
-386	Zaleplon
-387	Zolpidem
-388	Amobarbital suppository dosage form
-389	Butobarbital (butethal)
-390	Embutramide
-391	Gamma Hydroxybutyric Acid preparations
-393	Pentobarbital & noncontrolled active ingred.
 304	Benzodiazepines
 305	Benzylfentanyl
 306	Bromazepam
@@ -198,44 +203,47 @@
 346	Methohexital
 347	Methyprylon
 348	Midazolam
-433	Modafinil
-434	Vinbarbital
-435	Methylone
-436	Lisdexamfetamine
-437	Methoxy-Methylenedioxyamphetamine
-438	N, N-Dimethylamphetamine (Dimethylamphetamine)
-439	N-Benzylpiperazine
-440	Stimulant compounds previously excepted
-495	Stimulants, Type Unknown
-500	Amphetamine Variants
-501	Bufotenine
-503	Diethyltryptamine (DET)
-504	Dimethoxyamphetamine (DMA)
-505	Dimethyltryptamine (DMT)
-506	DMA
-507	Dronabinol
-508	N-Ethyl-3piperdyl benzilate
-509	Ibogaine
-511	Lysergic Acid
-512	Mescaline
-513	Methylenedioxymethamphetamine (MDMA)
-514	Methoxyamphetamine (PMA)
-515	Methylenedioxyamphetamine (MDA)
-516	Nabilone
-517	Peyote
-518	Phenylacetone (P2P)
-519	Psilocybin
-520	Psilocyn
-521	Trimethoxy amphetamine
-522	Ketamine
-523	Alpha-Ethyltryptamine
-524	Bromo-dimethoxyamphetamine
-525	Bromo-dimethoxyphenethylamine
-527	Lysergic Acid Amide
-528	Lysergic Acid Diethylamide (LSD)
-529	Methylaminorex
-530	Meth-dimethoxyamphetamine
-531	Methylenedioxy-N-ethylamphetamine
+349	Nimetazepam
+350	Nitrazepam
+351	Nordiazepam
+352	Oxazepam
+353	Oxazolam
+354	Paraldehyde
+355	Pentobarbital
+356	Petrichloral
+357	Phencyclohexylamine
+358	Phenobarbital
+359	Pinazepam
+360	Prazepam
+361	Quazepam
+362	Secobarbital
+363	Sulfondiethylmethane
+364	Sulfonethylmethane
+365	Sulfonmethane
+366	Talbutal
+367	Temazepam
+368	Tetrazepam
+369	Thenylfentanyl
+370	Thiamylal
+371	Thiopental (Pentothal)
+372	Tiletamine/Zolazepam (Telazol)
+373	Traizolam
+374	Tybamate
+376	Carisoprodol
+377	Gamma-Hydroxybutyric Acid (GHB)
+378	Amobarbital & non-controlled active ingred.
+379	Aprobarbital
+380	Barbituric Acid Derivative
+383	Dexfenfluramine
+384	Flurazepam
+385	Sibutramin
+386	Zaleplon
+387	Zolpidem
+388	Amobarbital suppository dosage form
+389	Butobarbital (butethal)
+390	Embutramide
+391	Gamma Hydroxybutyric Acid preparations
+393	Pentobarbital & noncontrolled active ingred.
 394	Pentobarbital suppository dosage form
 395	Depressants, Type Unknown
 396	Pregabalin
@@ -275,6 +283,77 @@
 430	Coca Leaves
 431	Dichloralphenazone
 432	Methcathinone
+433	Modafinil
+434	Vinbarbital
+435	Methylone
+436	Lisdexamfetamine
+437	Methoxy-Methylenedioxyamphetamine
+438	N, N-Dimethylamphetamine (Dimethylamphetamine)
+439	N-Benzylpiperazine
+440	Stimulant compounds previously excepted
+495	Stimulants, Type Unknown
+500	Amphetamine Variants
+501	Bufotenine
+503	Diethyltryptamine (DET)
+504	Dimethoxyamphetamine (DMA)
+505	Dimethyltryptamine (DMT)
+506	DMA
+507	Dronabinol
+508	N-Ethyl-3piperdyl benzilate
+509	Ibogaine
+511	Lysergic Acid
+512	Mescaline
+513	Methylenedioxymethamphetamine (MDMA)
+514	Methoxyamphetamine (PMA)
+515	Methylenedioxyamphetamine (MDA)
+516	Nabilone
+517	Peyote
+518	Phenylacetone (P2P)
+519	Psilocybin
+520	Psilocyn
+521	Trimethoxy amphetamine
+522	Ketamine
+523	Alpha-Ethyltryptamine
+524	Bromo-dimethoxyamphetamine
+525	Bromo-dimethoxyphenethylamine
+527	Lysergic Acid Amide
+528	Lysergic Acid Diethylamide (LSD)
+529	Methylaminorex
+530	Meth-dimethoxyamphetamine
+531	Methylenedioxy-N-ethylamphetamine
+532	MISSING FROM FARS CODING MANUAL (532)
+534	Alpha-methyltryptamine
+535	Dimethoxyethylamphetamine
+536	Dimethoxy-(n)-propylthiophenethylamine
+537	Methoxy-NN-diisopropyltryptamine
+538	N-Hydroxymethylenedioxy-amphetamin
+539	N-Methylpiperidyl benzilate
+595	Hallucinogens, Type Unknown
+600	Delta 9
+601	Hashish Oil
+602	Hashish
+603	Marijuana/Marihuana
+604	Marinol
+605	Tetrahydrocannabinols (THC)
+695	Cannabinoid, Type Unknown
+700	Ethylamine
+701	Parahexyl (Synhexyl)
+702	Phencyclidine
+703	Phencyclidine Analogs
+704	Phenylcyclohexylamine
+705	Piperidinocyclohexanecarbonitrile (PCC)
+706	Pyrrolidine (PCPy, PHP,TCPy)
+707	Thiophene
+708	Thienyl Cyclohexyl/piperidine
+709	Phenylcyclohexyl-Pyrrolidine
+710	Thienyl Cyclohexyl Pyrrolidine
+795	PCP, Type Unknown
+800	Boldenone
+801	Chlorotestosterone
+803	Dehydrochloromethyltestosterone
+804	Dihydrotestosterone
+805	Drostanolone
+806	Ethylestrenol
 807	Fluoxymesterone
 808	Formebulone (Formebolone)
 809	Mesterolone
@@ -314,39 +393,6 @@
 843	Hydroxytestosterone
 844	Mestanolone
 845	Methyldienolone
-533	N-Ethyl-1-phenylcyclohexylamine
-534	Alpha-methyltryptamine
-535	Dimethoxyethylamphetamine
-536	Dimethoxy-(n)-propylthiophenethylamine
-537	Methoxy-NN-diisopropyltryptamine
-538	N-Hydroxymethylenedioxy-amphetamin
-539	N-Methylpiperidyl benzilate
-595	Hallucinogens, Type Unknown
-600	Delta 9
-601	Hashish Oil
-602	Hashish
-603	Marijuana/Marihuana
-604	Marinol
-605	Tetrahydrocannabinols (THC)
-695	Cannabinoid, Type Unknown
-700	Ethylamine
-701	Parahexyl (Synhexyl)
-702	Phencyclidine
-703	Phencyclidine Analogs
-704	Phenylcyclohexylamine
-705	Piperidinocyclohexanecarbonitrile (PCC)
-706	Pyrrolidine (PCPy, PHP,TCPy)
-707	Thiophene
-708	Thienyl Cyclohexyl/piperidine
-709	Phenylcyclohexyl-Pyrrolidine
-710	Thienyl Cyclohexyl Pyrrolidine
-795	PCP, Type Unknown
-800	Boldenone
-801	Chlorotestosterone
-803	Dehydrochloromethyltestosterone
-804	Dihydrotestosterone
-805	Drostanolone
-806	Ethylestrenol
 846	Methyltrienolone
 847	Norandrostenediol
 848	Norandrostenedione
@@ -379,6 +425,7 @@
 946	Enflurane
 947	Halothane
 995	Inhalants, Type Unknown
+996	OTHER DRUGS
 997	TESTED; RESULTS UNKNOWN
 998	TESTED; DRUGS FOUND; TYPE UNKNOWN
 999	UNKNOWN IF TESTED FOR DRUG
