@@ -91,6 +91,11 @@ Query vehicles involved in a crash:
 select
     a.st_case,
     veh_no,
+    vin,
+    v.deaths,
+    make.name make,
+    model,
+    body_type.name body_type,
     trafficway.name trafficway,
     trav_sp travel_speed,
     numoccs occupants,
@@ -98,9 +103,6 @@ select
     dr_drink driver_drinking,
     state.name registration,
     dr_zip drivers_zipcode,
-    make.name make,
-    model,
-    body_type.name body_type,
     towing.name trailing_vehicle,
     haz.name hazardous_material,
     pre_event_movement.name pre_event_movement,
@@ -146,20 +148,34 @@ Query information about the sequence of events in a crash:
 select
     eventnum,
     vnumber1,
+    v1.vin,
     m1.name vehicle1make,
+    b1.name body_type1,
+    s1.name reg_state,
+    v1.model v1model,
+    v1.trav_sp travel_speed,
+    v1.vspd_lim speed_limit,
     aoi1.name area_of_impact1,
     soe.name as event,
-    vnumber2,
+    NULLIF(NULLIF(vnumber2, 5555), 9999) vnumber2,
     m2.name vehicle2make,
-    aoi1.name area_of_impact2
+    b2.name body_type2,
+    aoi2.name area_of_impact2
 from cevent c
-    left join area_of_impact aoi1 on (aoi1=aoi)
     left join sequence_events soe using (soe)
-    left join area_of_impact aoi2 on (c.aoi2 = aoi2.aoi)
+    -- vehicle 1
     left join vehicle v1 on (c.st_case = v1.st_case and c.vnumber1 = v1.veh_no)
+    left join area_of_impact aoi1 on (aoi1=aoi)
+    left join state s1 on (s1.state = v1.reg_stat)
     left join vehicle_make m1 on (v1.make = m1.make)
+    left join body_type b1 on (v1.body_typ = b1.body_typ)
+    -- vehicle 2
     left join vehicle v2 on (c.st_case = v2.st_case and c.vnumber2 = v2.veh_no)
+    left join area_of_impact aoi2 on (c.aoi2 = aoi2.aoi)
+    left join state s2 on (s2.state = v2.reg_stat)
     left join vehicle_make m2 on (v2.make = m2.make)
+    left join body_type b2 on (v2.body_typ = b2.body_typ)
+
 where c.st_case = 40399;
 ````
 
