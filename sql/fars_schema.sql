@@ -1,284 +1,12 @@
--- todo: vehicle configuration, cargo body type, special use, emergency use
+-- todo: emergency use
 
-CREATE SCHEMA IF NOT EXISTS fars;
-
-create table fars.state (
+create table IF NOT EXISTS fars.state (
     state int primary key,
     name text,
     fips char(2)
 );
 
-create table fars.route (
-    route int primary key,
-    name text
-);
-
-create table fars.functional_system (
-    func_sys int primary key,
-    name text
-);
-
-create table fars.road_owner (
-    rd_owner int primary key,
-    name text
-);
-
-create table fars.special_jurisdiction (
-    sp_jur int primary key,
-    name text
-);
-
-create table fars.harmful_event (
-    harm_ev int primary key,
-    name text
-);
-
-create table fars.manner_of_collision (
-    man_coll int primary key,
-    name text
-);
-
-create table fars.light_condition (
-    lgt_cond int primary key,
-    name text
-);
-
-create table fars.atmospheric_condition (
-    weather int primary key,
-    name text
-);
-
-create table fars.related_factors_crash (
-    cf int primary key,
-    name text
-);
-
-create table fars.related_factors_vehicle (
-    sc int primary key,
-    name text
-);
-
-create table fars.vehicle_owner (
-    owner int primary key,
-    name text
-);
-
-create table fars.vehicle_make (
-    make int primary key,
-    name text
-);
-
-create table fars.body_type (
-    body_typ int primary key,
-    name text
-);
-
-create table fars.trailing_vehicle (
-    tow_veh int primary key,
-    name text
-);
-
-create table fars.hazardous_material_class (
-    haz_cno int primary key,
-    name text
-);
-
-create table fars.safety_equipment (
-    msafeqmt int primary key,
-    name text
-);
-
-create table fars.ped_crash_type (
-    pedctype int primary key,
-    name text
-);
-
-create table fars.bike_crash_type (
-    bikectype int primary key,
-    name text
-);
-
-create table fars.related_factors_driver (
-    dr_sf integer primary key,
-    name text
-);
-
-create table fars.trafficway (
-    vtrafway int primary key,
-    name text
-);
-
-create table fars.related_factors_person (
-    p_sf int primary key,
-    name text
-);
-
-create table fars.person_type (
-    per_typ int PRIMARY KEY,
-    name TEXT
-);
-
-create table fars.sequence_events (
-    soe int primary key,
-    name text
-);
-
-create table fars.area_of_impact (
-    aoi int primary key,
-    name text
-);
-
-create table fars.driver_distracted (
-    mdrdstrd int primary key,
-    name text
-);
-
-create table fars.impairment (
-    impair int primary key,
-    name text
-);
-
-create table fars.motor_vehicle_factor (
-    mfactor int primary key,
-    name text
-);
-
-create table fars.driver_maneuver (
-    mdrmanav int primary key,
-    name text
-);
-
-create table fars.vision_obscured (
-    mvisobsc int primary key,
-    name text
-);
-
-create table fars.violations_charged (
-    mviolatn int primary key,
-    name text
-);
-
-create table fars.crash_group_bike (
-    bikecgp int primary key,
-    name text
-);
-
-create table fars.crash_group_pedestrian (
-    pedcgp int primary key,
-    name text
-);
-
-create table fars.injury_severity (
-    inj_sev int primary key,
-    name text
-);
-
-create table fars.restraint_use (
-    rest_use int primary key,
-    name text
-);
-
-create table fars.location (
-    location int primary key,
-    name text
-);
-
-create table fars.accident_type (
-    acc_type int primary key,
-    name text
-);
-
-create table fars.drug_test_result (
-    drugres int primary key,
-    name text
-);
-
-create table fars.rural_urban (
-    rur_urb int primary key,
-    name text
-);
-
-create table fars.bus_use (
-    bus_use int primary key,
-    name text
-);
-
-create table fars.relation_to_road (
-    rel_road int primary key,
-    name text
-);
-
-create table fars.roadway_surface (
-    vsurcond int primary key,
-    name text
-);
-
-create table fars.pre_event_movement (
-    p_crash1 int primary key,
-    name text
-);
-
-create table fars.critical_precrash_event (
-    p_crash2 int primary key,
-    name text
-);
-
-create table fars.attempted_avoidance (
-    p_crash3 int primary key,
-    name text
-);
-
-create table fars.nonmotorist_action (
-    mpr_act int primary key,
-    name text
-);
-
-create table fars.nonmotorist_contributing (
-    mtm_crsh int primary key,
-    name text
-);
-
-create table fars.damaged_area (
-    mdareas int primary key,
-    name text
-);
-
-create table fars.damage_extent (
-    deformed int primary key,
-    name text
-);
-
-create table fars.speeding (
-    speedrel int primary key,
-    name text
-);
-
-create table fars.bike_location (
-    bikeloc int primary key,
-    name text
-);
-
-create table fars.ped_location (
-    pedloc int primary key,
-    name text
-);
-
-create table fars.bike_position (
-    bikepos int primary key,
-    name text
-);
-
-create table fars.ped_position (
-    pedpos int primary key,
-    name text
-);
-
-create table fars.driver_impairment (
-    drimpair int primary key,
-    name text
-);
-
-CREATE TABLE fars.accident (
+CREATE TABLE IF NOT EXISTS fars.accident (
     state integer references fars.state (state),
     st_case integer PRIMARY KEY,
     ve_total integer,
@@ -451,7 +179,7 @@ CREATE TABLE fars.parkwork (
     pmcarr_i2 text,
     pmcarr_id text,
     pgvwr integer,
-    pv_config integer,
+    pv_config integer references fars.vehicle_config (v_config),
     pcargtyp integer,
     phaz_inv integer,
     phazplac integer,
@@ -526,8 +254,8 @@ CREATE TABLE fars.person (
     body_typ integer references fars.body_type (body_typ),
     mod_year integer,
     tow_veh integer references fars.trailing_vehicle (tow_veh),
-    spec_use integer,
-    emer_use integer,
+    spec_use integer references fars.special_use (spec_use),
+    emer_use integer references fars.emergency_use (emer_use),
     rollover integer,
     impact1 integer references fars.area_of_impact (aoi),
     fire_exp integer,
@@ -625,16 +353,16 @@ CREATE TABLE fars.vehicle (
     mcarr_i2 text,
     mcarr_id text,
     gvwr integer,
-    v_config integer,
-    cargo_bt integer,
+    v_config integer references fars.vehicle_config (v_config),
+    cargo_bt integer references fars.cargo_body_type (cargo_bt),
     haz_inv integer,
     haz_plac integer,
     haz_id integer,
     haz_cno integer references fars.hazardous_material_class (haz_cno),
     haz_rel integer,
     bus_use integer references fars.bus_use (bus_use),
-    spec_use integer,
-    emer_use integer,
+    spec_use integer references fars.special_use (spec_use),
+    emer_use integer references fars.emergency_use (emer_use),
     trav_sp integer,
     underide integer,
     rollover integer,

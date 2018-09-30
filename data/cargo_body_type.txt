@@ -1,0 +1,19 @@
+0	not applicable
+1	Van/Enclosed Box
+2	Cargo Tank
+3	Flatbed
+4	Dump
+5	Concrete Mixer
+6	Auto Transporter
+7	Garbage/Refuse
+8	Grain, Chips, Gravel
+9	Pole-Trailer
+10	Log
+11	Intermodal Container Chassis
+12	Vehicle Towing Another Motor Vehicle
+22	Bus
+28	not reported
+96	No Cargo Body Type
+97	other
+98	Unknown Cargo Body Type
+99	Unknown

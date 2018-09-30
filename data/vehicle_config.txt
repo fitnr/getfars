@@ -1,0 +1,13 @@
+0	Not Applicable
+10	Vehicle 10,000 pounds or less placarded for hazardous materials
+1	Single-Unit Truck (2-axle and GVWR more than 10,000 lbs.)
+2	Single-Unit Truck (3 or more axles)
+4	Truck Pulling Trailer(s)
+5	Truck Tractor (Bobtail)
+6	Truck Tractor/Semi-Trailer
+7	Truck Tractor/Double
+8	Truck Tractor/Triple
+19	Truck More Than 10,000 lbs., Cannot Classify
+20	Bus/Large Van (seats for 9-15 occupants, including driver)
+21	Bus (seats for more than 15 occupants, including driver)
+99	Unknown

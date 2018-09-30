@@ -1,0 +1,8 @@
+0	Not Applicable
+2	Non-Emergency, Non-Transport
+3	Non-Emergency Transport
+4	Emergency Operation, Emergency Warning Equipment Not In Use
+5	Emergency Operation, Emergency Warning Equipment In Use
+6	Emergency Operation, Emergency Warning Equipment In Use Unknown
+8	Not Reported
+9	Unknown

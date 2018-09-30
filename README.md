@@ -29,13 +29,16 @@ Retrieve information about a crash:
 select
     st_case,
     state.name state,
-    make_timestamp(a.year, a.month, a.day, a.hour, a.minute, 0),
+    make_timestamp(a.year, a.month, a.day, a.hour, a.minute, 0) as timestamp,
     route.name route_type,
     owner.name road_owner,
-    special_jurisdiction.name special_jurisdiction,
+    func_sys.name functional_system,
+    nullif(sj.name, 'No Special Jurisdiction (Includes National Forests)') special_jurisdiction,
     man_coll.name manner_of_collision,
     harmful_event.name first_harmful_event,
     lgt.name as lighting_condition,
+    rur_urb.name rur_urb,
+    rel_road.name relation_to_road,
     concat_ws('; ', weather1.name, nullif(weather2.name, 'No Additional Atmospheric Conditions')) weather,
     concat_ws('; ', rcf1.name, nullif(rcf2.name, 'None'), nullif(rcf3.name, 'None')) relatedfactors
 from accident as a
@@ -43,7 +46,7 @@ from accident as a
     left join route using (route)
     left join functional_system func_sys using (func_sys)
     left join road_owner owner using (rd_owner)
-    left join special_jurisdiction using (sp_jur)
+    left join special_jurisdiction sj using (sp_jur)
     left join harmful_event using (harm_ev)
     left join manner_of_collision man_coll using (man_coll)
     left join light_condition lgt using (lgt_cond)
@@ -52,13 +55,16 @@ from accident as a
     left join related_factors_crash rcf1 on (rcf1.cf = a.cf1)
     left join related_factors_crash rcf2 on (rcf2.cf = a.cf2)
     left join related_factors_crash rcf3 on (rcf3.cf = a.cf3)
+    left join rural_urban rur_urb using (rur_urb)
+    left join relation_to_road rel_road using (rel_road)
 where st_case = 10845;
 ````
 
 Retrieve information about persons involved in a particular crash:
 ````sql
 select a.st_case,
-    make_timestamp(a.year, a.month, a.day, a.hour, a.minute, 0),
+    make_date(a.year, a.month, a.day) as date,
+    make_time(nullif(a.hour, '99'), a.minute, 0) as timestamp,
     veh_no,
     per_no,
     str_veh struck,
@@ -72,7 +78,8 @@ select a.st_case,
     injury_severity.name injury_severity,
     make_date(nullif(death_yr, 8888), nullif(death_mo, 88), nullif(death_da, 88)) death_date,
     coalesce(nullif(crash_group_bike.name, 'Not a Cyclist'), crash_group_pedestrian.name) crash_group,
-    concat_ws('; ', sf1.name, nullif(sf2.name, 'None/Not Applicable-Driver'), nullif(sf3.name, 'None/Not Applicable-Driver')) relatedfactors
+    concat_ws('; ', sf1.name, nullif(sf2.name, 'None/Not Applicable-Driver'), nullif(sf3.name, 'None/Not Applicable-Driver')) relatedfactors,
+    concat_ws('; ', nullif(drugres1.name, 'Not Tested for Drugs'), nullif(drugres2.name, 'Not Tested for Drugs'), nullif(drugres3.name, 'Not Tested for Drugs')) drug_test_result
 from accident as a
     left join person using (st_case)
     left join pbtype pb using (st_case, veh_no, per_no)
@@ -82,6 +89,9 @@ from accident as a
     left join crash_group_bike using (bikecgp)
     left join injury_severity using (inj_sev)
     left join restraint_use using (rest_use)
+    left join drug_test_result drugres1 on (person.drugres1 = drugres1.drugres)
+    left join drug_test_result drugres2 on (person.drugres2 = drugres2.drugres)
+    left join drug_test_result drugres3 on (person.drugres3 = drugres3.drugres)
     left join related_factors_person sf1 on (p_sf1=sf1.p_sf)
     left join related_factors_person sf2 on (p_sf2=sf2.p_sf)
     left join related_factors_person sf3 on (p_sf3=sf3.p_sf)

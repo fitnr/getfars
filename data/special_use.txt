@@ -1,0 +1,12 @@
+0	No Special Use
+1	Taxi
+2	Vehicle Used as School Transport
+3	Vehicle Used as Other Bus
+4	Military
+5	Police
+6	Ambulance
+7	Fire Truck
+8	Non-Transport Emergency Services Vehicle
+13	Incident Response
+98	Not Reported
+99	Unknown

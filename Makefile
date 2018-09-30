@@ -40,7 +40,13 @@ init: init-schema $(addprefix init-,$(lookups))
 init-%: data/%.txt
 	$(PSQL) -c "\copy fars.$* from '$<' (FORMAT TEXT)"
 
-init-schema:; $(PSQL) -f sql/fars_schema.sql
+init-schema: sql/fars_schema.sql sql/lookups.txt
+	$(PSQL) -c "CREATE SCHEMA IF NOT EXISTS fars;"
+	awk -F " " '{ print "CREATE TABLE IF NOT EXISTS fars." $$2 \
+	  " (" $$3 " INT PRIMARY KEY, name TEXT); \
+	  COMMENT ON TABLE fars." $$2 " IS '\''" $$1 "'\'';" }' sql/lookups.txt \
+	| $(PSQL)
+	$(PSQL) -f sql/fars_schema.sql
 
 clean:; $(PSQL) -c "DROP SCHEMA fars CASCADE"
 
