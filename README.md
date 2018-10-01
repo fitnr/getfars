@@ -109,7 +109,8 @@ select
     model,
     body_type.name body_type,
     trafficway.name trafficway,
-    trav_sp travel_speed,
+    roadway_surface.name roadway_surface,
+    nullif(nullif(trav_sp, '0'), '999')::numeric as travel_speed,
     numoccs occupants,
     owner.name as owner,
     dr_drink driver_drinking,
@@ -117,14 +118,17 @@ select
     dr_zip drivers_zipcode,
     towing.name trailing_vehicle,
     haz.name hazardous_material,
+    bus_use.name as bus_use,
+    speeding.name speeding,
     pre_event_movement.name pre_event_movement,
     critical_precrash_event.name critical_precrash_event,
     attempted_avoidance.name attempted_avoidance,
+    man_coll.name as manner_of_collision,
     concat_ws('; ', vsf1.name, nullif(vsf2.name, 'None'), nullif(vsf3.name, 'None'), nullif(vsf4.name, 'None')) driver_related_factors,
     harmful_event.name most_harmful_event,
     damage_extent.name as damage_extent,
     accident_type.name as accident_type,
-    impairment.name impairment,
+    driver_impairment.name driver_impairment,
     distraction.name distraction
 from accident as a
     left join vehicle v using (st_case)
@@ -137,17 +141,19 @@ from accident as a
     left join body_type using (body_typ)
     left join trailing_vehicle towing using (tow_veh)
     left join hazardous_material_class haz using (haz_cno)
+    left join bus_use using (bus_use)
     left join harmful_event on (m_harm=harmful_event.harm_ev)
+    left join manner_of_collision man_coll on (v.man_coll=man_coll.man_coll)
     left join related_factors_driver vsf1 on (vsf1.dr_sf = v.dr_sf1)
     left join related_factors_driver vsf2 on (vsf2.dr_sf = v.dr_sf2)
     left join related_factors_driver vsf3 on (vsf3.dr_sf = v.dr_sf3)
     left join related_factors_driver vsf4 on (vsf4.dr_sf = v.dr_sf4)
+    left join roadway_surface using (vsurcond)
+    left join speeding using (speedrel)
     left join trafficway trafficway using (vtrafway)
     left join accident_type using (acc_type)
-
     left join drimpair using (st_case, veh_no)
-    left join impairment using (drimpair)
-
+    left join driver_impairment using (drimpair)
     left join distract using (st_case, veh_no)
     left join driver_distracted distraction using (mdrdstrd)
     left join damage_extent using (deformed)
