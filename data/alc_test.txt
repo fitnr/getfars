@@ -1,0 +1,4 @@
+0	Test Not Given
+1	Test Refused
+2	Test Given
+9	Unknown if Tested

@@ -1,0 +1,4 @@
+1	Male
+2	Female
+8	Not Reported
+9	Unknown

@@ -1,0 +1,9 @@
+0	Not A Fatality (Not Applicable)
+1	Mexican
+2	Puerto Rican
+3	Cuban
+4	Central or South American
+5	European Spanish (Since 2000)
+6	Hispanic, Origin Not Specified or Other Origin
+7	Non-Hispanic
+99	Unknown

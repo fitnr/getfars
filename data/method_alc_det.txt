@@ -1,0 +1,7 @@
+1	Evidential T est (Breath, Blood, Urine)
+2	Preliminary Breath T est (PBT)
+3	Behavioral
+4	Passive Alcohol Sensor (PAS)
+5	Observed
+8	Other (e.g., Saliva Test)
+9	Not Reported

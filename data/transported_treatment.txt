@@ -1,0 +1,10 @@
+0	Not Transported
+1	EMS Air
+2	Law Enforcement
+3	EMS Unknown Mode
+4	Transported Unknown Source
+5	EMS Ground
+6	Other
+7	Died at the Scene
+8	Died En Route
+9	Unknown

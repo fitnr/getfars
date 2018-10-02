@@ -70,10 +70,15 @@ select a.st_case,
     str_veh struck,
     person_type.name persontype,
     person.age,
-    person.sex,
+    sex.name as sex,
+    nullif(race.name, 'Not A Fatality (Not Applicable)') as race,
+    nullif(hispanic_origin.name, 'Not A Fatality (Not Applicable)') as hispanic_origin,
+    tt.name,
     restraint_use.name as restraint_use,
     air_bag,
-    drinking,
+    alc_det.name as alcohol_determination_method,
+    drinking as police_reported_alcohol_involvement,
+    alc_test.name alc_test_status,
     seat_pos,
     injury_severity.name injury_severity,
     make_date(nullif(death_yr, 8888), nullif(death_mo, 88), nullif(death_da, 88)) death_date,
@@ -84,17 +89,23 @@ from accident as a
     left join person using (st_case)
     left join pbtype pb using (st_case, veh_no, per_no)
     left join person_type using (per_typ)
+    left join sex using (sex)
+    left join race using (race)
+    left join hispanic_origin using (hispanic)
     left join vehicle using (st_case, veh_no)
+    left join transported_treatment tt using (hospital)
     left join crash_group_pedestrian using (pedcgp)
     left join crash_group_bike using (bikecgp)
     left join injury_severity using (inj_sev)
     left join restraint_use using (rest_use)
+    left join alc_test using (alc_status)
+    left join method_alc_det alc_det using (alc_det)
     left join drug_test_result drugres1 on (person.drugres1 = drugres1.drugres)
     left join drug_test_result drugres2 on (person.drugres2 = drugres2.drugres)
     left join drug_test_result drugres3 on (person.drugres3 = drugres3.drugres)
-    left join related_factors_person sf1 on (p_sf1=sf1.p_sf)
-    left join related_factors_person sf2 on (p_sf2=sf2.p_sf)
-    left join related_factors_person sf3 on (p_sf3=sf3.p_sf)
+    left join related_factors_person sf1 on (p_sf1 = sf1.p_sf)
+    left join related_factors_person sf2 on (p_sf2 = sf2.p_sf)
+    left join related_factors_person sf3 on (p_sf3 = sf3.p_sf)
 where st_case = 40792;
 ````
 

@@ -30,8 +30,12 @@ NM9-PB38	crash_group_pedestrian	pedcgp
 NM9-PB38B	crash_group_bike	bikecgp
 P10	restraint_use	rest_use
 P26	related_factors_person	p_sf
+P6-NM6	sex	sex
 P7-NM7	person_type	per_typ
 P8-NM25	injury_severity	inj_sev
+P17-NM16	method_alc_det	alc_det
+P18-NM17A	alc_test	alc_status
+P22-NM21	transported_treatment	hospital
 PC11	roadway_surface	vsurcond
 PC14	vision_obscured	mvisobsc
 PC15	driver_maneuver	mdrmanav
@@ -42,6 +46,8 @@ PC20	attempted_avoidance	p_crash3
 PC23	accident_type	acc_type
 PC4	motor_vehicle_factor	mfactor
 PC5	trafficway	vtrafway
+SP3A	race	race
+SP3B	hispanic_origin	hispanic
 V11	body_type	body_typ
 V14	trailing_vehicle	tow_veh
 V19	vehicle_config	v_config
