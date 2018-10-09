@@ -1,9 +1,8 @@
 YEAR = 2016
 
-PGDATABASE ?= $(USER)
 PGUSER ?= $(USER)
+PGDATABASE ?= $(PGUSER)
 psql = psql $(PSQLFLAGS)
-export PGUSER PGDATABASE
 
 tables = accident vehicle person \
 	cevent damage distract \
@@ -35,6 +34,7 @@ init-schema: sql/fars_schema.sql sql/lookups.txt
 	  COMMENT ON TABLE fars." $$2 " IS '\''" $$1 "'\'';" }' sql/lookups.txt \
 	| $(psql)
 	$(psql) -f sql/fars_schema.sql
+	-$(psql) -f sql/spatial.sql
 
 clean:; $(psql) -c "DROP SCHEMA fars CASCADE"
 

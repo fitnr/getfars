@@ -18,6 +18,8 @@ make init load PG_DATABASE=my_database_name
 
 The database tables will be created in a schema named `fars`.
 
+This will attempt to create a `geometry` column in the `fars.accident` table, but if you're not using PosGIS, that step will fail gracefully.
+
 ## Example queries
 
 These queries are meant to demonstrate the relationships between the different tables in FARS.
