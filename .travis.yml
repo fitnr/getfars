@@ -6,10 +6,10 @@ services:
 addons:
   postgresql: "9.3"
 
-env: PG_DATABASE=travis_test PG_USER=postgres YEAR=2016
+env: PGDATABASE=travis_test PGUSER=postgres YEAR=2016
 
 before_install:
-  - psql -U $PG_USER -c "create database $PG_DATABASE"
+  - psql -U $PGUSER -c "create database $PGDATABASE"
 
 install:
   - travis_retry make fars-$YEAR.zip
