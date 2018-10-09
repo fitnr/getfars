@@ -1,4 +1,5 @@
 0	Test Not Given
 1	Test Refused
 2	Test Given
+8   Not Reported
 9	Unknown if Tested
