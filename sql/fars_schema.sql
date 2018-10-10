@@ -1,6 +1,6 @@
 -- todo: emergency use
 
-create table IF NOT EXISTS fars.state (
+CREATE TABLE IF NOT EXISTS fars.state (
     state int primary key,
     name text,
     fips char(2)
@@ -79,7 +79,8 @@ CREATE TABLE fars.damage (
     veh_no integer,
     mdareas integer references fars.damaged_area (mdareas)
 );
-create index on fars.damage (st_case, veh_no);
+CREATE INDEX IF NOT EXISTS damage_idx
+    ON fars.damage (st_case, veh_no);
 
 CREATE TABLE fars.distract (
     state integer references fars.state (state),
@@ -87,7 +88,8 @@ CREATE TABLE fars.distract (
     veh_no integer,
     mdrdstrd integer references fars.driver_distracted (mdrdstrd)
 );
-create index on fars.distract (st_case, veh_no);
+CREATE INDEX IF NOT EXISTS distract_idx
+    ON fars.distract (st_case, veh_no);
 
 CREATE TABLE fars.drimpair (
     state integer references fars.state (state),
@@ -95,7 +97,8 @@ CREATE TABLE fars.drimpair (
     veh_no integer,
     drimpair integer references fars.impairment (impair)
 );
-create index on fars.drimpair (st_case, veh_no);
+CREATE INDEX IF NOT EXISTS drimpair_idx
+    ON fars.drimpair (st_case, veh_no);
 
 CREATE TABLE fars.factor (
     state integer references fars.state (state),
@@ -103,7 +106,8 @@ CREATE TABLE fars.factor (
     veh_no integer,
     mfactor integer references fars.motor_vehicle_factor (mfactor)
 );
-create index on fars.factor (st_case, veh_no);
+CREATE INDEX IF NOT EXISTS factor_idx
+    ON fars.factor (st_case, veh_no);
 
 CREATE TABLE fars.maneuver (
     state integer references fars.state (state),
@@ -111,7 +115,8 @@ CREATE TABLE fars.maneuver (
     veh_no integer,
     mdrmanav integer references fars.driver_maneuver (mdrmanav)
 );
-create index on fars.maneuver (st_case, veh_no);
+CREATE INDEX IF NOT EXISTS maneuver_idx
+    ON fars.maneuver (st_case, veh_no);
 
 CREATE TABLE fars.nmcrash (
     state integer references fars.state (state),
@@ -120,7 +125,8 @@ CREATE TABLE fars.nmcrash (
     per_no integer,
     mtm_crsh integer references fars.nonmotorist_contributing (mtm_crsh)
 );
-create index on fars.nmcrash (st_case, veh_no, per_no);
+CREATE INDEX IF NOT EXISTS nmcrash_idx
+    ON fars.nmcrash (st_case, veh_no, per_no);
 
 CREATE TABLE fars.nmimpair (
     state integer references fars.state (state),
@@ -129,7 +135,8 @@ CREATE TABLE fars.nmimpair (
     per_no integer,
     nmimpair integer references fars.impairment (impair)
 );
-create index on fars.nmimpair (st_case, veh_no, per_no);
+CREATE INDEX IF NOT EXISTS nmimpair_idx
+    ON fars.nmimpair (st_case, veh_no, per_no);
 
 CREATE TABLE fars.nmprior (
     state integer references fars.state (state),
@@ -138,7 +145,8 @@ CREATE TABLE fars.nmprior (
     per_no integer,
     mpr_act integer references fars.nonmotorist_action (mpr_act)
 );
-create index on fars.nmprior (st_case, veh_no, per_no);
+CREATE INDEX IF NOT EXISTS nmprior_idx
+    ON fars.nmprior (st_case, veh_no, per_no);
 
 CREATE TABLE fars.parkwork (
     state integer references fars.state (state),
@@ -311,7 +319,8 @@ CREATE TABLE fars.safetyeq (
     per_no integer,
     msafeqmt integer references fars.safety_equipment (msafeqmt)
 );
-create index on fars.safetyeq (st_case, veh_no, per_no);
+CREATE INDEX IF NOT EXISTS safetyeq_idx
+    ON fars.safetyeq (st_case, veh_no, per_no);
 
 CREATE TABLE fars.vehicle (
     state integer references fars.state (state),
@@ -549,7 +558,8 @@ CREATE TABLE fars.violatn (
     veh_no integer,
     mviolatn integer references fars.violations_charged (mviolatn)
 );
-create index on fars.violatn (st_case, veh_no);
+CREATE INDEX IF NOT EXISTS violatn_idx
+    ON fars.violatn (st_case, veh_no);
 
 CREATE TABLE fars.vision (
     state integer references fars.state (state),
@@ -557,7 +567,8 @@ CREATE TABLE fars.vision (
     veh_no integer,
     mvisobsc integer references fars.vision_obscured (mvisobsc)
 );
-create index on fars.vision (st_case, veh_no);
+CREATE INDEX IF NOT EXISTS vision_idx
+    ON fars.vision (st_case, veh_no);
 
 CREATE TABLE fars.vsoe (
     state integer references fars.state (state),

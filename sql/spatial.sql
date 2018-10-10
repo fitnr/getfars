@@ -1,6 +1,7 @@
 alter table fars.accident add column geom Geometry;
 
-create index on fars.accident using gist (geom);
+CREATE INDEX IF NOT EXISTS accident_geom_idx
+    ON fars.accident using gist (geom);
 
 create or replace function fars.add_geom() returns trigger
 as $$
