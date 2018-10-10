@@ -263,7 +263,7 @@ CREATE TABLE fars.person (
     sex integer references fars.sex (sex),
     per_typ integer references fars.person_type (per_typ),
     inj_sev integer references fars.injury_severity (inj_sev),
-    seat_pos integer,
+    seat_pos integer references fars.seating_position (seat_pos),
     rest_use integer,
     rest_mis integer,
     air_bag integer,
