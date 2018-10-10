@@ -81,7 +81,7 @@ select a.st_case,
     alc_det.name as alcohol_determination_method,
     drinking as police_reported_alcohol_involvement,
     alc_test.name alc_test_status,
-    seat_pos,
+    seating.name,
     injury_severity.name injury_severity,
     make_date(nullif(death_yr, 8888), nullif(death_mo, 88), nullif(death_da, 88)) death_date,
     coalesce(nullif(crash_group_bike.name, 'Not a Cyclist'), crash_group_pedestrian.name) crash_group,
@@ -99,6 +99,7 @@ from accident as a
     left join crash_group_pedestrian using (pedcgp)
     left join crash_group_bike using (bikecgp)
     left join injury_severity using (inj_sev)
+    left join seating_position seating using (seat_pos)
     left join restraint_use using (rest_use)
     left join alc_test using (alc_status)
     left join method_alc_det alc_det using (alc_det)

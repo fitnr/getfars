@@ -1,0 +1,29 @@
+0	Not a Motor Vehicle Occupant
+11	Front Seat – Left Side (Driver's Side)
+12	Front Seat – Middle
+13	Front Seat – Right Side
+18	Front Seat – Other
+19	Front Seat – Unknown
+21	Second Seat – Left Side
+22	Second Seat – Middle
+23	Second Seat – Right Side
+28	Second Seat – Other
+29	Second Seat – Unknown
+31	Third Seat – Left Side
+32	Third Seat – Middle
+33	Third Seat – Right Side
+38	Third Seat – Other
+39	Third Seat – Unknown
+41	Fourth Seat – Left Side
+42	Fourth Seat – Middle
+43	Fourth Seat – Right Side
+48	Fourth Seat – Other
+49	Fourth Seat – Unknown
+50	Sleeper Section of Cab (Truck)
+51	Other Passenger in Enclosed Passenger or Cargo Area
+52	Other Passenger in Unenclosed Passenger or Cargo Area
+53	Other Passenger in Passenger or Cargo Area, Unknown Whether Or Not Enclosed
+54	Trailing Unit
+55	Riding on Vehicle Exterior
+98	Not Reported
+99	Unknown

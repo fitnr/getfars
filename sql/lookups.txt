@@ -33,6 +33,7 @@ P26	related_factors_person	p_sf
 P6-NM6	sex	sex
 P7-NM7	person_type	per_typ
 P8-NM25	injury_severity	inj_sev
+P9	seating_position	seat_pos
 P17-NM16	method_alc_det	alc_det
 P18-NM17A	alc_test	alc_status
 P22-NM21	transported_treatment	hospital
