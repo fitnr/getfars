@@ -142,10 +142,14 @@ select
     harmful_event.name most_harmful_event,
     damage_extent.name as damage_extent,
     accident_type.name as accident_type,
-    driver_impairment.name driver_impairment,
-    distraction.name distraction
+    vin.bodystyl_t bodystyle,
+    vin.drivetyp_t drivetype,
+    vin.msrp,
+    vin.fuel_t fueltype
+
 from accident as a
     left join vehicle v using (st_case)
+    left join vindecode vin using (st_case, veh_no)
     left join pre_event_movement using (p_crash1)
     left join critical_precrash_event using (p_crash2)
     left join attempted_avoidance using (p_crash3)
@@ -166,13 +170,10 @@ from accident as a
     left join speeding using (speedrel)
     left join trafficway trafficway using (vtrafway)
     left join accident_type using (acc_type)
-    left join drimpair using (st_case, veh_no)
-    left join driver_impairment using (drimpair)
-    left join distract using (st_case, veh_no)
-    left join driver_distracted distraction using (mdrdstrd)
     left join damage_extent using (deformed)
 
-where a.st_case = 10845 order by veh_no asc;
+where a.st_case = 10845
+order by veh_no asc;
 ````
 
 Query information about the sequence of events in a crash:
@@ -226,3 +227,84 @@ WHERE inj_sev = 4 -- fatal injury
 GROUP BY person_type.name, COALESCE(NULLIF(bcg.name, 'Not a Cyclist'), pcg.name)
 ORDER BY 3 DESC;
 ````
+
+Retrieve information about violations:
+```sql
+SELECT st_case, veh_no, name
+FROM fars.violatn
+    LEFT JOIN violations_charged USING (mviolatn)
+WHERE st_case = 63300
+    AND veh_no = 1;
+```
+
+Retrieve information about safety equipment:
+```sql
+SELECT *
+FROM fars.safetyeq
+    LEFT JOIN safety_equipment USING (msafeqmt)
+WHERE st_case = 62269
+ORDER BY per_no
+```
+
+Get non-motorist actions:
+```sql
+SELECT st_case, veh_no, per_no, nonmotorist_action.name
+    FROM fars.nmprior
+    LEFT JOIN nonmotorist_action USING (mpr_act)
+WHERE st_case = 220455
+ORDER BY per_no;
+```
+
+Select non-motorist actions for a specific crash:
+```sql
+SELECT st_case, veh_no, per_no, name
+FROM nmcrash
+    LEFT JOIN nonmotorist_contributing USING (mtm_crsh)
+    WHERE st_case = 40079
+ORDER BY veh_no, per_no
+```
+
+Select damage to vehicles for a specific crash:
+```
+SELECT st_case, veh_no, name
+FROM damage
+    LEFT JOIN damaged_area USING (mdareas)
+WHERE st_case = 10041
+ORDER BY veh_no;
+```
+
+Get driver distractions for a specific crash:
+```sql
+SELECT st_case, veh_no, name
+FROM distract
+    LEFT JOIN driver_distracted using (mdrdstrd)
+WHERE st_case = 100024
+ORDER BY veh_no;
+```
+
+Get vehicle factors
+```sql
+SELECT st_case, veh_no, name
+FROM factor
+    LEFT JOIN motor_vehicle_factor USING (mfactor)
+WHERE st_case = 10024
+ORDER BY veh_no;
+```
+
+Get driver impairments relavent to a crash:
+```sql
+SELECT st_case, veh_no, name
+FROM drimpair
+    LEFT JOIN impairment on (drimpair = impair)
+WHERE st_case = 10079
+ORDER BY veh_no;
+```
+
+Get vehicle maneuvers prior to a crash:
+```sql
+SELECT st_case, veh_no, name
+FROM maneuver
+    LEFT JOIN driver_maneuver using (mdrmanav)
+WHERE st_case = 10134
+ORDER BY veh_no;
+```
