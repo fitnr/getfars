@@ -1,0 +1,10 @@
+0	Ejection Path Not Applicable
+1	Through Side Door Opening (All Side Doors)
+2	Through Side Window (All Side Windows, Bus Side Windows)
+3	Through Windshield (Front Windshield Only)
+4	Through Back Window (Standard Rear Window, Back Window of Bronco, Van)
+5	Through Back Door/Tailgate Opening (Station Wagon Tailgate, Back Door of Truck, Back Door of Bronco, Van)
+6	Through Roof Opening (Sun Roof, Convertible Top Down, T-Top, Targa Top)
+7	Through Roof (Convertible Top Up)
+8	Other Path (e.g., Back of Pickup Truck, Torn-Off Roof, Car Cut in Half)
+9	Ejection Path Unknown

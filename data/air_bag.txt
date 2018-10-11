@@ -1,0 +1,12 @@
+0	Not Applicable
+1	Deployed: Front
+2	Deployed: Side (Door, Seatback)
+3	Deployed: Curtain (Roof)
+7	Deployed: Other (Knee, Air Belt, etc.)
+8	Deployed: Combination
+9	Deployed: Unknown Location
+20	Not Deployed
+28	Switched Off
+97	Not a Motor Vehicle Occupant
+98	Not Reported
+99	Deployment Unknown

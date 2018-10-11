@@ -34,6 +34,9 @@ P6-NM6	sex	sex
 P7-NM7	person_type	per_typ
 P8-NM25	injury_severity	inj_sev
 P9	seating_position	seat_pos
+P12	air_bag	air_bag
+P13	ejection	ejection
+P14	ejection_path	ej_path
 P17-NM16	method_alc_det	alc_det
 P18-NM17A	alc_test	alc_status
 P22-NM21	transported_treatment	hospital
@@ -49,6 +52,9 @@ PC4	motor_vehicle_factor	mfactor
 PC5	trafficway	vtrafway
 SP3A	race	race
 SP3B	hispanic_origin	hispanic
+V6	hit_run	hit_run
+V8	vehicle_owner	owner
+V9	vehicle_make	make
 V11	body_type	body_typ
 V14	trailing_vehicle	tow_veh
 V19	vehicle_config	v_config
@@ -61,5 +67,3 @@ V28B	damaged_area	mdareas
 V30	damage_extent	deformed
 V31	sequence_events	soe
 V33	related_factors_vehicle	sc
-V8	vehicle_owner	owner
-V9	vehicle_make	make

@@ -1,0 +1,7 @@
+0	Not Ejected
+1	Totally Ejected
+2	Partially Ejected
+3	Ejected – Unknown Degree
+7	Not Reported
+8	Not Applicable
+9	Unknown if Ejected

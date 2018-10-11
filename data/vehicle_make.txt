@@ -38,7 +38,7 @@
 46	Renault
 47	Saab
 48	Subaru
-49	T oyota
+49	Toyota
 50	Triumph
 51	Volvo
 52	Mitsubishi
