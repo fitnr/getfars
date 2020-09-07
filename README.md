@@ -12,19 +12,30 @@ First, clone or download the repo.
 
 To set up the database, download 2016 data and load into the database:
 
-````
-make init load PG_DATABASE=my_database_name
+````bash
+make init load
 ````
 
-The database tables will be created in a schema named `fars`.
+This assumes that your Postgres database has the same name as your system user. To customize Postgres connection options, use the [Postgres environment variables](https://www.postgresql.org/docs/current/libpq-envars.html):
+```bash
+export PGDATABASE=my_database_name PGHOST=db.remote.com PGUSER=myname
+```
 
-This will attempt to create a `geometry` column in the `fars.accident` table, but if you're not using PosGIS, that step will fail gracefully.
+By default, the database tables will be created in a schema named `fars`. To customize the schema name, use the make variable `SCHEMA`:
+```bash
+make init load SCHEMA=myschema
+```
+
+The load task will attempt to create a `geometry`-type column in the `fars.accident` table, but if you're not using PosGIS, that step will fail and you can safely ignore the error.
 
 ## Example queries
 
 These queries are meant to demonstrate the relationships between the different tables in FARS.
 
-First run the following to add the `fars` schema into the search path: `set search_path to public, fars;`
+First run the following to add the `fars` schema into the search path: 
+```sql
+set search_path to public, fars;
+```
 
 Retrieve information about a crash:
 ````sql
@@ -265,7 +276,7 @@ ORDER BY veh_no, per_no
 ```
 
 Select damage to vehicles for a specific crash:
-```
+```sql
 SELECT st_case, veh_no, name
 FROM damage
     LEFT JOIN damaged_area USING (mdareas)
