@@ -1,4 +1,6 @@
-YEAR = 2016
+SHELL = /bin/bash
+
+YEAR = 2018
 
 PGUSER ?= $(USER)
 PGDATABASE ?= $(PGUSER)
@@ -23,8 +25,7 @@ load: $(addprefix load-,$(tables))
 	-$(psql) -v schema=$(SCHEMA) -f sql/spatial.sql
 
 load-%: FARS$(YEAR)NationalCSV.zip
-	unzip -Cp $< $*.csv \
-	| $(psql) -c "\copy $(SCHEMA).$* FROM STDIN WITH (FORMAT CSV, HEADER TRUE)"
+	./src/copy.sh $< $(SCHEMA) $*
 
 init: init-schema $(addprefix init-,$(lookups))
 
