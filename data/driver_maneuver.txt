@@ -7,4 +7,4 @@
 92	Phantom/Non-Contact Motor Vehicle
 95	No Driver Present/Unknown if Driver Present
 98	Not Reported
-99	Unknown
+99	Reported as Unknown

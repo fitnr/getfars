@@ -12,7 +12,8 @@
 16	Helmet, Other than DOT-Compliant Motorcycle Helmet
 17	No Helmet
 19	Helmet, Unknown if DOT-Compliant
+20	None Used / Not Applicable
 29	Unknown if Helmet Worn
 97	Not a Motor Vehicle Occupant Other
 98	Not Reported
-99	Unknown
+99	Reported as Unknown

@@ -6,6 +6,7 @@
 5	Surface Under Water
 6	Inadequate Construction or Poor Design of Roadway, Bridge, etc.
 7	Surface Washed Out (Caved in, Road Slippage)
+12	Distracted Driver of a Non-Contact Vehicle
 13	Aggressive Driving/Road Rage by Non-Contact Vehicle Driver 
 14	Motor Vehicle Struck By Falling Cargo or Something That Came Loose From or Something That Was Set in Motion By a Vehicle
 15	Non-Occupant Struck By Falling Cargo, or Something Came Loose From or Something That Was Set In Motion By A Vehicle
@@ -22,4 +23,4 @@
 26	Backup Due to Prior Non-Recurring Incident
 27	Backup Due to Prior Crash
 28	Backup Due to Regular Congestion
-99	Unknown
+99	Reported as Unknown

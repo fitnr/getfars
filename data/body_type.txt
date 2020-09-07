@@ -25,6 +25,7 @@
 31	Standard Pickup (4,500 lbs GVWR < 10,000 lbs)
 32	Pickup with Slide-In Camper
 33	Convertible Pickup
+34	Light Pickup
 39	Unknown (Pickup Style) Light Conventional Truck Type
 40	Cab Chassis-Based (Includes Light Stake, Light Dump, Light Tow, Rescue Vehicles)
 41	Truck-Based Panel
@@ -52,11 +53,15 @@
 73	Camper or Motorhome, Unknown Truck Type
 78	Unknown Medium/Heavy Truck Type
 79	Unknown Truck Type
-80	Motorcycle
-81	Moped (Motorized Bicycle)
-82	Three-Wheel Motorcycle/Moped- Not All-Terrain Vehicle
-83	Off-Road Motorcycle (2-Wheel) (Since 1993)
-88	Other Motored Cycle Type (Mini-Bikes, Motor Scooters, Pocket Motorcycles, Pocket Bikes) (Since 2008)
+80	Two Wheel Motorcycle (excluding motor scooters)
+81	Moped or Motorized Bicycle
+82	Three-Wheel Motorcycle/Moped (2 Rear Wheels)
+83	Off-Road Motorcycle (2-Wheel)
+84	Motor Scooter
+85	Unenclosed Three Wheel Motorcycle / Unenclosed Autocycle (1 Rear Wheel)
+86	Enclosed Three Wheel Motorcycle / Enclosed Autocycle (1 Rear Wheel)
+87	Unknown Three Wheel Motorcycle Type
+88	Other Motored Cycle Type (Mini-Bikes, Motor Scooters, Pocket Motorcycles, Pocket Bikes)
 89	Unknown Motored Cycle Type
 90	ATV (All-Terrain Vehicle; Includes 3 or 4 Wheels)
 91	Snowmobile
@@ -64,6 +69,7 @@
 93	Construction Equipment Other Than Trucks (Includes Graders)
 94	Low Speed Vehicle (LSV)/Neighborhood Electric Vehicle (NEV)
 95	Golf Cart
+96	Recreational Off-Highway Vehicle
 97	Other Vehicle Type (Includes Go-Cart, Fork-Lift, City Street Sweeper, Dune/Swamp Buggy)
 98	Not Reported
-99	Unknown Body Type
+99	Reported as Unknown Body Type

@@ -17,4 +17,4 @@
 16	Merging
 17	Successful Avoidance Maneuver to a Previous Critical Event
 98	Other
-99	Unknown
+99	Reported as Unknown

@@ -9,4 +9,4 @@
 8	Non-Transport Emergency Services Vehicle
 13	Incident Response
 98	Not Reported
-99	Unknown
+99	Reported as Unknown

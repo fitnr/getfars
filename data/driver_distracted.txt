@@ -20,4 +20,4 @@
 96	Not Reported
 97	Lost In Thought/Day Dreaming
 98	Other Distraction
-99	Unknown if Distracted
+99	Reported as Unknown if Distracted

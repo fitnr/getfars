@@ -9,7 +9,7 @@ C20	manner_of_collision	man_coll
 C23	relation_to_road	rel_road
 C24	light_condition	lgt_cond
 C25	atmospheric_condition	weather
-C31	related_factors_crash	cf
+C32	related_factors_crash	cf
 D21	violations_charged	mviolatn
 D22	speeding	speedrel
 D23	driver_impairment	drimpair
@@ -28,12 +28,12 @@ NM9-PB32	ped_position	pedpos
 NM9-PB33	bike_position	bikepos
 NM9-PB38	crash_group_pedestrian	pedcgp
 NM9-PB38B	crash_group_bike	bikecgp
-P10	restraint_use	rest_use
 P26	related_factors_person	p_sf
 P6-NM6	sex	sex
 P7-NM7	person_type	per_typ
 P8-NM25	injury_severity	inj_sev
 P9	seating_position	seat_pos
+P10 restraint_use   rest_use
 P12	air_bag	air_bag
 P13	ejection	ejection
 P14	ejection_path	ej_path

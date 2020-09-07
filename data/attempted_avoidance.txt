@@ -11,4 +11,4 @@
 15	Braking and Unknown Steering Direction
 16	Braking
 98	Other Actions
-99	Unknown/Not Reported
+99	Reported as Unknown/Not Reported

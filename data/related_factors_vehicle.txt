@@ -28,4 +28,4 @@
 41	Police Fire or EMS Vehicle Working at the Scene of an Emergency or Performing Other Traffic Control Activities
 42	Other Working Vehicle
 44	Adaptive Equipment
-99	Unknown
+99	Reported as Unknown

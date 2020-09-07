@@ -8,5 +8,6 @@
 8	Gore
 10	Separator
 11	Continuous Left-Turn Lane
+12	Pedestrian Refuge Island or Traffic Island
 98	Not Reported
-99	Unknown
+99	Reported as Unknown

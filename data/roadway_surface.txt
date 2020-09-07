@@ -10,4 +10,4 @@
 10	Slush
 11	Mud, Dirt, Gravel
 98	Not Reported
-99	Unknown
+99	Reported as Unknown

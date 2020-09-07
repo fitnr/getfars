@@ -16,4 +16,4 @@
 96	No Cargo Body Type
 97	other
 98	Unknown Cargo Body Type
-99	Unknown
+99	Reported as Unknown

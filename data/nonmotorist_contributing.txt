@@ -20,4 +20,4 @@
 19	Not Visible (Dark Clothing, No Lighting, etc.)
 20	Passing with Insufficient Distance or Inadequate Visibility or Failing to Yield to Overtaking Vehicle
 21	Other
-99	Unknown
+99	Reported as Unknown

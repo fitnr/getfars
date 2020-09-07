@@ -13,4 +13,4 @@
 13	Top
 14	Undercarriage
 15	No Damage
-99	Unknown
+99	Reported as Unknown

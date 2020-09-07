@@ -6,4 +6,4 @@
 7	Shuttle Bus
 8	Modified for Personal/Private Use
 98	Not Reported
-99	Unknown
+99	Reported as Unknown

@@ -60,9 +60,11 @@
 69	Re-Entering Highway
 70	Jackknife (Non-Harmful)
 71	End Departure
-72	Cargo/Equipment Loss or Shift (Harmful to This Vehicle)
+72	Cargo/Equipment Loss, Shift or Damage
 73	Object That Had Fallen From Motor Vehicle In-Transport
 74	Road Vehicle on Rails
 79	Ran Off Roadway – Direction Unknown
+91	Unknown Object Not Fixed
+93	Unknown Fixed Object
 98	Not reported
-99	Unknown
+99	Reported as Unknown

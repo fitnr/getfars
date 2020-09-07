@@ -10,4 +10,4 @@
 19	Truck More Than 10,000 lbs., Cannot Classify
 20	Bus/Large Van (seats for 9-15 occupants, including driver)
 21	Bus (seats for more than 15 occupants, including driver)
-99	Unknown
+99	Reported as Unknown

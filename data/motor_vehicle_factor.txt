@@ -18,4 +18,4 @@
 17	Vehicle Contributing Factors – No Details
 97	Other
 98	Not Reported
-99	Unknown
+99	Reported as Unknown

@@ -26,4 +26,4 @@
 54	Trailing Unit
 55	Riding on Vehicle Exterior
 98	Not Reported
-99	Unknown
+99	Reported as Unknown

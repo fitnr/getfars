@@ -8,4 +8,4 @@
 10	Rear-to-Rear
 11	Other (End-Swipes and Others)
 98	Not Reported
-99	Unknown
+99	Reported as Unknown

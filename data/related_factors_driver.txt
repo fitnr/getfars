@@ -2,6 +2,8 @@
 4	Reaction to or Failure to Take Drugs/Medication
 6	Careless Driving
 8	Road Rage/Aggressive Driving
+9	Emergency Services Personnel
+10	Looked But Did Not See
 12	Mother of Dead Fetus/Mother of Infant Born Post Crash
 13	Mentally Challenged
 15	Seat Back Not in Normal Position, Seat Back Reclined
@@ -39,8 +41,12 @@
 52	Operator Inexperience
 53	Unfamiliar With Roadway
 54	Stopping in Roadway (Vehicle Not Abandoned)
+55	Improper Management of Vehicle Controls
+56	Object Interference with Vehicle Controls
+57	Driving with Tire-Related Problems
 58	Over Correcting
 59	Getting Off/Out of a Vehicle
+60	Alcohol and/or Drug Test Refused
 73	Driver Has Not Complied with Learners Permit or Intermediate Driver License/GDL Restrictions
 74	Driver Has Not Complied With Physical or Other Imposed Restrictions
 77	Skidding, Swerving, Or Sliding Due to Severe Crosswind
@@ -58,4 +64,4 @@
 89	Driver has a Driving Record or Driver’s License from More than One State
 91	Non-Traffic Violation Charged (Manslaughter, Homicide or Other Assault Offense Committed Without Malice)
 92	Other Non-Moving Traffic Violation
-99	Unknown
+99	Reported as Unknown

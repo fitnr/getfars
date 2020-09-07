@@ -6,4 +6,4 @@
 5	European Spanish (Since 2000)
 6	Hispanic, Origin Not Specified or Other Origin
 7	Non-Hispanic
-99	Unknown
+99	Reported as Unknown

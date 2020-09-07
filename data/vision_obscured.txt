@@ -16,4 +16,4 @@
 95	No Driver Present/Unknown if Driver Present
 97	Vision Obscured – No Details
 98	Other Visual Obstruction
-99	Unknown
+99	Reported as Unknown

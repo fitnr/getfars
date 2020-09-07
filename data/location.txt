@@ -16,4 +16,4 @@
 25	Non-Trafficway Area
 28	Other
 98	Not Reported
-99	Unknown Location
+99	Reported as Unknown Location

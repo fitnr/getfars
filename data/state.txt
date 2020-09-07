@@ -60,4 +60,4 @@
 96	Mexico	\N
 97	Other Foreign Country	\N
 98	Not reported	\N
-99	Unknown	\N
+99	Reported as Unknown	\N

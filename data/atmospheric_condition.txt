@@ -11,4 +11,4 @@
 11	Blowing Snow
 12	Freezing Rain or Drizzle
 98	Not Reported
-99	Unknown
+99	Reported as Unknown

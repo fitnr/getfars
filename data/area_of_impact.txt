@@ -15,6 +15,7 @@
 14	Undercarriage
 18	Cargo/Vehicle Parts Set-In-Motion
 19	Other Objects Set-In-Motion
+20	Object Set in Motion, Unknown if Cargo/Vehicle Parts or Other
 55	Non-Harmful Event
 61	Left
 62	Left-Front Size
@@ -24,4 +25,4 @@
 82	Right-Front Side
 83	Right-Back Side
 98	Not Reported
-99	Unknown
+99	Reported as Unknown
