@@ -19,9 +19,10 @@ lookups = $(notdir $(basename $(wildcard data/*.txt)))
 .PHONY: load load-% init
 
 load: $(addprefix load-,$(tables))
+	$(psql) -v schema=$(SCHEMA) -f sql/constraint.sql
 	-$(psql) -v schema=$(SCHEMA) -f sql/spatial.sql
 
-load-%: fars-$(YEAR).zip
+load-%: FARS$(YEAR)NationalCSV.zip
 	unzip -Cp $< $*.csv \
 	| $(psql) -c "\copy $(SCHEMA).$* FROM STDIN WITH (FORMAT CSV, HEADER TRUE)"
 
@@ -39,6 +40,3 @@ init-schema: sql/schema.sql sql/lookups.txt
 	$(psql) -v schema=$(SCHEMA) -f sql/schema.sql
 
 clean:; $(psql) -c "DROP SCHEMA $(SCHEMA) CASCADE"
-
-fars-$(YEAR).zip:
-	curl ftp://ftp.nhtsa.dot.gov/fars/$(YEAR)/National/FARS$(YEAR)NationalCSV.zip -o $@

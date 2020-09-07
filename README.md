@@ -8,12 +8,12 @@ Requires: make, postgresql (9.3+).
 
 ## Usage
 
-First, clone or download the repo.
+First, clone or download the repo. Then [download the FARS CSV zip file from the NHTSA](https://www.nhtsa.gov/node/97996/251). Place the resulting file, which should have a name like `FARS2018NationalCSV.zip` .
 
-To set up the database, download 2016 data and load into the database:
+To set up the database and load into the database:
 
 ````bash
-make init load
+make init load YEAR=2018
 ````
 
 This assumes that your Postgres database has the same name as your system user. To customize Postgres connection options, use the [Postgres environment variables](https://www.postgresql.org/docs/current/libpq-envars.html):

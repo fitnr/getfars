@@ -2,14 +2,14 @@
 
 SET search_path to :schema;
 
-CREATE TABLE IF NOT EXISTS state (
+CREATE TABLE state (
     state int primary key,
     name text,
     fips char(2)
 );
 
-CREATE TABLE IF NOT EXISTS accident (
-    state integer references state (state),
+CREATE TABLE accident (
+    state integer,
     st_case integer PRIMARY KEY,
     ve_total integer,
     ve_forms integer,
@@ -27,27 +27,27 @@ CREATE TABLE IF NOT EXISTS accident (
     hour integer,
     minute integer,
     nhs integer,
-    rur_urb integer references rural_urban (rur_urb),
-    func_sys integer references functional_system (func_sys),
-    rd_owner integer references road_owner (rd_owner),
-    route integer references route (route),
+    rur_urb integer,
+    func_sys integer,
+    rd_owner integer,
+    route integer,
     tway_id text,
     tway_id2 text,
     milept integer,
     latitude double precision,
     longitud double precision,
-    sp_jur integer references special_jurisdiction (sp_jur),
-    harm_ev integer references harmful_event (harm_ev),
-    man_coll integer references manner_of_collision (man_coll),
+    sp_jur integer,
+    harm_ev integer,
+    man_coll integer,
     reljct1 integer,
     reljct2 integer,
     typ_int integer,
     wrk_zone integer,
-    rel_road integer references relation_to_road (rel_road),
-    lgt_cond integer references light_condition (lgt_cond),
-    weather1 integer references atmospheric_condition (weather),
-    weather2 integer references atmospheric_condition (weather),
-    weather integer references atmospheric_condition (weather),
+    rel_road integer,
+    lgt_cond integer,
+    weather1 integer,
+    weather2 integer,
+    weather integer,
     sch_bus integer,
     rail text,
     not_hour integer,
@@ -56,103 +56,87 @@ CREATE TABLE IF NOT EXISTS accident (
     arr_min integer,
     hosp_hr integer,
     hosp_mn integer,
-    cf1 integer references related_factors_crash (cf),
-    cf2 integer references related_factors_crash (cf),
-    cf3 integer references related_factors_crash (cf),
+    cf1 integer,
+    cf2 integer,
+    cf3 integer,
     fatals integer,
     drunk_dr integer
 );
 
 CREATE TABLE cevent (
-    state integer references state (state),
+    state integer,
     st_case integer,
     eventnum integer,
     vnumber1 integer,
-    aoi1 integer references area_of_impact (aoi),
-    soe integer references sequence_events (soe),
+    aoi1 integer,
+    soe integer,
     vnumber2 integer,
-    aoi2 integer references area_of_impact (aoi),
+    aoi2 integer,
     constraint cevent_pk primary key (st_case, eventnum)
 );
 
 CREATE TABLE damage (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
-    mdareas integer references damaged_area (mdareas)
+    mdareas integer
 );
-CREATE INDEX IF NOT EXISTS damage_idx
-    ON damage (st_case, veh_no);
 
 CREATE TABLE distract (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
-    mdrdstrd integer references driver_distracted (mdrdstrd)
+    mdrdstrd integer
 );
-CREATE INDEX IF NOT EXISTS distract_idx
-    ON distract (st_case, veh_no);
 
 CREATE TABLE drimpair (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
-    drimpair integer references impairment (impair)
+    drimpair integer
 );
-CREATE INDEX IF NOT EXISTS drimpair_idx
-    ON drimpair (st_case, veh_no);
 
 CREATE TABLE factor (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
-    mfactor integer references motor_vehicle_factor (mfactor)
+    mfactor integer
 );
-CREATE INDEX IF NOT EXISTS factor_idx
-    ON factor (st_case, veh_no);
 
 CREATE TABLE maneuver (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
-    mdrmanav integer references driver_maneuver (mdrmanav)
+    mdrmanav integer
 );
-CREATE INDEX IF NOT EXISTS maneuver_idx
-    ON maneuver (st_case, veh_no);
 
 CREATE TABLE nmcrash (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
     per_no integer,
-    mtm_crsh integer references nonmotorist_contributing (mtm_crsh)
+    mtm_crsh integer
 );
-CREATE INDEX IF NOT EXISTS nmcrash_idx
-    ON nmcrash (st_case, veh_no, per_no);
 
 CREATE TABLE nmimpair (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
     per_no integer,
-    nmimpair integer references impairment (impair)
+    nmimpair integer
 );
-CREATE INDEX IF NOT EXISTS nmimpair_idx
-    ON nmimpair (st_case, veh_no, per_no);
 
 CREATE TABLE nmprior (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
     per_no integer,
-    mpr_act integer references nonmotorist_action (mpr_act)
+    mpr_act integer
 );
-CREATE INDEX IF NOT EXISTS nmprior_idx
-    ON nmprior (st_case, veh_no, per_no);
 
 CREATE TABLE parkwork (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
     pve_forms integer,
     pnumoccs integer,
@@ -161,15 +145,15 @@ CREATE TABLE parkwork (
     phour integer,
     pminute integer,
     pharm_ev integer,
-    pman_coll integer references manner_of_collision (man_coll),
+    pman_coll integer,
     ptype integer,
-    phit_run integer references hit_run (hit_run),
+    phit_run integer,
     preg_stat integer,
-    powner integer references vehicle_owner (owner),
-    pmake integer references vehicle_make (make),
+    powner integer,
+    pmake integer,
     pmodel integer,
     pmak_mod integer,
-    pbodytyp integer references body_type (body_typ),
+    pbodytyp integer,
     pmodyear integer,
     pvin text,
     pvin_1 text,
@@ -189,23 +173,23 @@ CREATE TABLE parkwork (
     pmcarr_i2 text,
     pmcarr_id text,
     pgvwr integer,
-    pv_config integer references vehicle_config (v_config),
+    pv_config integer,
     pcargtyp integer,
     phaz_inv integer,
     phazplac integer,
     phaz_id integer,
-    phaz_cno integer references hazardous_material_class (haz_cno),
+    phaz_cno integer,
     phaz_rel integer,
-    pbus_use integer references bus_use (bus_use),
-    psp_use integer references special_use (spec_use),
-    pem_use integer references emergency_use (emer_use),
+    pbus_use integer,
+    psp_use integer,
+    pem_use integer,
     punderide integer,
-    pimpact1 integer references area_of_impact (aoi),
+    pimpact1 integer,
     pveh_sev integer,
     ptowed integer,
-    pm_harm integer references harmful_event (harm_ev),
-    pveh_sc1 integer references related_factors_vehicle (sc),
-    pveh_sc2 integer references related_factors_vehicle (sc),
+    pm_harm integer,
+    pveh_sc1 integer,
+    pveh_sc2 integer,
     pfire integer,
     pdeaths integer,
     ptrlr1vin text,
@@ -215,36 +199,36 @@ CREATE TABLE parkwork (
 );
 
 CREATE TABLE pbtype (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
     per_no integer,
-    pbptype integer references person_type (per_typ),
+    pbptype integer,
     pbage integer,
-    pbsex integer references sex (sex),
+    pbsex integer,
     pbcwalk integer,
     pbswalk integer,
     pbszone integer,
-    pedctype integer references ped_crash_type (pedctype),
-    bikectype integer references bike_crash_type (bikectype),
-    pedloc integer references ped_location (pedloc),
-    bikeloc integer references bike_location (bikeloc),
-    pedpos integer references ped_position (pedpos),
-    bikepos integer references bike_position (bikepos),
+    pedctype integer,
+    bikectype integer,
+    pedloc integer,
+    bikeloc integer,
+    pedpos integer,
+    bikepos integer,
     peddir integer,
     bikedir integer,
     motdir integer,
     motman integer,
     pedleg integer,
     pedsnr text,
-    pedcgp integer references crash_group_pedestrian (pedcgp),
-    bikecgp integer references crash_group_bike (bikecgp),
+    pedcgp integer,
+    bikecgp integer,
     constraint pbtype_pk primary key (st_case, per_no)
 );
 
 CREATE TABLE person (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     ve_forms integer,
     veh_no integer,
     per_no integer,
@@ -254,35 +238,35 @@ CREATE TABLE person (
     month integer,
     hour integer,
     minute integer,
-    rur_urb integer references rural_urban (rur_urb),
+    rur_urb integer,
     func_sys integer,
     harm_ev integer,
-    man_coll integer references manner_of_collision (man_coll),
+    man_coll integer,
     sch_bus integer,
-    make integer references vehicle_make (make),
+    make integer,
     mak_mod integer,
-    body_typ integer references body_type (body_typ),
+    body_typ integer,
     mod_year integer,
-    tow_veh integer references trailing_vehicle (tow_veh),
-    spec_use integer references special_use (spec_use),
-    emer_use integer references emergency_use (emer_use),
+    tow_veh integer,
+    spec_use integer,
+    emer_use integer,
     rollover integer,
-    impact1 integer references area_of_impact (aoi),
+    impact1 integer,
     fire_exp integer,
     age integer,
-    sex integer references sex (sex),
-    per_typ integer references person_type (per_typ),
-    inj_sev integer references injury_severity (inj_sev),
-    seat_pos integer references seating_position (seat_pos),
+    sex integer,
+    per_typ integer,
+    inj_sev integer,
+    seat_pos integer,
     rest_use integer,
     rest_mis integer,
-    air_bag integer references air_bag (air_bag),
-    ejection integer references ejection (ejection),
-    ej_path integer references ejection_path (ej_path),
+    air_bag integer,
+    ejection integer,
+    ej_path integer,
     extricat integer,
     drinking integer,
-    alc_det integer references method_alc_det (alc_det),
-    alc_status integer references alc_test (alc_status),
+    alc_det integer,
+    alc_status integer,
     atst_typ integer,
     alc_res integer,
     drugs integer,
@@ -291,10 +275,10 @@ CREATE TABLE person (
     drugtst1 integer,
     drugtst2 integer,
     drugtst3 integer,
-    drugres1 integer references drug_test_result (drugres),
-    drugres2 integer references drug_test_result (drugres),
-    drugres3 integer references drug_test_result (drugres),
-    hospital integer references transported_treatment (hospital),
+    drugres1 integer,
+    drugres2 integer,
+    drugres3 integer,
+    hospital integer,
     doa integer,
     death_da integer,
     death_mo integer,
@@ -304,29 +288,32 @@ CREATE TABLE person (
     death_tm integer,
     lag_hrs integer,
     lag_mins integer,
-    p_sf1 integer references related_factors_person (p_sf),
-    p_sf2 integer references related_factors_person (p_sf),
-    p_sf3 integer references related_factors_person (p_sf),
+    p_sf1 integer,
+    p_sf2 integer,
+    p_sf3 integer,
     work_inj integer,
-    hispanic integer  references hispanic_origin (hispanic),
-    race integer references race (race),
-    location integer references location (location),
+    hispanic integer ,
+    race integer,
+    location integer,
     constraint person_pk primary key (st_case, veh_no, per_no)
 );
 
 CREATE TABLE safetyeq (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
     per_no integer,
-    msafeqmt integer references safety_equipment (msafeqmt)
+    nmhelmet integer,
+    nmpropad integer,
+    nmothpro integer,
+    nmrefclo integer,
+    nmlight integer,
+    nmothpre integer
 );
-CREATE INDEX IF NOT EXISTS safetyeq_idx
-    ON safetyeq (st_case, veh_no, per_no);
 
 CREATE TABLE vehicle (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
     ve_forms integer,
     numoccs integer,
@@ -334,16 +321,16 @@ CREATE TABLE vehicle (
     month integer,
     hour integer,
     minute integer,
-    harm_ev integer references harmful_event (harm_ev),
-    man_coll integer references manner_of_collision (man_coll),
+    harm_ev integer,
+    man_coll integer,
     unittype integer,
-    hit_run integer references hit_run (hit_run),
+    hit_run integer,
     reg_stat integer,
-    owner integer references vehicle_owner (owner),
-    make integer references vehicle_make (make),
+    owner integer,
+    make integer,
     model integer,
     mak_mod integer,
-    body_typ integer references body_type (body_typ),
+    body_typ integer,
     mod_year integer,
     vin text,
     vin_1 text,
@@ -358,35 +345,35 @@ CREATE TABLE vehicle (
     vin_10 text,
     vin_11 text,
     vin_12 text,
-    tow_veh integer references trailing_vehicle (tow_veh),
+    tow_veh integer,
     j_knife integer,
     mcarr_i1 integer,
     mcarr_i2 text,
     mcarr_id text,
     gvwr integer,
-    v_config integer references vehicle_config (v_config),
-    cargo_bt integer references cargo_body_type (cargo_bt),
+    v_config integer,
+    cargo_bt integer,
     haz_inv integer,
     haz_plac integer,
     haz_id integer,
-    haz_cno integer references hazardous_material_class (haz_cno),
+    haz_cno integer,
     haz_rel integer,
-    bus_use integer references bus_use (bus_use),
-    spec_use integer references special_use (spec_use),
-    emer_use integer references emergency_use (emer_use),
+    bus_use integer,
+    spec_use integer,
+    emer_use integer,
     trav_sp integer,
     underide integer,
     rollover integer,
     rolinloc integer,
     impact1 integer,
-    deformed integer references damage_extent (deformed),
+    deformed integer,
     towed integer,
-    m_harm integer references harmful_event (harm_ev),
+    m_harm integer,
     veh_sc1 integer,
     veh_sc2 integer,
     fire_exp integer,
     dr_pres integer,
-    l_state integer references state (state),
+    l_state integer,
     dr_zip text,
     l_status integer,
     l_type integer,
@@ -408,26 +395,26 @@ CREATE TABLE vehicle (
     first_yr integer,
     last_mo integer,
     last_yr integer,
-    speedrel integer references speeding (speedrel),
-    dr_sf1 integer references related_factors_driver (dr_sf),
-    dr_sf2 integer references related_factors_driver (dr_sf),
-    dr_sf3 integer references related_factors_driver (dr_sf),
-    dr_sf4 integer references related_factors_driver (dr_sf),
-    vtrafway integer references trafficway (vtrafway),
+    speedrel integer,
+    dr_sf1 integer,
+    dr_sf2 integer,
+    dr_sf3 integer,
+    dr_sf4 integer,
+    vtrafway integer,
     vnum_lan integer,
     vspd_lim integer,
     valign integer,
     vprofile integer,
     vpavetyp integer,
-    vsurcond integer references roadway_surface (vsurcond),
+    vsurcond integer,
     vtrafcon integer,
     vtcont_f integer,
-    p_crash1 integer references pre_event_movement (p_crash1),
-    p_crash2 integer references critical_precrash_event (p_crash2),
-    p_crash3 integer references attempted_avoidance (p_crash3),
+    p_crash1 integer,
+    p_crash2 integer,
+    p_crash3 integer,
     pcrash4 integer,
     pcrash5 integer,
-    acc_type integer references accident_type (acc_type),
+    acc_type integer,
     trlr1vin text,
     trlr2vin text,
     trlr3vin text,
@@ -437,22 +424,22 @@ CREATE TABLE vehicle (
 );
 
 CREATE TABLE vevent (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     eventnum integer,
     veh_no integer,
     veventnum integer,
     vnumber1 integer,
-    aoi1 integer references area_of_impact (aoi),
-    soe integer references sequence_events (soe),
+    aoi1 integer,
+    soe integer,
     vnumber2 integer,
-    aoi2 integer references area_of_impact (aoi),
+    aoi2 integer,
     constraint vevent_pk primary key (st_case, veh_no, eventnum)
 );
 
 CREATE TABLE vindecode (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
     ncicmake text,
     vinyear integer,
@@ -493,7 +480,7 @@ CREATE TABLE vindecode (
     tiresz_f_t text,
     tiredesc_r text,
     psi_r integer,
-    rearsize integer,
+    rearsize text,
     rearsize_t text,
     tonrating text,
     shipweight integer,
@@ -558,29 +545,25 @@ CREATE TABLE vindecode (
 );
 
 CREATE TABLE violatn (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
-    mviolatn integer references violations_charged (mviolatn)
+    mviolatn integer
 );
-CREATE INDEX IF NOT EXISTS violatn_idx
-    ON violatn (st_case, veh_no);
 
 CREATE TABLE vision (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
-    mvisobsc integer references vision_obscured (mvisobsc)
+    mvisobsc integer
 );
-CREATE INDEX IF NOT EXISTS vision_idx
-    ON vision (st_case, veh_no);
 
 CREATE TABLE vsoe (
-    state integer references state (state),
-    st_case integer references accident (st_case),
+    state integer,
+    st_case integer,
     veh_no integer,
     veventnum integer,
-    soe integer references sequence_events (soe),
-    aoi integer references area_of_impact (aoi),
+    soe integer,
+    aoi integer,
     constraint vsoe_pk primary key (st_case, veh_no, veventnum)
 );
