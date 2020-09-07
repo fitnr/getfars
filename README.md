@@ -28,6 +28,10 @@ make init load SCHEMA=myschema
 
 The load task will attempt to create a `geometry`-type column in the `fars.accident` table, but if you're not using PosGIS, that step will fail and you can safely ignore the error.
 
+## Data consistency
+
+The current table schema is valid for the most recent year available (2018), and may be fail for previous years. Even when table structures haven't changes, the meaning of the various attribute may have been altered.
+
 ## Example queries
 
 These queries are meant to demonstrate the relationships between the different tables in FARS.
