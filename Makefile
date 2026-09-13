@@ -13,8 +13,8 @@ tables = accident vehicle person \
 	drimpair factor maneuver \
 	nmcrash nmimpair nmprior \
 	parkwork pbtype safetyeq \
-	vevent vindecode \
-	violatn vision vsoe 
+	vevent violatn vision \
+	vsoe 
 
 lookups = $(notdir $(basename $(wildcard data/*.txt)))
 
@@ -25,7 +25,7 @@ load: $(addprefix load-,$(tables))
 	-$(psql) -v schema=$(SCHEMA) -f sql/spatial.sql
 
 load-%: FARS$(YEAR)NationalCSV.zip
-	./src/copy.sh $< $(SCHEMA) $*
+	./src/copy.sh $< $(SCHEMA) $* $(YEAR)
 
 init: init-schema $(addprefix init-,$(lookups))
 

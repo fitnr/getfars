@@ -149,8 +149,6 @@ ALTER TABLE vevent ADD CONSTRAINT vevent_st_case_fkey FOREIGN KEY (st_case) REFE
 ALTER TABLE vevent ADD CONSTRAINT vevent_aoi1_fkey FOREIGN KEY (aoi1) REFERENCES area_of_impact (aoi);
 ALTER TABLE vevent ADD CONSTRAINT vevent_soe_fkey FOREIGN KEY (soe) REFERENCES sequence_events (soe);
 ALTER TABLE vevent ADD CONSTRAINT vevent_aoi2_fkey FOREIGN KEY (aoi2) REFERENCES area_of_impact (aoi);
-ALTER TABLE vindecode ADD CONSTRAINT vindecode_state_fkey FOREIGN KEY (state) REFERENCES state (state);
-ALTER TABLE vindecode ADD CONSTRAINT vindecode_st_case_fkey FOREIGN KEY (st_case) REFERENCES accident (st_case);
 ALTER TABLE violatn ADD CONSTRAINT violatn_state_fkey FOREIGN KEY (state) REFERENCES state (state);
 ALTER TABLE violatn ADD CONSTRAINT violatn_st_case_fkey FOREIGN KEY (st_case) REFERENCES accident (st_case);
 ALTER TABLE violatn ADD CONSTRAINT violatn_mviolatn_fkey FOREIGN KEY (mviolatn) REFERENCES violations_charged (mviolatn);
